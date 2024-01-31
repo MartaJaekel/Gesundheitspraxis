@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navigation() {
-  const [open, setOpen] = useState(false);
   const links = [
     { name: "Die Bowen-Technik", href: "/bowen" },
     { name: "Preise & Ablauf", href: "/prices" },
@@ -13,37 +13,38 @@ export default function Navigation() {
   ];
 
   return (
-    <nav>
-      <Burger onClick={() => setOpen(!open)}>
-        <div />
-        <div />
-        <div />
-      </Burger>
-      <StyledContainer open={open}>
+    <NavContainer>
+      <StyledContainer>
+        <ImageContainer>
+          <Image src="lotus.svg" alt="lotus" width={100} height={100} />
+        </ImageContainer>
         {links.map((link) => (
           <StyledList key={link.name}>
             <StyledLink href={link.href}>{link.name}</StyledLink>
           </StyledList>
         ))}
       </StyledContainer>
-    </nav>
+    </NavContainer>
   );
 }
+const NavContainer = styled.nav`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
+
 const StyledContainer = styled.ul`
   display: flex;
   justify-content: flex-end;
-  gap: 30px;
+  gap: 50px;
   align-items: center;
   list-style: none;
   background-color: #ede6d8;
-  padding: 60px 100px;
+  padding: 30px 100px;
   margin: 2px 0px;
-
-  @media (max-width: 600px) {
-    display: ${(props) => (props.open ? "flex" : "none")};
-    flex-direction: column;
-    padding: 20px;
-  }
+  width: 100%;
 `;
 
 const Burger = styled.div`
@@ -62,7 +63,7 @@ const StyledList = styled.li`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 `;
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   text-decoration: none;
   color: #000;
 
@@ -70,4 +71,8 @@ const StyledLink = styled.a`
     color: #ffffff;
     transition: all 0.3s ease-in-out;
   }
+`;
+const ImageContainer = styled.div`
+  display: flex;
+  align-items: left;
 `;
