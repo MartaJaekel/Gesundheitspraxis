@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { useState } from "react";
 import Image from "next/image";
 
 export default function Navigation() {
@@ -29,31 +28,21 @@ export default function Navigation() {
 }
 const NavContainer = styled.nav`
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
 `;
 
 const StyledContainer = styled.ul`
+  position: fixed;
   display: flex;
-  justify-content: flex-end;
+
   gap: 50px;
   align-items: center;
   list-style: none;
   background-color: #ede6d8;
-  padding: 30px 100px;
+  padding: 10px 100px;
   margin: 2px 0px;
   width: 100%;
 `;
 
-const Burger = styled.div`
-  display: none;
-
-  @media (max-width: 600px) {
-    display: flex;
-  }
-`;
 const StyledList = styled.li`
   font-size: 1.1rem;
   font-weight: 200;
