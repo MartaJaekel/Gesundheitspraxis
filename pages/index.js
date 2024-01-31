@@ -4,6 +4,7 @@ import styled, { keyframes } from "styled-components";
 import Intro from "../components/Intro/Intro.js";
 import React from "react";
 import GlobalStyle from "./styles";
+import Main from "../components/Main/Main.js";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       </ImageContainer>
 
       <Intro />
+      <Main />
     </>
   );
 }
@@ -56,12 +58,10 @@ const fadeIn = keyframes`
 `;
 
 const ImageText = styled.h1`
-  font-size: 1.3rem;
-
   position: absolute;
   font-weight: 200;
-  top: 10%;
-  left: 75%;
+  top: 50%;
+  left: 42%;
   transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 0.5);
 
@@ -69,7 +69,8 @@ const ImageText = styled.h1`
     font-family: sans-serif;
     line-height: 1.5;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.5rem;
+
     animation: ${fadeIn} 5s;
   }
 `;
