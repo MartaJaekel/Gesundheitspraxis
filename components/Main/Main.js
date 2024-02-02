@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import React from "react";
+import media from "css-in-js-media";
 
 export default function Main() {
   return (
@@ -36,30 +37,33 @@ export default function Main() {
               emotionalen und psychischen Bereich anstoßen. Durch die Sanftheit
               kann Bowtech bei Menschen jeden Alters angewendet werden: Vom
               Neugeborenen über Schwangere, bis ins hohe Alter.
-              <br />
+            </StyledParagraph>
+            <StyledParagraph>
               Die Bowen-Technik kann helfen bei:
-              <ul>
-                <li>Rückenschmerzen verschiedenen Ursprungs</li>
-                <li>
-                  Verspannungen und Verhärtungen bei Muskulatur im
-                  Rücken-Schulter- und Nackenbereich
-                </li>
-                <li>ISG-Blockaden</li>
-                <li>Kniebeschwerden</li>
-                <li>
-                  Schwangerschaftsbegleitung wie z. B. Rückenschmerzen, Übelkeit
-                </li>
-                <li>Baby-Koliken, Schlafprobleme bei Babys</li>
-                <li>Körperwahrnehmung</li>
-                <li>Stärkung des Immunsystems</li>
-                <li>Entspannung</li>
-              </ul>
+            </StyledParagraph>
+            <StyledUl>
+              <li>Rückenschmerzen verschiedenen Ursprungs</li>
+              <li>
+                Verspannungen und Verhärtungen bei Muskulatur im
+                Rücken-Schulter- und Nackenbereich
+              </li>
+              <li>ISG-Blockaden</li>
+              <li>Kniebeschwerden</li>
+              <li>
+                Schwangerschaftsbegleitung wie z. B. Rückenschmerzen, Übelkeit
+              </li>
+              <li>Baby-Koliken, Schlafprobleme bei Babys</li>
+              <li>Körperwahrnehmung</li>
+              <li>Stärkung des Immunsystems</li>
+              <li>Entspannung</li>
+            </StyledUl>
+            <StyledParagraph>
               Hinweis: Die Bowen-Technik ersetzt keine ärztlichen Behandlungen
               und Beratungen.
             </StyledParagraph>
           </StyledContent>
           <StyledContainer>
-            <StyledImage src="/vorteile.jpeg" layout="fill" objectFit="cover" />
+            <StyledImage src="/move.jpg" layout="fill" objectFit="cover" />
           </StyledContainer>
         </StyledSectionReverse>
         <StyledSectionThree>
@@ -96,23 +100,31 @@ export default function Main() {
   );
 }
 const StyledWrapper = styled.div`
-
   max-width: 1280px;
-    margin: auto;
-    margin-top: 80px;
-}
+  margin: auto;
+  margin-top: 80px;
 `;
 
 const StyledSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  ${media("<=phone")} {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 `;
 
 const StyledContainer = styled.div`
   position: relative;
-  width: 45%; // Adjust as needed
-  height: 500px; // Adjust as needed
+  width: 45%;
+  height: 500px;
+
+  ${media("<=phone")} {
+    width: 100%;
+  }
 `;
 
 const StyledSectionReverse = styled(StyledSection)`
@@ -120,37 +132,57 @@ const StyledSectionReverse = styled(StyledSection)`
 
   justify-content: space-between;
   align-items: center;
+
+  ${media("<=phone")} {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 const StyledSectionThree = styled(StyledSection)`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+  ${media("<=phone")} {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const StyledImage = styled(Image)`
   position: relative;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-  z-index: -1;
+  z-index: 0;
 `;
 
 const StyledContent = styled.div`
-  width: 45%; // Adjust as needed
+  width: 45%;
 `;
 
 const StyledTitle = styled.h1`
-  font-family: arsenal, sans-serif;
+  font-family: Recoleta Alt Light, sans-serif !important;
   font-size: 2em;
   letter-spacing: 0.15em;
   font-style: normal;
   font-weight: lighter;
   color: #9e8d8d;
+  hyphens: auto;
 `;
 
 const StyledParagraph = styled.p`
   font-size: 1.1rem;
   line-height: 2.3rem;
-  font-family: "Open Sans", sans-serif;
+  // font-family: "Open Sans", sans-serif;
+  color: #9e8d8d;
+
+  ${media("<=phone")} {
+    justify-content: center;
+  }
+`;
+
+const StyledUl = styled.ul`
+  font-size: 1.1rem;
+  line-height: 2.3rem;
   color: #9e8d8d;
 `;
 
