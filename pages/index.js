@@ -1,6 +1,6 @@
-import Navigation from "../components/Navigation/Navigation.js";
 import Image from "next/image";
 import styled, { keyframes } from "styled-components";
+import Navigation from "../components/Navigation/Navigation.js";
 import Intro from "../components/Intro/Intro.js";
 import React from "react";
 import Main from "../components/Main/Main.js";
