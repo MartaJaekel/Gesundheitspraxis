@@ -1,16 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-
+import media from "css-in-js-media";
 export default function Infos() {
   return (
     <>
-      <StyledHeader>Preise</StyledHeader>
+      <StyledHeader id="prices">Preise</StyledHeader>
       <StyledContainer>
         <StyledParagraph>
-          Eine Bowen-Anwendung: 60,-Euro für ca. 60 Min.
-          <br /> Die Anwendungskosten sind bar zu zahlen. Paypal möglich. Im
-          Verhinderungsfall bitte ich, Termine spätestens 24 Stunden vorher
-          abzusagen, da sie ansonsten in voller Höhe verrechnet werden.
+          <BoldText> Eine Bowen-Anwendung:</BoldText> 60,-Euro für ca. 60 Min.
+          <ul>
+            <SyledList>
+              In jeder Anwendung ist ein Vorgespräch und ein kurzes Nachgespräch
+              enthalten.
+            </SyledList>
+
+            <SyledList>
+              Die Anwendungskosten sind bar zu zahlen. Paypal möglich.{" "}
+            </SyledList>
+            <SyledList>
+              {" "}
+              Im Verhinderungsfall bitte ich, Termine spätestens 24 Stunden
+              vorher abzusagen, da sie ansonsten in voller Höhe verrechnet
+              werden.
+            </SyledList>
+          </ul>
         </StyledParagraph>
       </StyledContainer>
       <StyledSection>
@@ -49,18 +62,21 @@ const StyledHeader = styled.h1`
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   background-color: #c7d4b0;
+  padding: 30px;
+  #prices {
+    scroll-margin-top: 100px;
+  }
 `;
 const StyledParagraph = styled.p`
-  text-align: center;
   font-size: 1.1rem;
   line-height: 2.3rem;
-
-  color: black;
-  font-weight: lighter;
+  margin: 30px;
+  text-align: center;
+  ${media("<=phone")} {
+    text-align: left;
+    margin: auto;
+  }
 `;
 const StyledSection = styled.div`
   display: flex;
@@ -70,4 +86,11 @@ const StyledParagraphTwo = styled.p`
   font-size: 1.1rem;
   line-height: 2.3rem;
   margin: 30px;
+`;
+const BoldText = styled.span`
+  font-weight: 600;
+  font-size: 1.2rem;
+`;
+const SyledList = styled.li`
+  list-style: none;
 `;

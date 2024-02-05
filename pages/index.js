@@ -6,6 +6,7 @@ import React from "react";
 import Main from "../components/Main/Main.js";
 import Infos from "../components/Infos/Infos.js";
 import media from "css-in-js-media";
+import Contact from "../components/Contact/Contact.js";
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
             alt="massage"
             layout="fill"
             objectFit="cover"
+            style={{
+              objectPosition: "top",
+            }}
           />
           <ImageText className="fade-in-text">
             Sanfte Impulse <br />
@@ -28,7 +32,16 @@ export default function Home() {
 
       <Intro />
       <Main />
+      <StyledContainer>
+        <Image src="/massageroom.jpeg" width={700} height={500} />
+        <Image src="/living.jpeg" width={700} height={500} />
+      </StyledContainer>
       <Infos />
+      <StyledLine>
+        <StyledText id="contact">Kontakt</StyledText>
+      </StyledLine>
+
+      <Contact />
     </>
   );
 }
@@ -39,23 +52,20 @@ const StyledNavigation = styled(Navigation)`
   top: 0;
   left: 0;
   width: 100%;
-  ${media("<=phone")} {
-  }
 `;
 const ImageContainer = styled.div`
-  position: relative;
   width: 100%;
-  height: 60vh;
-  // margin-top: 120px;
+  height: calc(100vh - 95px);
+
+  padding-top: 95px;
   z-index: -1;
-  ${media("<=phone")} {
-  }
 `;
 
 const StyledImage = styled.div`
-  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
   height: 100%;
-  margin-top: 0;
+  position: relative;
 `;
 
 const fadeIn = keyframes`
@@ -66,10 +76,10 @@ const fadeIn = keyframes`
 const ImageText = styled.h1`
   position: absolute;
 
-  top: 44%;
-  left: 44%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  color: #eaeaea;
+  color: beige;
 
   &.fade-in-text {
     line-height: 1.5;
@@ -77,5 +87,63 @@ const ImageText = styled.h1`
     font-size: 1.8rem;
 
     animation: ${fadeIn} 5s;
+  }
+  ${media("<=phone")} {
+    position: absolute;
+
+  top: 50%;
+  left: 50%;
+    &.fade-in-text {
+      line-height: 1.5;
+      text-align: center;
+      font-size: 1.3rem;
+
+      animation: ${fadeIn} 5s;
+    }
+  
+`;
+const StyledLine = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 30px 80px 20px 80px;
+  color: #000;
+  &:before,
+  &:after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #000;
+  }
+  &:before {
+    margin-right: 2em;
+  }
+  &:after {
+    margin-left: 2em;
+  }
+`;
+const StyledText = styled.h1`
+  font-size: 1.7rem;
+  color: #000;
+  margin: 0 20px;
+  #contact {
+    scroll-margin-top: 10px;
+  }
+`;
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 15px;
+
+  ${media("<=phone")} {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 20px;
+    gap: 60px;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
 `;

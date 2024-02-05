@@ -9,7 +9,7 @@ export default function Main() {
       <StyledWrapper>
         <StyledSection>
           <StyledContainer>
-            <StyledImage src="/technik.jpeg" layout="fill" objectFit="cover" />
+            <StyledImage src="/move.jpg" layout="fill" objectFit="cover" />
           </StyledContainer>
           <StyledContent>
             <StyledTitle>ÜBERBLICK</StyledTitle>
@@ -24,6 +24,7 @@ export default function Main() {
             </StyledParagraph>
           </StyledContent>
         </StyledSection>
+
         <StyledCorridor />
         <StyledSectionReverse>
           <StyledContent>
@@ -63,7 +64,7 @@ export default function Main() {
             </StyledParagraph>
           </StyledContent>
           <StyledContainer>
-            <StyledImage src="/move.jpg" layout="fill" objectFit="cover" />
+            <StyledImage src="/technik.jpeg" layout="fill" objectFit="cover" />
           </StyledContainer>
         </StyledSectionReverse>
         <StyledSectionThree>
@@ -103,12 +104,17 @@ const StyledWrapper = styled.div`
   max-width: 1280px;
   margin: auto;
   margin-top: 80px;
+
+  ${media("<=phone")} {
+   margin: 15px
 `;
 
 const StyledSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  width: 100%;
 
   ${media("<=phone")} {
     display: flex;
@@ -120,6 +126,7 @@ const StyledSection = styled.section`
 const StyledContainer = styled.div`
   position: relative;
   width: 45%;
+  height: 100%;
   height: 500px;
 
   ${media("<=phone")} {
@@ -153,10 +160,18 @@ const StyledImage = styled(Image)`
   position: relative;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   z-index: 0;
+  ${media("<=phone")} {
+  }
 `;
 
 const StyledContent = styled.div`
   width: 45%;
+
+  ${media("<=phone")} {
+    width: 100%;
+    text-align: left;
+    margin: 20px;
+  }
 `;
 
 const StyledTitle = styled.h1`
@@ -167,6 +182,11 @@ const StyledTitle = styled.h1`
   font-weight: lighter;
   color: #9e8d8d;
   hyphens: auto;
+  ${media("<=phone")} {
+    font-size: 1.5em;
+    color: Black;
+    text-align: center;
+  }
 `;
 
 const StyledParagraph = styled.p`

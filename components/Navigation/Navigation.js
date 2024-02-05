@@ -9,10 +9,10 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: "Die Bowen-Technik", href: "/bowen" },
-    { name: "Preise & Ablauf", href: "/prices" },
-    { name: "Über mich", href: "/About" },
-    { name: "Kontakt", href: "/contact" },
+    { name: "Die Bowen-Technik", href: "#bowen-technik" },
+    { name: "Preise & Ablauf", href: "#prices" },
+    { name: "Über mich", href: "/About", id: "about" },
+    { name: "Kontakt", href: "#contact" },
   ];
   function handleToggle() {
     setIsOpen(!isOpen);
@@ -20,7 +20,7 @@ export default function Navigation() {
 
   return (
     <NavContainer>
-      <Image src="lotus.svg" alt="lotus" width={75} height={75} />
+      <StyledImage src="lotus.svg" alt="lotus" width={75} height={75} />
       <Burger onClick={handleToggle}>
         <div />
         <div />
@@ -29,7 +29,9 @@ export default function Navigation() {
       <StyledContainer isOpen={isOpen}>
         {links.map((link) => (
           <StyledList key={link.name}>
-            <StyledLink href={link.href}>{link.name}</StyledLink>
+            <StyledLink href={link.href} onClick={() => setIsOpen(false)}>
+              {link.name}
+            </StyledLink>
           </StyledList>
         ))}
       </StyledContainer>
@@ -46,6 +48,8 @@ const NavContainer = styled.nav`
   position: fixed;
   padding: 10px 50px;
   z-index: 1;
+  p: 100px;
+  }
 `;
 const Burger = styled.div`
   width: 0.5rem;
@@ -84,11 +88,11 @@ const StyledContainer = styled.ul`
     display: ${(props) => (props.isOpen ? "flex" : "none")};
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 80px;
     right: 0;
     gap: 0;
     width: 100%;
-    background-color: #ede6d8;
+    background-color: #cad4c9;
     padding: 10px 0;
   }
 `;
@@ -115,5 +119,11 @@ const StyledLink = styled(Link)`
     &:hover {
     color: #ffffff;
     transition: all 0.3s ease-in-out;
+  }
+`;
+const StyledImage = styled(Image)`
+  ${media("<=phone")} {
+    position: relative;
+    left: 36%;
   }
 `;

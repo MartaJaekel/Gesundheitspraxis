@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import React from "react";
 import Image from "next/image";
+import media from "css-in-js-media";
+
 export default function Intro() {
   return (
     <StyledContainer>
@@ -14,7 +16,7 @@ export default function Intro() {
         Du bist es Dir Wert!
       </StyledParagraph>
       <Image src="/flower.png" width={50} height={50} />
-      <StyledText>
+      <StyledText id="bowen-technik">
         DIE BOWEN-TECHNIK <br />
         Sanft - Effektiv - Ganzheitlich
       </StyledText>
@@ -27,6 +29,15 @@ const StyledParagraph = styled.p`
   line-height: 2.3rem;
   font-family: "Open Sans", sans-serif;
   color: #9e8d8d;
+
+  ${media("<=phone")} {
+    text-align: center;
+    line-height: 2.3rem;
+    font-family: "Open Sans", sans-serif;
+    color: #9e8d8d;
+    margin: 39px;
+    font-size: 1.1rem;
+  }
 `;
 const StyledContainer = styled.div`
   display: flex;
@@ -34,6 +45,8 @@ const StyledContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+   #bowen-technik {
+    scroll-margin-top: 110px;
 `;
 const StyledText = styled.h1`
   font-size: 1.6rem;
@@ -42,4 +55,9 @@ const StyledText = styled.h1`
 
   font-family: optima, sans-serif;
   color: #9e8d8d;
+
+  ${media("<=phone")} {
+    font-size: 1.3rem;
+    margin-top: 80px;
+  }
 `;

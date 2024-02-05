@@ -6,4 +6,12 @@ body {
   padding: 0;
   font-family: "Recoleta Alt Light", system-ui;
   overflow-wrap: break-word;
+  scroll-behavior: smooth;
+
+  #prices,
+  #about,
+  #contact,
+  #contact {
+    scroll-margin-top: 100px;
+  }
 }
