@@ -7,6 +7,7 @@ import Main from "../components/Main/Main.js";
 import Infos from "../components/Infos/Infos.js";
 import media from "css-in-js-media";
 import Contact from "../components/Contact/Contact.js";
+import Footer from "../components/Footer/Footer.js";
 
 export default function Home() {
   return (
@@ -32,16 +33,23 @@ export default function Home() {
 
       <Intro />
       <Main />
-      <StyledContainer>
-        <Image src="/massageroom.jpeg" width={700} height={500} />
-        <Image src="/living.jpeg" width={700} height={500} />
-      </StyledContainer>
+      <StyledScroll>
+        <Image
+          src="/massageroom.jpeg"
+          alt="massageroom"
+          width={700}
+          height={500}
+        />
+        <Image src="/living.jpeg" alt="living" width={700} height={500} />
+      </StyledScroll>
+
       <Infos />
       <StyledLine>
         <StyledText id="contact">Kontakt</StyledText>
       </StyledLine>
 
       <Contact />
+      <Footer />
     </>
   );
 }
@@ -129,17 +137,9 @@ const StyledText = styled.h1`
     scroll-margin-top: 10px;
   }
 `;
-const StyledContainer = styled.div`
+const StyledScroll = styled.div`
   display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-left: 15px;
-
   ${media("<=phone")} {
-    display: flex;
-    flex-direction: column;
-    margin: 100px 20px;
-    gap: 60px;
     img {
       width: 100%;
       height: auto;

@@ -20,7 +20,10 @@ export default function Navigation() {
 
   return (
     <NavContainer>
-      <StyledImage src="lotus.svg" alt="lotus" width={75} height={75} />
+      <SyledFigure>
+        <StyledImage src="lotus.svg" alt="lotus" width={75} height={75} />
+        <StyledCaption>BOWEN-PRAXIS Simona Jäkel</StyledCaption>
+      </SyledFigure>
       <Burger onClick={handleToggle}>
         <div />
         <div />
@@ -59,6 +62,14 @@ const Burger = styled.div`
   display: none;
 
   ${media("<=phone")} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 10px; /* Adjust this value to move the burger button up or down */
+    right: 40px;
+  }
+  ${media("<=tablet", ">phone")} {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -123,7 +134,25 @@ const StyledLink = styled(Link)`
 `;
 const StyledImage = styled(Image)`
   ${media("<=phone")} {
-    position: relative;
-    left: 36%;
+  }
+`;
+const StyledCaption = styled.figcaption`
+  font-size: 1.5rem;
+  font-family: "Reforma";
+  font-style: italic;
+  font-weight: lighter;
+  ${media("<=phone")} {
+    font-size: 1.2rem;
+  }
+`;
+const SyledFigure = styled.figure`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ${media("<=phone")} {
+    margin: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 `;

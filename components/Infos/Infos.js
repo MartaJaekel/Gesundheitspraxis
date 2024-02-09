@@ -6,25 +6,31 @@ export default function Infos() {
     <>
       <StyledHeader id="prices">Preise</StyledHeader>
       <StyledContainer>
-        <StyledParagraph>
-          <BoldText> Eine Bowen-Anwendung:</BoldText> 60,-Euro für ca. 60 Min.
-          <ul>
-            <SyledList>
+        <BoldText> Eine Bowen-Anwendung:</BoldText>{" "}
+        <h3>
+          <strong>60,-Euro </strong>für ca. 60 Min.
+        </h3>
+        <StyledWrapper>
+          <SyledList>
+            <StyledParagraph>
               In jeder Anwendung ist ein Vorgespräch und ein kurzes Nachgespräch
               enthalten.
-            </SyledList>
+            </StyledParagraph>
+          </SyledList>
 
-            <SyledList>
+          <SyledList>
+            <StyledParagraph>
               Die Anwendungskosten sind bar zu zahlen. Paypal möglich.{" "}
-            </SyledList>
-            <SyledList>
-              {" "}
+            </StyledParagraph>
+          </SyledList>
+          <SyledList>
+            <StyledParagraph>
               Im Verhinderungsfall bitte ich, Termine spätestens 24 Stunden
               vorher abzusagen, da sie ansonsten in voller Höhe verrechnet
               werden.
-            </SyledList>
-          </ul>
-        </StyledParagraph>
+            </StyledParagraph>
+          </SyledList>
+        </StyledWrapper>
       </StyledContainer>
       <StyledSection>
         <StyledHeader>Ablauf</StyledHeader>
@@ -93,4 +99,7 @@ const BoldText = styled.span`
 `;
 const SyledList = styled.li`
   list-style: none;
+`;
+const StyledWrapper = styled.div`
+  text-align: left;
 `;

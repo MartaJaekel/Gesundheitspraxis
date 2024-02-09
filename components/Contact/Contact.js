@@ -8,11 +8,11 @@ export default function Contact() {
       <StyledContainer>
         <StyledInfo>
           <h2>Simona Jäkel</h2>
-          <p>Telefon: +49 (0)177 2357658</p>
-          <p>Email:simonajaekel@gmail.com</p>
+          <a href="tel:6031112298p000">Telefon: +49 (0) 15788297240</a>
+          <p>Email: info@bowen-praxis.de</p>
           <h3>Adresse</h3>
           <p>Weichselpl. 4</p>
-          <p>12045 Berlin-Neukölln</p>
+          <p>12045 Berlin</p>
         </StyledInfo>
         <StyledForm
           action="https://formsubmit.co/e3cd97bc2ac034008a8ceb35e12efc17"
@@ -87,10 +87,6 @@ const StyledContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   column-gap: 500px;
-
-  #contact {
-    scroll-margin-top: 10px;
-  }
 
   ${media("<=phone")} {
     display: flex;

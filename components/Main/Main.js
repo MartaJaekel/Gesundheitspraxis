@@ -28,17 +28,8 @@ export default function Main() {
         <StyledCorridor />
         <StyledSectionReverse>
           <StyledContent>
-            <StyledTitle>VORTEILE UND ANWENDUNGSBEREICHE</StyledTitle>
-            <StyledParagraph>
-              Bowtech aktiviert das Lymphsystem und reguliert das
-              Herz-Kreislaufsystem, sowie das Nerven- und Hormonsystem. Es wurde
-              auch beobachtet, dass sie zu einer Neuausrichtung des
-              Bewegungsapparats führen kann. Darüber hinaus bringt sie das
-              Energiesystem wieder ins Gleichgewicht und kann Prozesse im
-              emotionalen und psychischen Bereich anstoßen. Durch die Sanftheit
-              kann Bowtech bei Menschen jeden Alters angewendet werden: Vom
-              Neugeborenen über Schwangere, bis ins hohe Alter.
-            </StyledParagraph>
+            <StyledTitle>ANWENDUNGSBEREICHE</StyledTitle>
+
             <StyledParagraph>
               Die Bowen-Technik kann helfen bei:
             </StyledParagraph>
@@ -96,11 +87,17 @@ export default function Main() {
             <StyledImage src="/water.jpeg" layout="fill" objectFit="cover" />
           </StyledContainer>
         </StyledSectionThree>
+        <StyledQuote>
+          "Die Kraft die den Körper erschaffen hat,
+          <br /> ist auch fähig den Körper zu heilen."
+          <StyledName> J. Dispenza</StyledName>
+        </StyledQuote>
       </StyledWrapper>
     </>
   );
 }
 const StyledWrapper = styled.div`
+
   max-width: 1280px;
   margin: auto;
   margin-top: 80px;
@@ -120,6 +117,7 @@ const StyledSection = styled.section`
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
+    margin-bottom: 20px;
   }
 `;
 
@@ -131,6 +129,7 @@ const StyledContainer = styled.div`
 
   ${media("<=phone")} {
     width: 100%;
+    height: 300px;
   }
 `;
 
@@ -143,6 +142,7 @@ const StyledSectionReverse = styled(StyledSection)`
   ${media("<=phone")} {
     display: flex;
     flex-direction: column;
+    margin-top: -60px;
   }
 `;
 const StyledSectionThree = styled(StyledSection)`
@@ -160,8 +160,6 @@ const StyledImage = styled(Image)`
   position: relative;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   z-index: 0;
-  ${media("<=phone")} {
-  }
 `;
 
 const StyledContent = styled.div`
@@ -208,4 +206,22 @@ const StyledUl = styled.ul`
 
 const StyledCorridor = styled.div`
   height: 100px; // Adjust as needed
+`;
+const StyledQuote = styled.p`
+display: flex;
+flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding: 30px;
+    line-height: 2.3rem;
+    font-size: 1.5rem;
+    opacity: 2;
+  transition: opacity 2s ease-in-out;
+  background-color: #f4f1e9;
+ 
+}`;
+const StyledName = styled.h1`
+  font-size: 1.2rem;
 `;
