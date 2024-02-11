@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function Footer() {
   return (
     <StyledContainer>
-      <a href="#">
+      <a href="/impressum">
         <p>Impressum</p>
       </a>
       <a href="#">

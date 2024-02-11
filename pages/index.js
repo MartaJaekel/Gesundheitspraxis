@@ -2,14 +2,27 @@ import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 import Navigation from "../components/Navigation/Navigation.js";
 import Intro from "../components/Intro/Intro.js";
-import React from "react";
+
 import Main from "../components/Main/Main.js";
 import Infos from "../components/Infos/Infos.js";
 import media from "css-in-js-media";
 import Contact from "../components/Contact/Contact.js";
 import Footer from "../components/Footer/Footer.js";
+import { useState } from "react";
 
 export default function Home() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = ["/massageroom.jpeg", "/living.jpeg"];
+  const scrollLeft = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const scrollRight = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
   return (
     <>
       <StyledNavigation />
@@ -33,16 +46,22 @@ export default function Home() {
 
       <Intro />
       <Main />
-      <StyledScroll>
-        <Image
-          src="/massageroom.jpeg"
-          alt="massageroom"
-          width={700}
-          height={500}
-        />
-        <Image src="/living.jpeg" alt="living" width={700} height={500} />
-      </StyledScroll>
-
+      <ScrollContainer>
+        <StyledScroll>
+          <ImageWrapper>
+            <Image
+              src={images[currentImageIndex]}
+              alt="slideshow"
+              width={700}
+              height={500}
+            />
+          </ImageWrapper>
+        </StyledScroll>
+        <CustomNav>
+          <ArrowLeft onClick={scrollLeft}>{"<"}</ArrowLeft>
+          <ArrowRight onClick={scrollRight}>{">"}</ArrowRight>
+        </CustomNav>
+      </ScrollContainer>
       <Infos />
       <StyledLine>
         <StyledText id="contact">Kontakt</StyledText>
@@ -137,13 +156,56 @@ const StyledText = styled.h1`
     scroll-margin-top: 10px;
   }
 `;
+const ScrollContainer = styled.div`
+  position: relative;
+  width: 100%;
+`;
 const StyledScroll = styled.div`
+  width: 100%;
+  overflow-x: auto;
   display: flex;
-  ${media("<=phone")} {
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap; /* Ensure the images stay in a single row */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  &::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome and Safari */
   }
+`;
+
+const CustomNav = styled.div`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+`;
+
+const ImageWrapper = styled.div`
+  flex-shrink: 0;
+  margin-right: 10px; /* Adjust spacing between images */
+  border: 2px solid #000;
+`;
+
+const Arrow = styled.button`
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+`;
+
+const ArrowLeft = styled(Arrow)`
+  margin-right: 10px; /* Adjust spacing between arrows */
+  color: black;
+`;
+
+const ArrowRight = styled(Arrow)`
+  margin-left: 10px; /* Adjust spacing between arrows */
 `;
