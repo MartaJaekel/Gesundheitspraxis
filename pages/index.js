@@ -1,131 +1,211 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Image from "next/image";
+import styled, { keyframes } from "styled-components";
+import Navigation from "../components/Navigation/Navigation.js";
+import Intro from "../components/Intro/Intro.js";
+
+import Main from "../components/Main/Main.js";
+import Infos from "../components/Infos/Infos.js";
+import media from "css-in-js-media";
+import Contact from "../components/Contact/Contact.js";
+import Footer from "../components/Footer/Footer.js";
+import { useState } from "react";
 
 export default function Home() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = ["/massageroom.jpeg", "/living.jpeg"];
+  const scrollLeft = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const scrollRight = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <StyledNavigation />
+      <ImageContainer>
+        <StyledImage>
+          <Image
+            src="/massage.jpeg"
+            alt="massage"
+            layout="fill"
+            objectFit="cover"
+            style={{
+              objectPosition: "top",
+            }}
+          />
+          <ImageText className="fade-in-text">
+            Sanfte Impulse <br />
+            für innere Balance
+          </ImageText>
+        </StyledImage>
+      </ImageContainer>
 
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Intro />
+      <Main />
+      <ScrollContainer>
+        <StyledScroll>
+          <ImageWrapper>
+            <Image
+              src={images[currentImageIndex]}
+              alt="slideshow"
+              width={700}
+              height={500}
+            />
+          </ImageWrapper>
+        </StyledScroll>
+        <CustomNav>
+          <ArrowLeft onClick={scrollLeft}>{"<"}</ArrowLeft>
+          <ArrowRight onClick={scrollRight}>{">"}</ArrowRight>
+        </CustomNav>
+      </ScrollContainer>
+      <Infos />
+      <StyledLine>
+        <StyledText id="contact">Kontakt</StyledText>
+      </StyledLine>
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family:
-            Menlo,
-            Monaco,
-            Lucida Console,
-            Liberation Mono,
-            DejaVu Sans Mono,
-            Bitstream Vera Sans Mono,
-            Courier New,
-            monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family:
-            -apple-system,
-            BlinkMacSystemFont,
-            Segoe UI,
-            Roboto,
-            Oxygen,
-            Ubuntu,
-            Cantarell,
-            Fira Sans,
-            Droid Sans,
-            Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+      <Contact />
+      <Footer />
+    </>
   );
 }
+
+const StyledNavigation = styled(Navigation)`
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+`;
+const ImageContainer = styled.div`
+  width: 100%;
+  height: calc(100vh - 95px);
+
+  padding-top: 95px;
+  z-index: -1;
+`;
+
+const StyledImage = styled.div`
+  max-width: 100%;
+  object-fit: contain;
+  height: 100%;
+  position: relative;
+`;
+
+const fadeIn = keyframes`
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+`;
+
+const ImageText = styled.h1`
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: beige;
+
+  &.fade-in-text {
+    line-height: 1.5;
+    text-align: center;
+    font-size: 1.8rem;
+
+    animation: ${fadeIn} 5s;
+  }
+  ${media("<=phone")} {
+    position: absolute;
+
+  top: 50%;
+  left: 50%;
+    &.fade-in-text {
+      line-height: 1.5;
+      text-align: center;
+      font-size: 1.3rem;
+
+      animation: ${fadeIn} 5s;
+    }
+  
+`;
+const StyledLine = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 30px 80px 20px 80px;
+  color: #000;
+  &:before,
+  &:after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #000;
+  }
+  &:before {
+    margin-right: 2em;
+  }
+  &:after {
+    margin-left: 2em;
+  }
+`;
+const StyledText = styled.h1`
+  font-size: 1.7rem;
+  color: #000;
+  margin: 0 20px;
+  #contact {
+    scroll-margin-top: 10px;
+  }
+`;
+const ScrollContainer = styled.div`
+  position: relative;
+  width: 100%;
+`;
+const StyledScroll = styled.div`
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap; /* Ensure the images stay in a single row */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  &::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome and Safari */
+  }
+`;
+
+const CustomNav = styled.div`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+`;
+
+const ImageWrapper = styled.div`
+  flex-shrink: 0;
+  margin-right: 10px; /* Adjust spacing between images */
+  border: 2px solid #000;
+`;
+
+const Arrow = styled.button`
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+`;
+
+const ArrowLeft = styled(Arrow)`
+  margin-right: 10px; /* Adjust spacing between arrows */
+  color: black;
+`;
+
+const ArrowRight = styled(Arrow)`
+  margin-left: 10px; /* Adjust spacing between arrows */
+`;
