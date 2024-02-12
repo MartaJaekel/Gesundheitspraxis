@@ -2,10 +2,10 @@ import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 import Navigation from "../components/Navigation/Navigation.js";
 import Intro from "../components/Intro/Intro.js";
-
+import media from "css-in-js-media";
 import Main from "../components/Main/Main.js";
 import Infos from "../components/Infos/Infos.js";
-import media from "css-in-js-media";
+
 import Contact from "../components/Contact/Contact.js";
 import Footer from "../components/Footer/Footer.js";
 import { useState } from "react";
@@ -102,7 +102,7 @@ const fadeIn = keyframes`
 
 const ImageText = styled.h1`
   position: absolute;
-
+font-family:"Recoleta Alt Light";
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -147,9 +147,13 @@ const StyledLine = styled.div`
   &:after {
     margin-left: 2em;
   }
+  ${media("<=phone")} {
+    margin-bottom: 10px;
+  }
 `;
 const StyledText = styled.h1`
-  font-size: 1.7rem;
+  font-size: 1.4rem;
+  font-family: "Recoleta Alt Light";
   color: #000;
   margin: 0 20px;
   #contact {
@@ -164,6 +168,7 @@ const StyledScroll = styled.div`
   width: 100%;
   overflow-x: auto;
   display: flex;
+
   flex-direction: row;
   justify-content: center;
   flex-wrap: nowrap; /* Ensure the images stay in a single row */
@@ -186,10 +191,17 @@ const CustomNav = styled.div`
 
 const ImageWrapper = styled.div`
   flex-shrink: 0;
-  margin-right: 10px; /* Adjust spacing between images */
-  border: 2px solid #000;
-`;
+  scroll-snap-align: start;
+  transform: translateX(100%); // Start from off the right edge of the screen
+  transition: transform 1s ease-out; // Transition the transform property over 1 second
+  animation: slideIn 1s forwards;
 
+  @keyframes slideIn {
+    to {
+      transform: translateX(0); // End at the normal position
+    }
+  }
+`;
 const Arrow = styled.button`
   background: transparent;
   border: none;
@@ -203,9 +215,10 @@ const Arrow = styled.button`
 
 const ArrowLeft = styled(Arrow)`
   margin-right: 10px; /* Adjust spacing between arrows */
-  color: black;
+  color: #573838;
 `;
 
 const ArrowRight = styled(Arrow)`
   margin-left: 10px; /* Adjust spacing between arrows */
+  color: #573838;
 `;

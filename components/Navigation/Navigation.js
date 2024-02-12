@@ -51,7 +51,9 @@ const NavContainer = styled.nav`
   position: fixed;
   padding: 10px 50px;
   z-index: 1;
-  p: 100px;
+
+  ${media("<=tablet")} {
+    display: block;
   }
 `;
 const Burger = styled.div`
@@ -62,14 +64,6 @@ const Burger = styled.div`
   display: none;
 
   ${media("<=phone")} {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: absolute;
-    top: 10px; /* Adjust this value to move the burger button up or down */
-    right: 40px;
-  }
-  ${media("<=tablet", ">phone")} {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -106,6 +100,9 @@ const StyledContainer = styled.ul`
     background-color: #cad4c9;
     padding: 10px 0;
   }
+  ${media("<=tablet")} {
+    width: 100%;
+  }
 `;
 
 const StyledList = styled.li`
@@ -116,6 +113,7 @@ const StyledList = styled.li`
   transition: all 0.3s ease-in-out;
   padding: 10px;
   display: inline;
+  font-family: "Recoleta Alt Light";
 `;
 
 const StyledLink = styled(Link)`
@@ -150,7 +148,7 @@ const SyledFigure = styled.figure`
   flex-direction: column;
   align-items: center;
   ${media("<=phone")} {
-    margin: 0 25px;
+    margin: 5px 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;

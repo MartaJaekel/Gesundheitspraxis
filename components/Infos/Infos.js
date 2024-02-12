@@ -4,36 +4,61 @@ import media from "css-in-js-media";
 export default function Infos() {
   return (
     <>
-      <StyledHeader id="prices">Preise</StyledHeader>
-      <StyledContainer>
-        <BoldText> Eine Bowen-Anwendung:</BoldText>{" "}
-        <h3>
-          <strong>60,-Euro </strong>für ca. 60 Min.
-        </h3>
+      <StyledLine>
+        <StyledHeader id="prices">Preise</StyledHeader>
+      </StyledLine>
+      <StyledPriceContainer>
         <StyledWrapper>
-          <SyledList>
-            <StyledParagraph>
-              In jeder Anwendung ist ein Vorgespräch und ein kurzes Nachgespräch
-              enthalten.
-            </StyledParagraph>
-          </SyledList>
-
-          <SyledList>
-            <StyledParagraph>
-              Die Anwendungskosten sind bar zu zahlen. Paypal möglich.{" "}
-            </StyledParagraph>
-          </SyledList>
-          <SyledList>
-            <StyledParagraph>
-              Im Verhinderungsfall bitte ich, Termine spätestens 24 Stunden
-              vorher abzusagen, da sie ansonsten in voller Höhe verrechnet
-              werden.
-            </StyledParagraph>
-          </SyledList>
+          <StyledLeftSection>
+            <StyledTitle>Bowen Classic</StyledTitle>
+            <StyledDiv1>
+              <span>45 Min</span>
+              <span>60 Euro</span>
+            </StyledDiv1>
+            <StyledTitle>Bowen Ganzkörper (inkl. Kopf und Füße)</StyledTitle>
+            <StyledDiv1>
+              <span>45 Min</span>
+              <span>60 Euro</span>
+            </StyledDiv1>
+            <StyledTitle>Bowen für Kopf-Nacken-Rücken</StyledTitle>
+            <StyledDiv1>
+              <span>45 Min</span>
+              <span>60 Euro</span>
+            </StyledDiv1>
+            <StyledTitle>Bowen für Arme-Schultern-Rücken</StyledTitle>
+            <StyledDiv1>
+              <span>45 Minuten</span>
+              <span>60 Euro</span>
+            </StyledDiv1>
+          </StyledLeftSection>
+          <StyledRightSection>
+            <StyledTitle>Bowen für Becken-Beine-Füsse</StyledTitle>
+            <StyledDiv1>
+              <span>45 Minuten</span>
+              <span>60 Euro</span>
+            </StyledDiv1>
+            <StyledTitle>Bowen für die Schwangerschaft</StyledTitle>
+            <StyledDiv1>
+              <span>45 Minuten</span>
+              <span>60 Euro</span>
+            </StyledDiv1>
+            <StyledTitle>Bowen für die Geburtsvorbereitung</StyledTitle>
+            <StyledDiv1>
+              <span>45 Minuten</span>
+              <span>60 Euro</span>
+            </StyledDiv1>
+            <StyledTitle>Bowen für hormonelle Balance</StyledTitle>
+            <StyledDiv1>
+              <span>45 Minuten</span>
+              <span>60 Euro</span>
+            </StyledDiv1>
+          </StyledRightSection>
         </StyledWrapper>
-      </StyledContainer>
+      </StyledPriceContainer>
       <StyledSection>
-        <StyledHeader>Ablauf</StyledHeader>
+        <StyledLine>
+          <StyledHeader>Ablauf</StyledHeader>
+        </StyledLine>
         <StyledParagraphTwo>
           Die Bowtech-Sitzung findet in der Regel liegend statt, kann aber auch
           im Sitzen durchgeführt werden. Auf der Haut oder über leichte Kleidung
@@ -57,49 +82,98 @@ export default function Infos() {
     </>
   );
 }
+const StyledLine = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 30px 80px 20px 80px;
+  color: #000;
+  &:before,
+  &:after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #000;
+  }
+  &:before {
+    margin-right: 2em;
+  }
+  &:after {
+    margin-left: 2em;
+  }
+`;
 const StyledHeader = styled.h1`
   font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
   margin: 50px 0px;
   color: #000;
+  font-family: "Recoleta Alt Light";
 `;
 
-const StyledContainer = styled.div`
+const StyledPriceContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #c7d4b0;
-  padding: 30px;
-  #prices {
-    scroll-margin-top: 100px;
+
+ 
   }
 `;
-const StyledParagraph = styled.p`
-  font-size: 1.1rem;
-  line-height: 2.3rem;
-  margin: 30px;
-  text-align: center;
-  ${media("<=phone")} {
-    text-align: left;
-    margin: auto;
-  }
-`;
+
 const StyledSection = styled.div`
   display: flex;
   flex-direction: column;
 `;
 const StyledParagraphTwo = styled.p`
   font-size: 1.1rem;
-  line-height: 2.3rem;
+  line-height: 1.8rem;
   margin: 30px;
 `;
-const BoldText = styled.span`
-  font-weight: 600;
-  font-size: 1.2rem;
-`;
-const SyledList = styled.li`
-  list-style: none;
-`;
+
 const StyledWrapper = styled.div`
-  text-align: left;
+  display: flex;
+  flex-direction: row;
+  background-color: #cad4c9;
+  justify-content: space-evenly;
+  gap: 50px;
+  padding: 40px 100px;
+  margin: 2px 0px;
+  ${media("<=phone")} {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+  }
+
+  
+  ${media("<=tablet")} {
+    display: flex;
+    flex-direction: column;
+`;
+const StyledLeftSection = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const StyledRightSection = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const StyledDiv1 = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  gap: 170px;
+  border-bottom: 1px solid white;
+  ${media("<=phone")} {
+    display: flex;
+    flex-direction: row;
+  }
+`;
+const StyledTitle = styled.h2`
+  text-align: center;
+  color: darkbrown;
+  font-family: bodoni, serif;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  hyphens: auto;
 `;
