@@ -11,7 +11,7 @@ export default function Navigation() {
   const links = [
     { name: "Bowen-Technik", href: "#bowen-technik" },
     { name: "Preise & Ablauf", href: "#prices" },
-    { name: "Über mich", href: "/About", id: "about" },
+    { name: "Über mich", href: "about" },
     { name: "Kontakt", href: "#contact" },
   ];
   function handleToggle() {

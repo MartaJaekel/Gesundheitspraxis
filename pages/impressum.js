@@ -32,13 +32,14 @@ export default function Impressum() {
           <br />
           Ruhrallee 92, 44139 Dortmund
         </p>
-        <h3>Geltungsbereich des Versicherungsschutzes:</h3>
+
         <br />
         <h2>Hinweise zur Website</h2>
         <h3>Urheberrechtliche Hinweise</h3>
         <p>
           Simona Jäkel
           <br />
+          Web Entwickler Marta Jäkel
         </p>
         <p></p>
         <h2>Information gemäß § 36 VSBG</h2>
