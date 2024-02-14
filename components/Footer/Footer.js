@@ -12,11 +12,13 @@ export default function Footer() {
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: #ede6d8;
-  justify-content: space-evenly;
+
+  justify-content: center;
+  gap: 50px;
   padding: 20px;
-  background-color: #cad4c9;
+  background-color: #837373;
 `;
 const StyledLink = styled.a`
   text-decoration: none;
+  color: #f3ebeb;
 `;

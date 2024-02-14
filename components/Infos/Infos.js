@@ -12,27 +12,27 @@ export default function Infos() {
           <StyledLeftSection>
             <StyledTitle>Bowen Classic</StyledTitle>
             <StyledDiv1>
-              <span>45 Min</span>
+              <span>45 Minuten</span>
               <span>60 Euro</span>
             </StyledDiv1>
-            <StyledTitle>Bowen Ganzkörper (inkl. Kopf und Füße)</StyledTitle>
+            <StyledTitle>Ganzkörper (inkl. Kopf und Füße)</StyledTitle>
+            <StyledDiv1>
+              <span>45 Minuten</span>
+              <span>60 Euro</span>
+            </StyledDiv1>
+            <StyledTitle>Kopf-Nacken-Rücken</StyledTitle>
             <StyledDiv1>
               <span>45 Min</span>
               <span>60 Euro</span>
             </StyledDiv1>
-            <StyledTitle>Bowen für Kopf-Nacken-Rücken</StyledTitle>
-            <StyledDiv1>
-              <span>45 Min</span>
-              <span>60 Euro</span>
-            </StyledDiv1>
-            <StyledTitle>Bowen für Arme-Schultern-Rücken</StyledTitle>
+            <StyledTitle>Arme-Schultern-Rücken</StyledTitle>
             <StyledDiv1>
               <span>45 Minuten</span>
               <span>60 Euro</span>
             </StyledDiv1>
           </StyledLeftSection>
           <StyledRightSection>
-            <StyledTitle>Bowen für Becken-Beine-Füsse</StyledTitle>
+            <StyledTitle>Becken-Beine-Füsse</StyledTitle>
             <StyledDiv1>
               <span>45 Minuten</span>
               <span>60 Euro</span>
@@ -69,14 +69,15 @@ export default function Infos() {
           aktiviert wird und ausreichend Flüssigkeit benötigt. Zudem sollte
           Überanstrengung, Sauna oder andere Wärme oder Kälteanwendungen
           vermieden werden, sowie weitere manuelle Behandlungen um einige Tage
-          verschoben werden. Der Körper soll sich die Zeit nehmen können, um
-          angestoßene Prozesse wirken zu lassen. Für den weiteren Tag nach der
-          Anwendung ist darauf zu achten nicht länger als 30 Minuten am Stück zu
-          sitzen, um den Blut und Lymphfluss positiv zu beeinflussen. Kurzes
-          aufstehen und wenige Schritte genügen. Nach 2 bis 4 Tagen ist häufig
-          eine deutliche Veränderung wahrnehmbar. Wie viele Anwendungen der
-          Körper benötigt um wieder in die Balance zu kommen ist sehr
-          individuell.
+          verschoben werden.
+          <br />
+          <br /> Der Körper soll sich die Zeit nehmen können, um angestoßene
+          Prozesse wirken zu lassen. Für den weiteren Tag nach der Anwendung ist
+          darauf zu achten nicht länger als 30 Minuten am Stück zu sitzen, um
+          den Blut und Lymphfluss positiv zu beeinflussen. Kurzes aufstehen und
+          wenige Schritte genügen. Nach 2 bis 4 Tagen ist häufig eine deutliche
+          Veränderung wahrnehmbar. Wie viele Anwendungen der Körper benötigt um
+          wieder in die Balance zu kommen ist sehr individuell.
         </StyledParagraphTwo>
       </StyledSection>
     </>
@@ -86,7 +87,7 @@ const StyledLine = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 30px 80px 20px 80px;
+  margin: 30px 100px;
   color: #000;
   &:before,
   &:after {
@@ -103,11 +104,10 @@ const StyledLine = styled.div`
 `;
 const StyledHeader = styled.h1`
   font-size: 1.5rem;
-  font-weight: 400;
+
   text-align: center;
-  margin: 50px 0px;
+  font-weight: lighter;
   color: #000;
-  font-family: "Recoleta Alt Light";
 `;
 
 const StyledPriceContainer = styled.div`
@@ -126,12 +126,22 @@ const StyledParagraphTwo = styled.p`
   font-size: 1.1rem;
   line-height: 1.8rem;
   margin: 30px;
+  text-align: center;
+  margin: 0px 100px;
+
+  ${media("<=phone")} {
+    margin: 0px 25px;
+    align-self: center;
+  }
+  ${media("<=tablet")} {
+    margin: 0px 15px;
+  }
 `;
 
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: #cad4c9;
+  background-color: #d3d2d2;
   justify-content: space-evenly;
   gap: 50px;
   padding: 40px 100px;
@@ -150,6 +160,8 @@ const StyledWrapper = styled.div`
 const StyledLeftSection = styled.div`
   display: flex;
   flex-direction: column;
+  ${media("<=phone")} {
+  }
 `;
 const StyledRightSection = styled.div`
   display: flex;
@@ -160,10 +172,15 @@ const StyledDiv1 = styled.div`
   align-items: center;
   text-align: center;
   justify-content: center;
+  color: #968787;
   margin-top: 20px;
   margin-bottom: 30px;
   gap: 170px;
-  border-bottom: 1px solid white;
+  span {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
   ${media("<=phone")} {
     display: flex;
     flex-direction: row;
@@ -171,7 +188,7 @@ const StyledDiv1 = styled.div`
 `;
 const StyledTitle = styled.h2`
   text-align: center;
-  color: darkbrown;
+  color: #6f5f5f;
   font-family: bodoni, serif;
   font-size: 1.3rem;
   font-weight: lighter;

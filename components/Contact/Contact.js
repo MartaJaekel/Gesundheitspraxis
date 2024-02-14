@@ -34,15 +34,15 @@ export default function Contact() {
           <input type="text" name="Name" placeholder="Dein Name" required />
           <StyledLabel htmlFor="email">Email </StyledLabel>
           <input type="text" name="email" placeholder="Deine Email" required />
-          <StyledTextArea></StyledTextArea>
+          <StyledTextArea name="message"></StyledTextArea>
 
           <StyledButton type="submit">Senden</StyledButton>
         </StyledForm>
         <StyledInfo>
           <div>
             <h2>Simona Jäkel</h2>
-            <a href="tel:6031112298p000">Telefon: +49 (0) 15788297240</a>
-            <p>Email: info@bowen-praxis.de</p>
+            <a href="tel:6031112298p000">+49 (0) 15788297240</a>
+            <p>info@bowen-praxis.de</p>
             <h3>Adresse</h3>
             <p>Weichselpl. 4</p>
             <p>12045 Berlin</p>
@@ -112,6 +112,7 @@ const StyledInfo = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
+  text-align: center;
   h2 {
     font-weight: lighter;
   }
@@ -155,7 +156,7 @@ const StyledMap = styled.div`
     display: flex;
     justify-content: center;
     width: 80%;
-    margin-left: 12px;
+
     margin-top: 40px;
   }
   ${media("<=desktop")} {

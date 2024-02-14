@@ -68,19 +68,21 @@ export default function Main() {
               sich und das Nervensystem wird ausbalanciert. Bedeutend sind die 2
               bis 3 Minuten Pausen zwischen einzelnen Abfolgen von Bowen Moves
               in denen die Körpersysteme die Zeit bekommen die Impulse zu
-              verarbeiten und sie zu integrieren. So können in dieser
-              Entspannung z.B. Wirbelknochen oder Gelenke wieder in ihre
-              Position gelangen. Im Bereichen von Schwellung oder Stauung im
-              Gewebe wird das Lymphsystem angeregt. Das Lösen von Spannungen und
-              Verklebungen im Gewebe fördert auch die Durchblutung. Dadurch wird
-              die Aufnahme von Nährstoffen in die Zellen gefördert und
-              unterstützt Wie die Bowen-Technik funktioniert kann man sich in
-              etwa so vorstellen: ein Regentropfen fällt ins Wasser. Dadurch
-              entstehen Wellen, die sich immer weiter ausdehnen. Wenn sie ans
-              Ufer gelangen, rollen sie wieder zurück und ein harmonischer
-              Zustand wird erreicht. So etwa funktioniert es auch im Körper, der
-              aus 60 bis 75% aus Wasser besteht, eine ideale Voraussetzung um
-              die Bowen Impulse weiterzuleiten.
+              verarbeiten und sie zu integrieren.
+              <br />
+              <br /> So können in dieser Entspannung z.B. Wirbelknochen oder
+              Gelenke wieder in ihre Position gelangen. Im Bereichen von
+              Schwellung oder Stauung im Gewebe wird das Lymphsystem angeregt.
+              Das Lösen von Spannungen und Verklebungen im Gewebe fördert auch
+              die Durchblutung. Dadurch wird die Aufnahme von Nährstoffen in die
+              Zellen gefördert und unterstützt. <br />
+              <br /> Wie die Bowen-Technik funktioniert kann man sich in etwa so
+              vorstellen: ein Regentropfen fällt ins Wasser. Dadurch entstehen
+              Wellen, die sich immer weiter ausdehnen. Wenn sie ans Ufer
+              gelangen, rollen sie wieder zurück und ein harmonischer Zustand
+              wird erreicht. So etwa funktioniert es auch im Körper, der aus 60
+              bis 75% aus Wasser besteht, eine ideale Voraussetzung um die Bowen
+              Impulse weiterzuleiten.
             </StyledParagraph>
           </StyledContent>
           <StyledContainer>
@@ -97,42 +99,51 @@ export default function Main() {
   );
 }
 const StyledWrapper = styled.div`
-
   max-width: 1280px;
   margin: auto;
   margin-top: 80px;
 
   ${media("<=phone")} {
-   margin: 15px
+  }
+  ${media("<=desktop")} {
+  }
 `;
 
 const StyledSection = styled.section`
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
-  width: 100%;
+  margin: 0 100px;
 
   ${media("<=phone")} {
+    margin: 15px;
+  }
+
+  ${media("<=desktop")} {
     display: flex;
     flex-direction: column-reverse;
-    text-align: center;
-    margin-bottom: 20px;
   }
-  @media ${media.tablet} {
-    justify-content: space-around;
+  ${media("<=tablet")} {
+    margin: 0 10px;
   }
 `;
 
 const StyledContainer = styled.div`
   position: relative;
-  width: 45%;
-  height: 100%;
+  width: 50%;
+
   height: 500px;
 
+  ${media("<=desktop")} {
+    width: calc(100% - 90px);
+  }
   ${media("<=phone")} {
     width: 100%;
     height: 300px;
+  }
+  ${media("<=tablet")} {
+    width: calc(100% - 20px);
   }
 `;
 
@@ -147,8 +158,8 @@ const StyledSectionReverse = styled(StyledSection)`
     flex-direction: column;
     margin-top: -60px;
   }
-  @media ${media.tablet} {
-    justify-content: space-around;
+  ${media("<=desktop")} {
+    flex-direction: column;
   }
 `;
 const StyledSectionThree = styled(StyledSection)`
@@ -160,8 +171,9 @@ const StyledSectionThree = styled(StyledSection)`
     display: flex;
     flex-direction: column;
   }
-  @media ${media.tablet} {
-    justify-content: space-around;
+  ${media("<=desktop")} {
+    flex-direction: column;
+    margin-top: 50px;
   }
 `;
 
@@ -173,11 +185,18 @@ const StyledImage = styled(Image)`
 
 const StyledContent = styled.div`
   width: 45%;
+  align-self: baseline;
 
-  ${media("<=phone")} {
-    width: 100%;
-    text-align: left;
-    margin: 20px;
+  ${media("<=desktop")} {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 50px;
+    width: calc(100% - 90px);
+  }
+  ${media("<=tablet")} {
+    margin: 0px 20px;
+    width: calc(100% - 40px);
+    align-self: center;
   }
 `;
 
@@ -199,11 +218,10 @@ const StyledTitle = styled.h1`
 const StyledParagraph = styled.p`
   font-size: 1.1rem;
   line-height: 2.3rem;
-
+  width: 100%;
   color: #9e8d8d;
 
   ${media("<=phone")} {
-    justify-content: center;
   }
 `;
 
@@ -222,11 +240,12 @@ flex-direction: column;
     justify-content: center;
     text-align: center;
     margin-top: 150px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     padding: 30px;
     line-height: 2.3rem;
     font-size: 1.5rem;
     opacity: 2;
+    
   transition: opacity 2s ease-in-out;
   background-color: #f4f1e9;
  

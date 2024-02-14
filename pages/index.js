@@ -11,18 +11,6 @@ import Footer from "../components/Footer/Footer.js";
 import { useState } from "react";
 
 export default function Home() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = ["/massageroom.jpeg", "/living.jpeg"];
-  const scrollLeft = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  const scrollRight = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
   return (
     <>
       <StyledNavigation />
@@ -46,22 +34,22 @@ export default function Home() {
 
       <Intro />
       <Main />
-      <ScrollContainer>
-        <StyledScroll>
-          <ImageWrapper>
-            <Image
-              src={images[currentImageIndex]}
-              alt="slideshow"
-              width={700}
-              height={500}
-            />
-          </ImageWrapper>
-        </StyledScroll>
-        <CustomNav>
-          <ArrowLeft onClick={scrollLeft}>{"<"}</ArrowLeft>
-          <ArrowRight onClick={scrollRight}>{">"}</ArrowRight>
-        </CustomNav>
-      </ScrollContainer>
+      <StyledContainer>
+        <ImageWrapper>
+          <StyledImage2
+            src="/massageroom.jpeg"
+            alt="massage"
+            width={700}
+            height={500}
+          />
+          <StyledImage2
+            src="/living.jpeg"
+            alt="massage"
+            width={700}
+            height={500}
+          />
+        </ImageWrapper>
+      </StyledContainer>
       <Infos />
       <StyledLine>
         <StyledText id="contact">Kontakt</StyledText>
@@ -82,10 +70,19 @@ const StyledNavigation = styled(Navigation)`
 `;
 const ImageContainer = styled.div`
   width: 100%;
-  height: calc(100vh - 95px);
+  height: calc(100vh - 63px);
 
-  padding-top: 95px;
+  padding-top: 110px;
   z-index: -1;
+  ${media("<=phone")} {
+    height: calc(100vh - 200px);
+  }
+  ${media("<=tablet")} {
+    height: calc(81vh - 200px);
+  }
+  ${media("<=desktop")} {
+    height: calc(100vh - 200px);
+  }
 `;
 
 const StyledImage = styled.div`
@@ -94,10 +91,9 @@ const StyledImage = styled.div`
   height: 100%;
   position: relative;
 `;
-
 const fadeIn = keyframes`
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 `;
 
 const ImageText = styled.h1`
@@ -133,7 +129,7 @@ const StyledLine = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 30px 80px 20px 80px;
+  margin: 30px 100px;
   color: #000;
   &:before,
   &:after {
@@ -150,75 +146,66 @@ const StyledLine = styled.div`
   ${media("<=phone")} {
     margin-bottom: 10px;
   }
+  ${media("<=tablet")} {
+    margin: 30px 70px;
+  }
 `;
 const StyledText = styled.h1`
   font-size: 1.4rem;
-  font-family: "Recoleta Alt Light";
+
   color: #000;
   margin: 0 20px;
+  font-weight: lighter;
   #contact {
     scroll-margin-top: 10px;
   }
-`;
-const ScrollContainer = styled.div`
-  position: relative;
-  width: 100%;
-`;
-const StyledScroll = styled.div`
-  width: 100%;
-  overflow-x: auto;
-  display: flex;
-
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: nowrap; /* Ensure the images stay in a single row */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
-  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-  &::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome and Safari */
+  ${media("<=phone")} {
+    margin: 0px;
   }
 `;
-
-const CustomNav = styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
+const StyledContainer = styled.div`
+  background-color: #724141;
+  padding: 20px;
+  background: linear-gradient(to right, #9b9a99, #d8c5a1);
 `;
-
 const ImageWrapper = styled.div`
-  flex-shrink: 0;
-  scroll-snap-align: start;
-  transform: translateX(100%); // Start from off the right edge of the screen
-  transition: transform 1s ease-out; // Transition the transform property over 1 second
-  animation: slideIn 1s forwards;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
 
-  @keyframes slideIn {
-    to {
-      transform: translateX(0); // End at the normal position
-    }
+  margin: 50px 30px;
+  display: flex;
+
+  ${media("<=tablet")} {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  ${media("<=desktop")} {
+    flex-direction: column;
+    align-items: center;
+  }
+  ${media("<=phone")} {
+    flex-direction: column;
+    align-items: center;
   }
 `;
-const Arrow = styled.button`
-  background: transparent;
-  border: none;
-  font-size: 24px;
-  color: #fff;
-  cursor: pointer;
-  &:focus {
-    outline: none;
+const StyledImage2 = styled(Image)`
+  width: 500px; // adjust as needed
+  height: 350px;
+
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  ${media("<=desktop")} {
+    width: 400px;
+    height: 300px;
   }
-`;
-
-const ArrowLeft = styled(Arrow)`
-  margin-right: 10px; /* Adjust spacing between arrows */
-  color: #573838;
-`;
-
-const ArrowRight = styled(Arrow)`
-  margin-left: 10px; /* Adjust spacing between arrows */
-  color: #573838;
+  ${media("<=tablet")} {
+    width: 300px;
+    height: 200px;
+  }
+  ${media("<=phone")} {
+    width: 300px;
+    height: 200px;
+  }
 `;

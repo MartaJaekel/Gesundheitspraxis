@@ -9,7 +9,7 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: "Die Bowen-Technik", href: "#bowen-technik" },
+    { name: "Bowen-Technik", href: "#bowen-technik" },
     { name: "Preise & Ablauf", href: "#prices" },
     { name: "Über mich", href: "/About", id: "about" },
     { name: "Kontakt", href: "#contact" },
@@ -21,8 +21,10 @@ export default function Navigation() {
   return (
     <NavContainer>
       <SyledFigure>
-        <StyledImage src="lotus.svg" alt="lotus" width={75} height={75} />
-        <StyledCaption>BOWEN-PRAXIS Simona Jäkel</StyledCaption>
+        <StyledCaption>
+          BOWEN-PRAXIS
+          <br /> Simona Jäkel
+        </StyledCaption>
       </SyledFigure>
       <Burger onClick={handleToggle}>
         <div />
@@ -51,9 +53,19 @@ const NavContainer = styled.nav`
   position: fixed;
   padding: 10px 50px;
   z-index: 1;
-
+  height: 94px;
   ${media("<=tablet")} {
     display: block;
+    padding-top: 5px;
+  }
+  ${media("<=phone")} {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 10px 4px;
+  }
+  ${media("<=desktop")} {
   }
 `;
 const Burger = styled.div`
@@ -75,6 +87,21 @@ const Burger = styled.div`
   div {
     width: 2rem;
     height: 0.2rem;
+    background-color: black;
+
+    transition: all 0.3s linear;
+  }
+  ${media("<=tablet")} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 10px; /* Adjust this value to move the burger button up or down */
+    right: 40px;
+  }
+  div {
+    width: 2rem;
+    height: 0.2rem;
     background-color: white;
 
     transition: all 0.3s linear;
@@ -83,7 +110,6 @@ const Burger = styled.div`
 
 const StyledContainer = styled.ul`
   display: flex;
-
   gap: 30px;
   align-items: center;
   list-style: none;
@@ -97,11 +123,19 @@ const StyledContainer = styled.ul`
     right: 0;
     gap: 0;
     width: 100%;
-    background-color: #cad4c9;
+    background-color: #ede6d8;
     padding: 10px 0;
   }
   ${media("<=tablet")} {
+    display: ${(props) => (props.isOpen ? "flex" : "none")};
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    gap: 0;
     width: 100%;
+    background-color: #ede6d8;
+    padding: 10px 0;
   }
 `;
 
@@ -130,15 +164,16 @@ const StyledLink = styled(Link)`
     transition: all 0.3s ease-in-out;
   }
 `;
-const StyledImage = styled(Image)`
-  ${media("<=phone")} {
-  }
-`;
+
 const StyledCaption = styled.figcaption`
   font-size: 1.5rem;
   font-family: "Reforma";
   font-style: italic;
   font-weight: lighter;
+  color: #958888;
+  line-height: 2.1rem;
+  text-align: center;
+
   ${media("<=phone")} {
     font-size: 1.2rem;
   }
@@ -152,5 +187,9 @@ const SyledFigure = styled.figure`
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  ${media("<=tablet")} {
+    margin: 0px;
+    padding: 15px;
   }
 `;
