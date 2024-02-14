@@ -4,7 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Recoleta Alt Light", system-ui;
+  font-family: "sans-serif";
   overflow-wrap: break-word;
   scroll-behavior: smooth;
   background-color: rgb(245, 245, 237);
