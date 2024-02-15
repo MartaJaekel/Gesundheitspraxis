@@ -41,7 +41,7 @@ export default function Contact() {
         <StyledInfo>
           <div>
             <h2>Simona Jäkel</h2>
-            <a href="tel:6031112298p000">+49 (0) 15788297240</a>
+            <a href="+49 (0) 15788297240">+49 (0) 15788297240</a>
             <p>info@bowen-praxis.de</p>
             <h3>Adresse</h3>
             <p>Weichselpl. 4</p>

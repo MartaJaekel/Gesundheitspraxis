@@ -141,7 +141,7 @@ const StyledParagraphTwo = styled.p`
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: #d3d2d2;
+  background-color: #c9c960;
   justify-content: space-evenly;
   gap: 50px;
   padding: 40px 100px;

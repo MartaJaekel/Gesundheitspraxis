@@ -16,7 +16,7 @@ const StyledContainer = styled.div`
   justify-content: center;
   gap: 50px;
   padding: 20px;
-  background-color: #837373;
+  background-color: #5f6319;
 `;
 const StyledLink = styled.a`
   text-decoration: none;

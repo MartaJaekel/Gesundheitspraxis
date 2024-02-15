@@ -25,10 +25,12 @@ export default function Home() {
               objectPosition: "top",
             }}
           />
-          <ImageText className="fade-in-text">
-            Sanfte Impulse <br />
-            für innere Balance
-          </ImageText>
+          <Overlay>
+            <ImageText className="fade-in-text">
+              Sanfte Impulse <br />
+              für innere Balance
+            </ImageText>
+          </Overlay>
         </StyledImage>
       </ImageContainer>
 
@@ -70,12 +72,13 @@ const StyledNavigation = styled(Navigation)`
 `;
 const ImageContainer = styled.div`
   width: 100%;
-  height: calc(100vh - 63px);
+  height: calc(100vh - 120px);
 
-  padding-top: 110px;
+  padding-top: 120px;
   z-index: -1;
   ${media("<=phone")} {
     height: calc(100vh - 200px);
+    padding-top: 100px;
   }
   ${media("<=tablet")} {
     height: calc(81vh - 200px);
@@ -97,29 +100,27 @@ const fadeIn = keyframes`
 `;
 
 const ImageText = styled.h1`
-  position: absolute;
+ 
 font-family:"Recoleta Alt Light";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   color: beige;
 
   &.fade-in-text {
     line-height: 1.5;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 
     animation: ${fadeIn} 5s;
   }
   ${media("<=phone")} {
-    position: absolute;
+    
 
   top: 50%;
   left: 50%;
     &.fade-in-text {
       line-height: 1.5;
       text-align: center;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
 
       animation: ${fadeIn} 5s;
     }
@@ -151,7 +152,7 @@ const StyledLine = styled.div`
   }
 `;
 const StyledText = styled.h1`
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 
   color: #000;
   margin: 0 20px;
@@ -207,5 +208,21 @@ const StyledImage2 = styled(Image)`
   ${media("<=phone")} {
     width: 300px;
     height: 200px;
+  }
+`;
+const Overlay = styled.div`
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Adjust the padding as needed */
+  border-radius: 10px; /* Add rounded corners */
+  white-space: nowrap; /* Prevent 
+  transition: background-color 0.5s ease-in-out; /* Smooth transition for background-color */
+  ${media("<=phone")} {
+    top: 80%;
+
+    padding: 7px;
   }
 `;
