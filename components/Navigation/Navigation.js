@@ -21,6 +21,7 @@ export default function Navigation() {
   return (
     <NavContainer>
       <SyledFigure>
+        <StyleImage src="/logo.jpeg" alt="lotus" width={100} height={100} />
         <StyledCaption>
           BOWEN-PRAXIS
           <br /> Simona Jäkel
@@ -51,12 +52,12 @@ const NavContainer = styled.nav`
   justify-content: space-between;
   width: calc(100vw - 100px);
   position: fixed;
-  padding: 10px 50px;
+  padding: 20px 50px;
   z-index: 1;
-  height: 94px;
+  height: 80px;
   ${media("<=tablet")} {
     display: block;
-    padding-top: 5px;
+    // padding-top: 5px;
   }
   ${media("<=phone")} {
     display: flex;
@@ -130,7 +131,7 @@ const StyledContainer = styled.ul`
     display: ${(props) => (props.isOpen ? "flex" : "none")};
     flex-direction: column;
     position: absolute;
-    top: 80px;
+    top: 100px;
     right: 0;
     gap: 0;
     width: 100%;
@@ -138,7 +139,11 @@ const StyledContainer = styled.ul`
     padding: 10px 0;
   }
 `;
-
+const StyleImage = styled(Image)`
+  border-radius: 50%;
+  height: 100%;
+  width: auto;
+`;
 const StyledList = styled.li`
   font-size: 1.1rem;
   font-weight: 200;
@@ -180,16 +185,20 @@ const StyledCaption = styled.figcaption`
 `;
 const SyledFigure = styled.figure`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 20px;
   align-items: center;
+  margin: 0;
+  height: 100%;
   ${media("<=phone")} {
     margin: 5px 15px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
   }
   ${media("<=tablet")} {
     margin: 0px;
-    padding: 15px;
+  }
+  ${media("<=desktop")} {
+    gap: 14px;
   }
 `;

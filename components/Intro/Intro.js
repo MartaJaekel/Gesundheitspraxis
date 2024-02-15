@@ -49,7 +49,7 @@ const StyledContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #d3d2d2;
+  background-color: #d9d082;
   padding:50px 0px;
    #bowen-technik {
     scroll-margin-top: 110px;
