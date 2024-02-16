@@ -21,10 +21,10 @@ export default function Navigation() {
   return (
     <NavContainer>
       <SyledFigure>
-        <StyleImage src="/logo.jpeg" alt="lotus" width={100} height={100} />
         <StyledCaption>
-          BOWEN-PRAXIS
-          <br /> Simona Jäkel
+          Gesundheitspraxis
+          <br />
+          <h1> Simona Jäkel</h1>
         </StyledCaption>
       </SyledFigure>
       <Burger onClick={handleToggle}>
@@ -139,11 +139,7 @@ const StyledContainer = styled.ul`
     padding: 10px 0;
   }
 `;
-const StyleImage = styled(Image)`
-  border-radius: 50%;
-  height: 100%;
-  width: auto;
-`;
+
 const StyledList = styled.li`
   font-size: 1.1rem;
   font-weight: 200;
@@ -171,14 +167,19 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledCaption = styled.figcaption`
-  font-size: 1.5rem;
-  font-family: "Reforma";
-  font-style: italic;
+  font-size: 1.8rem;
+  font-family: "Inter Tight", sans-serif;
+  font-style: Italic;
   font-weight: lighter;
   color: #958888;
   line-height: 2.1rem;
   text-align: center;
-
+  h1 {
+    font-size: 1.8rem;
+    margin: 0px;
+    font-style: Italic;
+    font-weight: lighter;
+  }
   ${media("<=phone")} {
     font-size: 1.2rem;
   }

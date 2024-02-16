@@ -1,40 +1,43 @@
 import React from "react";
 import { styled, css } from "styled-components";
 import Image from "next/image";
+import Navigation from "../components/Navigation/Navigation";
 
 export default function About() {
   return (
-    <Container>
-      <AboutMe>
-        <ProfileImage>
-          <Image
-            id="profile-image"
-            src="/profile.jpeg"
-            alt="profile"
-            fill={true}
-            objectFit="cover"
-            objectPosition="top"
-          />
-        </ProfileImage>
-        <Description>
-          <h1>Simona Jäkel</h1>
-          <p>Dipl. Bowen-Practitioner</p>
-          <p>Gesundheitspraktikerin (BfG)</p>
-          <p>Mutter von 3 Kindern</p>
-        </Description>
-        <Quote>
-          <p>
-            Through hands we
-            <br /> SERVE,
-            <br /> through
-            <br /> serving we <br />
-            LOVE
-            <br /> through loving we
-            <br /> CREATE &nbsp;&nbsp; J. Norton
-          </p>
-        </Quote>
-      </AboutMe>
-    </Container>
+    <>
+      <Navigation />
+      <Container>
+        <AboutMe>
+          <ProfileImage>
+            <Image
+              id="profile-image"
+              src="/profile.jpeg"
+              alt="profile"
+              fill={true}
+              objectFit="cover"
+              objectPosition="top"
+            />
+          </ProfileImage>
+          <Description>
+            <h1>Simona Jäkel</h1>
+            <p>Dipl. Bowen-Practitioner</p>
+            <p>Gesundheitspraktikerin (BfG)</p>
+            <p>Mutter von 3 Kindern</p>
+          </Description>
+          <Quote>
+            <p>
+              " Through hands we
+              <br /> SERVE, through
+              <br /> serving we LOVE
+              <br /> through loving we
+              <br /> CREATE "
+            </p>
+            <Author>- J. Norton</Author>
+          </Quote>
+        </AboutMe>
+      </Container>
+    </>
   );
 }
 
@@ -87,6 +90,7 @@ const Container = styled.div`
   background-color: #ede6d8;
   margin: 0px 0px;
   width: calc(100% - 100px);
+  padding-top: 122px;
 `;
 
 const ProfileImage = styled.div`
@@ -113,10 +117,15 @@ const Quote = styled.div`
   font-style: italic;
   font-size: 1.5em;
   color: #9f887e;
-  span {
-    margin-top: -10px;
-    font-size: 0.9em;
-    text-align: right;
-    width: 100%;
+
+  p {
+    margin: 0;
   }
+`;
+const Author = styled.span`
+  margin-top: 5px;
+  font-size: 0.9em;
+
+  width: 100%;
+  color: black;
 `;

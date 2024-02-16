@@ -27,8 +27,7 @@ export default function Home() {
           />
           <Overlay>
             <ImageText className="fade-in-text">
-              Sanfte Impulse <br />
-              für innere Balance
+              Sanfte Impulse für innere Balance
             </ImageText>
           </Overlay>
         </StyledImage>
@@ -215,7 +214,7 @@ const Overlay = styled.div`
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 20px; /* Adjust the padding as needed */
   border-radius: 10px; /* Add rounded corners */
   white-space: nowrap; /* Prevent 

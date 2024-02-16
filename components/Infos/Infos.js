@@ -64,21 +64,24 @@ export default function Infos() {
           im Sitzen durchgeführt werden. Auf der Haut oder über leichte Kleidung
           werden sanfte Griffe gesetzt. Zwischen zwei griffserien Folgen Pausen
           von 2 bis 3 Minuten. Diese Pausen geben den Körper Zeit, die Impulse
-          zu verarbeiten und zu integrieren. WICHTIG: Vor und nach der Sitzung
-          sollte ausreichend Wasser getrunken werden, da das Fasziensystem
-          aktiviert wird und ausreichend Flüssigkeit benötigt. Zudem sollte
+          zu verarbeiten und zu integrieren. <br />
+        </StyledParagraphTwo>
+        <ParagraphThree>
+          <StyledHeader>Wichtig</StyledHeader> Vor und nach der Sitzung sollte
+          ausreichend Wasser getrunken werden, da das Fasziensystem aktiviert
+          wird und ausreichend Flüssigkeit benötigt. Zudem sollte
           Überanstrengung, Sauna oder andere Wärme oder Kälteanwendungen
           vermieden werden, sowie weitere manuelle Behandlungen um einige Tage
-          verschoben werden.
-          <br />
-          <br /> Der Körper soll sich die Zeit nehmen können, um angestoßene
-          Prozesse wirken zu lassen. Für den weiteren Tag nach der Anwendung ist
-          darauf zu achten nicht länger als 30 Minuten am Stück zu sitzen, um
-          den Blut und Lymphfluss positiv zu beeinflussen. Kurzes aufstehen und
-          wenige Schritte genügen. Nach 2 bis 4 Tagen ist häufig eine deutliche
-          Veränderung wahrnehmbar. Wie viele Anwendungen der Körper benötigt um
-          wieder in die Balance zu kommen ist sehr individuell.
-        </StyledParagraphTwo>
+          verschoben werden. Der Körper soll sich die Zeit nehmen können, um
+          angestoßene Prozesse wirken zu lassen. Für den weiteren Tag nach der
+          Anwendung ist darauf zu achten nicht länger als 30 Minuten am Stück zu
+          sitzen, um den Blut und Lymphfluss positiv zu beeinflussen. Kurzes
+          aufstehen und wenige Schritte genügen. Nach 2 bis 4 Tagen ist häufig
+          eine deutliche Veränderung wahrnehmbar. Wie viele Anwendungen der
+          Körper benötigt um wieder in die Balance zu kommen ist sehr
+          individuell. Hinweis: Die Bowen-Technik ersetzt keine ärztlichen
+          Behandlungen und Beratungen.
+        </ParagraphThree>
       </StyledSection>
     </>
   );
@@ -141,7 +144,7 @@ const StyledParagraphTwo = styled.p`
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: #c9c960;
+  background-color: #d9d082;
   justify-content: space-evenly;
   gap: 50px;
   padding: 40px 100px;
@@ -176,6 +179,7 @@ const StyledDiv1 = styled.div`
   margin-top: 20px;
   margin-bottom: 30px;
   gap: 170px;
+  border-bottom: 1px solid white;
   span {
     font-size: 1.2rem;
     font-weight: 300;
@@ -193,4 +197,11 @@ const StyledTitle = styled.h2`
   font-size: 1.3rem;
   font-weight: lighter;
   hyphens: auto;
+`;
+const ParagraphThree = styled.p`
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  margin: 30px;
+  text-align: center;
+  margin: 0px 100px;
 `;

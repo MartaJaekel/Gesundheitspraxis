@@ -7,6 +7,10 @@ export default function Main() {
   return (
     <>
       <StyledWrapper>
+        <StyledText id="bowen-technik">
+          DIE BOWEN-TECHNIK <br />
+          Sanft - Effektiv - Ganzheitlich
+        </StyledText>
         <StyledSection>
           <StyledContainer>
             <StyledImage src="/move.jpg" layout="fill" objectFit="cover" />
@@ -31,7 +35,7 @@ export default function Main() {
             <StyledTitle>ANWENDUNGSBEREICHE</StyledTitle>
 
             <StyledParagraph>
-              Die Bowen-Technik kann helfen bei:
+              Die Bowen-Technik wird angewendet bei:
             </StyledParagraph>
             <StyledUl>
               <li>Rückenschmerzen verschiedenen Ursprungs</li>
@@ -49,10 +53,6 @@ export default function Main() {
               <li>Stärkung des Immunsystems</li>
               <li>Entspannung</li>
             </StyledUl>
-            <StyledParagraph>
-              Hinweis: Die Bowen-Technik ersetzt keine ärztlichen Behandlungen
-              und Beratungen.
-            </StyledParagraph>
           </StyledContent>
           <StyledContainer>
             <StyledImage src="/technik.jpeg" layout="fill" objectFit="cover" />
@@ -65,24 +65,14 @@ export default function Main() {
               Die gesetzten Impulse stimulieren bestimmte Nervenrezeptoren
               (Propriozeptoren u. Nozizeptoren) im Muskel und Fasziensystem.
               Dadurch wird der Energiefluss angeregt, die Muskeln entspannen
-              sich und das Nervensystem wird ausbalanciert. Bedeutend sind die 2
-              bis 3 Minuten Pausen zwischen einzelnen Abfolgen von Bowen Moves
-              in denen die Körpersysteme die Zeit bekommen die Impulse zu
-              verarbeiten und sie zu integrieren.
-              <br />
-              <br /> So können in dieser Entspannung z.B. Wirbelknochen oder
-              Gelenke wieder in ihre Position gelangen. Im Bereichen von
-              Schwellung oder Stauung im Gewebe wird das Lymphsystem angeregt.
-              Das Lösen von Spannungen und Verklebungen im Gewebe fördert auch
-              die Durchblutung. Dadurch wird die Aufnahme von Nährstoffen in die
-              Zellen gefördert und unterstützt. <br />
-              <br /> Wie die Bowen-Technik funktioniert kann man sich in etwa so
-              vorstellen: ein Regentropfen fällt ins Wasser. Dadurch entstehen
-              Wellen, die sich immer weiter ausdehnen. Wenn sie ans Ufer
-              gelangen, rollen sie wieder zurück und ein harmonischer Zustand
-              wird erreicht. So etwa funktioniert es auch im Körper, der aus 60
-              bis 75% aus Wasser besteht, eine ideale Voraussetzung um die Bowen
-              Impulse weiterzuleiten.
+              sich und das Nervensystem wird ausbalanciert. Wie die
+              Bowen-Technik funktioniert kann man sich in etwa so vorstellen:
+              ein Regentropfen fällt ins Wasser. Dadurch entstehen Wellen, die
+              sich immer weiter ausdehnen. Wenn sie ans Ufer gelangen, rollen
+              sie wieder zurück und ein harmonischer Zustand wird erreicht. So
+              etwa funktioniert es auch im Körper, der aus 60 bis 75% aus Wasser
+              besteht, eine ideale Voraussetzung um die Bowen Impulse
+              weiterzuleiten.
             </StyledParagraph>
           </StyledContent>
           <StyledContainer>
@@ -101,7 +91,7 @@ export default function Main() {
 const StyledWrapper = styled.div`
   max-width: 1280px;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 30px;
 
   ${media("<=phone")} {
   }
@@ -202,7 +192,7 @@ const StyledContent = styled.div`
 
 const StyledTitle = styled.h1`
   font-family: Recoleta Alt Light, sans-serif !important;
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: 0.15em;
   font-style: normal;
   font-weight: lighter;
@@ -220,6 +210,7 @@ const StyledParagraph = styled.p`
   line-height: 2.3rem;
   width: 100%;
   color: #9e8d8d;
+  font-family: "Recoleta Alt Light";
 
   ${media("<=phone")} {
   }
@@ -252,4 +243,23 @@ flex-direction: column;
 }`;
 const StyledName = styled.span`
   font-size: 1.2rem;
+`;
+const StyledText = styled.h1`
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  text-align: center;
+  margin-bottom: 100px;
+  font-family: "Recoleta Alt Light";
+  color: #9e8d8d;
+  background-color: #e1ded9;
+
+  ${media("<=phone")} {
+    font-size: 1.3rem;
+
+    width: 100%;
+  }
+  ${media("<=tablet")} {
+    font-size: 1.1rem;
+    line-height: 2.3rem;
+  }
 `;
