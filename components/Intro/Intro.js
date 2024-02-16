@@ -44,6 +44,9 @@ const StyledContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: white;
+
+  
+
   padding:50px 0px;
    #bowen-technik {
     scroll-margin-top: 110px;

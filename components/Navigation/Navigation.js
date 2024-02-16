@@ -21,6 +21,7 @@ export default function Navigation() {
   return (
     <NavContainer>
       <SyledFigure>
+        <StyleImage src="/logo.jpeg" alt="lotus" width={100} height={100} />
         <StyledCaption>
           Gesundheitspraxis
           <br />
@@ -139,7 +140,11 @@ const StyledContainer = styled.ul`
     padding: 10px 0;
   }
 `;
-
+const StyleImage = styled(Image)`
+  border-radius: 50%;
+  height: 100%;
+  width: auto;
+`;
 const StyledList = styled.li`
   font-size: 1.1rem;
   font-weight: 200;
