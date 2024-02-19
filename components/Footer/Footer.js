@@ -16,9 +16,12 @@ const StyledContainer = styled.div`
   justify-content: center;
   gap: 50px;
   padding: 20px;
-  background-color: #5f6319;
+  background-color: #ede6d8;
 `;
 const StyledLink = styled.a`
   text-decoration: none;
-  color: #f3ebeb;
+  color: black;
+
+  font-family: "Inter Tight", sans-serif;
+  font-weight: lighter;
 `;

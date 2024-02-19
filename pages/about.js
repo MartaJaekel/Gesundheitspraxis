@@ -97,6 +97,7 @@ const ProfileImage = styled.div`
     width: 200px;
     height: 200px;
     position: relative;
+    background-color: #ede6d8;
 
     img {
         border-radius: 50%;

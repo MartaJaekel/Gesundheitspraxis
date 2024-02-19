@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import media from "css-in-js-media";
+import Image from "next/image";
 
 export default function Contact() {
   return (
     <>
       <StyledContainer>
         <StyledForm
-          action="https://formsubmit.co/e3cd97bc2ac034008a8ceb35e12efc17"
+          action="https://formsubmit.co/bccef37a920cca07b4c018121eb17f7f"
           method="POST"
           id="form"
         >
@@ -39,14 +40,28 @@ export default function Contact() {
           <StyledButton type="submit">Senden</StyledButton>
         </StyledForm>
         <StyledInfo>
-          <div>
-            <h2>Simona Jäkel</h2>
-            <a href="+49 (0) 15788297240">+49 (0) 15788297240</a>
-            <p>info@bowen-praxis.de</p>
-            <h3>Adresse</h3>
-            <p>Weichselpl. 4</p>
-            <p>12045 Berlin</p>
-          </div>
+          <StyledSection>
+            <StyledImage src="/profile.jpeg" height={110} width={110} />
+            <StyledDeatails>
+              <IconWrapper>
+                <img src="/home.png" alt="home" height={20} width={20} />
+
+                <p>Gesundheitspraxis Simona Jäkel</p>
+              </IconWrapper>
+              <IconWrapper>
+                <img src="/telephone.png" alt="home" height={20} width={20} />
+                <a href="+49 (0) 15788297240">+49 (0) 15788297240</a>
+              </IconWrapper>
+              <IconWrapper>
+                <img src="/email.png" alt="home" height={20} width={20} />
+                <p>info@gesundheitspraxis-jaekel.de</p>
+              </IconWrapper>
+              <IconWrapper>
+                <img src="/location.png" alt="home" height={20} width={20} />
+                <p>Weichselplatz 4 - 12045 Berlin</p>
+              </IconWrapper>
+            </StyledDeatails>
+          </StyledSection>
           <StyledMap>
             <StyledFrame
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.5572798608396!2d13.4392619!3d52.4871512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84fafca314ff5%3A0xdc6795d0065c3bc9!2sWeichselpl.%204%2C%2012045%20Berlin!5e0!3m2!1sit!2sde!4v1707649157027!5m2!1sit!2sde"
@@ -62,6 +77,63 @@ export default function Contact() {
     </>
   );
 }
+const StyledDeatails = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 15px;
+  p {
+    margin: 10px;
+    display: flex;
+    font-size: 0.9rem;
+
+    font-family: "Inter Tight", sans-serif;
+    font-weight: lighter;
+  }
+  a {
+    margin: 10px;
+    color: black;
+  }
+  ${media("<=phone")} {
+    margin: 10px 0px 10px 20px;
+  }
+`;
+
+// Define a styled component for your SVG icon wrapper
+const IconWrapper = styled.div`
+  margin-right: 10px; /* Adjust margin as needed */
+  display: flex;
+  felx-direction: row;
+  img {
+    align-self: center;
+  }
+`;
+
+const StyledSection = styled.section`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  ${media("<=phone")} {
+    flex-direction: column;
+  }
+  ${media("<=tablet")} {
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+  }
+  ${media("<=desktop")} {
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+    align-items: flex-start;
+  }
+`;
+
+const StyledImage = styled(Image)`
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.6px solid #523816;
+`;
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -113,6 +185,7 @@ const StyledInfo = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: space-evenly;
   h2 {
     font-weight: lighter;
   }
@@ -132,12 +205,17 @@ const StyledLabel = styled.label`
   text-align: left;
   margin-right: 200px;
 
+  font-family: "Inter Tight", sans-serif;
+  font-weight: lighter;
+
   ${media("<=phone")} {
     margin: 0px;
   }
 `;
 const StyledTitle = styled.h2`
+  font-size: 1.7rem;
   text-align: center;
+  font-family: "Inter Tight", sans-serif;
   font-weight: lighter;
 `;
 const StyledTextArea = styled.textarea`
