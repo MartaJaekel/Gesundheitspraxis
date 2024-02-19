@@ -20,14 +20,12 @@ export default function Navigation() {
 
   return (
     <NavContainer>
-      <SyledFigure>
-        <StyleImage src="/logo.jpeg" alt="lotus" width={100} height={100} />
-        <StyledCaption>
-          Gesundheitspraxis
-          <br />
-          <h1> Simona Jäkel</h1>
-        </StyledCaption>
-      </SyledFigure>
+      <StyledTitle>
+        Gesundheitspraxis
+        <br />
+        <h1> Simona Jäkel</h1>
+      </StyledTitle>
+
       <Burger onClick={handleToggle}>
         <div />
         <div />
@@ -45,6 +43,24 @@ export default function Navigation() {
     </NavContainer>
   );
 }
+const StyledTitle = styled.h1`
+  font-size: 1.8rem;
+  font-family: "Inter Tight", sans-serif;
+  font-style: Italic;
+  font-weight: lighter;
+  color: #958888;
+  line-height: 2.1rem;
+  text-align: center;
+  h1 {
+    font-size: 1.8rem;
+    margin: 0px;
+    font-style: Italic;
+    font-weight: lighter;
+  }
+  ${media("<=phone")} {
+    font-size: 1.2rem;
+  }
+`;
 const NavContainer = styled.nav`
   display: flex;
   background-color: #ede6d8;
