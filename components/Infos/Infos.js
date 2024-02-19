@@ -62,10 +62,10 @@ export default function Infos() {
           können, um angestoßene Prozesse wirken zu lassen. Für den weiteren Tag
           nach der Anwendung ist darauf zu achten nicht länger als 30 Minuten am
           Stück zu sitzen, um den Blut und Lymphfluss positiv zu beeinflussen.
-          Kurzes aufstehen und wenige Schritte genügen. Nach 2 bis 4 Tagen ist
-          häufig eine deutliche Veränderung wahrnehmbar. Wie viele Anwendungen
-          der Körper benötigt um wieder in die Balance zu kommen ist sehr
-          individuell. Hinweis: Die Bowen-Technik ersetzt keine ärztlichen
+          Kurzes aufstehen und wenige Schritte genügen. Nach 2 bis 4 Tagen
+          istswitch häufig eine deutliche Veränderung wahrnehmbar. Wie viele
+          Anwendungen der Körper benötigt um wieder in die Balance zu kommen ist
+          sehr individuell. Hinweis: Die Bowen-Technik ersetzt keine ärztlichen
           Behandlungen und Beratungen.
         </ParagraphThree>
       </StyledSection>
@@ -189,4 +189,19 @@ const StyledImportant = styled.span`
   text-align: center;
   font-family: "Inter Tight", sans-serif;
   font-weight: lighter;
+`;
+const ParagraphThree = styled.p`
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  margin: 30px;
+  text-align: center;
+  margin: 0px 100px;
+  font-family: "Recoleta Alt Light";
+  ${media("<=phone")} {
+    margin: 0px 25px;
+    align-self: center;
+  }
+  ${media("<=tablet")} {
+    margin: 0px 15px;
+  }
 `;
