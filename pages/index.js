@@ -8,7 +8,6 @@ import Infos from "../components/Infos/Infos.js";
 
 import Contact from "../components/Contact/Contact.js";
 import Footer from "../components/Footer/Footer.js";
-import { useState } from "react";
 
 export default function Home() {
   return (
@@ -27,8 +26,9 @@ export default function Home() {
           />
           <Overlay>
             <ImageText className="fade-in-text">
-              Sanfte Impulse <br />
-              für innere Balance
+              Sanfte Impulse für innere Balance
+              
+
             </ImageText>
           </Overlay>
         </StyledImage>
@@ -36,6 +36,7 @@ export default function Home() {
 
       <Intro />
       <Main />
+
       <StyledContainer>
         <ImageWrapper>
           <StyledImage2
@@ -72,7 +73,7 @@ const StyledNavigation = styled(Navigation)`
 `;
 const ImageContainer = styled.div`
   width: 100%;
-  height: calc(100vh - 120px);
+  height: calc(105vh - 100px);
 
   padding-top: 120px;
   z-index: -1;
@@ -152,10 +153,9 @@ const StyledLine = styled.div`
   }
 `;
 const StyledText = styled.h1`
-  font-size: 1.3rem;
-
-  color: #000;
-  margin: 0 20px;
+  font-size: 1.7rem;
+  text-align: center;
+  font-family: "Inter Tight", sans-serif;
   font-weight: lighter;
   #contact {
     scroll-margin-top: 10px;
@@ -167,7 +167,7 @@ const StyledText = styled.h1`
 const StyledContainer = styled.div`
   background-color: #724141;
   padding: 20px;
-  background: linear-gradient(to right, #9b9a99, #d8c5a1);
+  background: linear-gradient(to right, #d8c5a1, #9b9a99);
 `;
 const ImageWrapper = styled.div`
   display: flex;
@@ -215,7 +215,10 @@ const Overlay = styled.div`
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.1);
+
+  background-color: rgba(0, 0, 0, 0.3);
+
+
   padding: 20px; /* Adjust the padding as needed */
   border-radius: 10px; /* Add rounded corners */
   white-space: nowrap; /* Prevent 

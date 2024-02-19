@@ -4,85 +4,102 @@ import media from "css-in-js-media";
 export default function Infos() {
   return (
     <>
-      <StyledLine>
-        <StyledHeader id="prices">Preise</StyledHeader>
-      </StyledLine>
-      <StyledPriceContainer>
-        <StyledWrapper>
-          <StyledLeftSection>
-            <StyledTitle>Bowen Classic</StyledTitle>
-            <StyledDiv1>
-              <span>45 Minuten</span>
-              <span>60 Euro</span>
-            </StyledDiv1>
-            <StyledTitle>Ganzkörper (inkl. Kopf und Füße)</StyledTitle>
-            <StyledDiv1>
-              <span>45 Minuten</span>
-              <span>60 Euro</span>
-            </StyledDiv1>
-            <StyledTitle>Kopf-Nacken-Rücken</StyledTitle>
-            <StyledDiv1>
-              <span>45 Min</span>
-              <span>60 Euro</span>
-            </StyledDiv1>
-            <StyledTitle>Arme-Schultern-Rücken</StyledTitle>
-            <StyledDiv1>
-              <span>45 Minuten</span>
-              <span>60 Euro</span>
-            </StyledDiv1>
-          </StyledLeftSection>
-          <StyledRightSection>
-            <StyledTitle>Becken-Beine-Füsse</StyledTitle>
-            <StyledDiv1>
-              <span>45 Minuten</span>
-              <span>60 Euro</span>
-            </StyledDiv1>
-            <StyledTitle>Bowen für die Schwangerschaft</StyledTitle>
-            <StyledDiv1>
-              <span>45 Minuten</span>
-              <span>60 Euro</span>
-            </StyledDiv1>
-            <StyledTitle>Bowen für die Geburtsvorbereitung</StyledTitle>
-            <StyledDiv1>
-              <span>45 Minuten</span>
-              <span>60 Euro</span>
-            </StyledDiv1>
-            <StyledTitle>Bowen für hormonelle Balance</StyledTitle>
-            <StyledDiv1>
-              <span>45 Minuten</span>
-              <span>60 Euro</span>
-            </StyledDiv1>
-          </StyledRightSection>
-        </StyledWrapper>
-      </StyledPriceContainer>
+      <StyledTitle>Preise</StyledTitle>
+      <GridContainer>
+        <GridItem background="#d9b89f">Anwendung</GridItem>
+        <GridItem background="#d9b89f">60 Minuten</GridItem>
+        <GridItem background="#d9b89f">75 Minuten</GridItem>
+        <GridItem background="#e5d5cd">Ganzkörper(inkl.Kopf und Füße)</GridItem>
+        <GridItem background="#e5d5cd">-</GridItem>
+        <GridItem background="#e5d5cd">80 Euro</GridItem>
+        <GridItem background="#e9e0d9">Bowen Classic</GridItem>
+        <GridItem background="#e9e0d9">60 Euro</GridItem>
+        <GridItem background="#e9e0d9">-</GridItem>
+        <GridItem background="#e5d5cd">Kopf-Nacken-Rücken</GridItem>
+        <GridItem background="#e5d5cd">60 Euro</GridItem>
+        <GridItem background="#e5d5cd">-</GridItem>
+        <GridItem background="#e9e0d9">Arme-schultern-Rücken</GridItem>
+        <GridItem background="#e9e0d9">60 Euro</GridItem>
+        <GridItem background="#e9e0d9">-</GridItem>
+        <GridItem background="#e5d5cd">Becken-Beine-Füße</GridItem>
+        <GridItem background="#e5d5cd">60 Euro</GridItem>
+        <GridItem background="#e5d5cd">-</GridItem>
+        <GridItem background="#e9e0d9">Bowen für Schwangere</GridItem>
+        <GridItem background="#e9e0d9">60 Euro</GridItem>
+        <GridItem background="#e9e0d9">-</GridItem>
+        <GridItem background="#e5d5cd">
+          Bowen für die Geburtsvorbereitung
+        </GridItem>
+        <GridItem background="#e5d5cd">60 Euro</GridItem>
+        <GridItem background="#e5d5cd">- </GridItem>
+        <GridItem background="#e9e0d9">
+          Bowen für die Hormonelle Balance
+        </GridItem>
+        <GridItem background="#e9e0d9">60 Euro</GridItem>
+        <GridItem background="#e9e0d9">-</GridItem>
+      </GridContainer>
+      <StyledSection></StyledSection>
       <StyledSection>
         <StyledLine>
-          <StyledHeader>Ablauf</StyledHeader>
+          <StyledTitle>Ablauf</StyledTitle>
         </StyledLine>
         <StyledParagraphTwo>
           Die Bowtech-Sitzung findet in der Regel liegend statt, kann aber auch
           im Sitzen durchgeführt werden. Auf der Haut oder über leichte Kleidung
           werden sanfte Griffe gesetzt. Zwischen zwei griffserien Folgen Pausen
           von 2 bis 3 Minuten. Diese Pausen geben den Körper Zeit, die Impulse
-          zu verarbeiten und zu integrieren. WICHTIG: Vor und nach der Sitzung
-          sollte ausreichend Wasser getrunken werden, da das Fasziensystem
-          aktiviert wird und ausreichend Flüssigkeit benötigt. Zudem sollte
-          Überanstrengung, Sauna oder andere Wärme oder Kälteanwendungen
-          vermieden werden, sowie weitere manuelle Behandlungen um einige Tage
-          verschoben werden.
-          <br />
-          <br /> Der Körper soll sich die Zeit nehmen können, um angestoßene
-          Prozesse wirken zu lassen. Für den weiteren Tag nach der Anwendung ist
-          darauf zu achten nicht länger als 30 Minuten am Stück zu sitzen, um
-          den Blut und Lymphfluss positiv zu beeinflussen. Kurzes aufstehen und
-          wenige Schritte genügen. Nach 2 bis 4 Tagen ist häufig eine deutliche
-          Veränderung wahrnehmbar. Wie viele Anwendungen der Körper benötigt um
-          wieder in die Balance zu kommen ist sehr individuell.
+          zu verarbeiten und zu integrieren.
         </StyledParagraphTwo>
+        <ParagraphThree>
+          <StyledImportant>Wichtig</StyledImportant>
+          <br />
+          <br />
+          Vor und nach der Sitzung sollte ausreichend Wasser getrunken werden,
+          da das Fasziensystem aktiviert wird und ausreichend Flüssigkeit
+          benötigt. Zudem sollte Überanstrengung, Sauna oder andere Wärme oder
+          Kälteanwendungen vermieden werden, sowie weitere manuelle Behandlungen
+          um einige Tage verschoben werden. Der Körper soll sich die Zeit nehmen
+          können, um angestoßene Prozesse wirken zu lassen. Für den weiteren Tag
+          nach der Anwendung ist darauf zu achten nicht länger als 30 Minuten am
+          Stück zu sitzen, um den Blut und Lymphfluss positiv zu beeinflussen.
+          Kurzes aufstehen und wenige Schritte genügen. Nach 2 bis 4 Tagen ist
+          häufig eine deutliche Veränderung wahrnehmbar. Wie viele Anwendungen
+          der Körper benötigt um wieder in die Balance zu kommen ist sehr
+          individuell. Hinweis: Die Bowen-Technik ersetzt keine ärztlichen
+          Behandlungen und Beratungen.
+        </ParagraphThree>
       </StyledSection>
     </>
   );
 }
+const StyledTitle = styled.h1`
+  font-size: 1.7rem;
+  text-align: center;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: lighter;
+`;
+
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 500px)); /* 3 columns */
+  grid-template-rows: repeat(9, auto); /* 9 rows */
+  grid-gap: 1px; /* Gap between grid items */
+  margin: 0px 100px;
+  background-color: white;
+  ${media("<=phone")} {
+    margin: 10px;
+  }
+`;
+
+const GridItem = styled.div`
+  padding: 10px;
+  text-align: center;
+  background-color: ${(props) => props.background || "transparent"};
+  font-family: "Recoleta Alt Light";
+
+  ${media("<=phone")} {
+  }
+`;
 const StyledLine = styled.div`
   display: flex;
   align-items: center;
@@ -102,21 +119,6 @@ const StyledLine = styled.div`
     margin-left: 2em;
   }
 `;
-const StyledHeader = styled.h1`
-  font-size: 1.5rem;
-
-  text-align: center;
-  font-weight: lighter;
-  color: #000;
-`;
-
-const StyledPriceContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-
- 
-  }
-`;
 
 const StyledSection = styled.div`
   display: flex;
@@ -128,6 +130,7 @@ const StyledParagraphTwo = styled.p`
   margin: 30px;
   text-align: center;
   margin: 0px 100px;
+  font-family: "Recoleta Alt Light";
 
   ${media("<=phone")} {
     margin: 0px 25px;
@@ -141,7 +144,9 @@ const StyledParagraphTwo = styled.p`
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: #c9c960;
+
+  background-color: #d9d082;
+  
   justify-content: space-evenly;
   gap: 50px;
   padding: 40px 100px;
@@ -171,26 +176,17 @@ const StyledDiv1 = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
-  justify-content: center;
-  color: #968787;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  gap: 170px;
-  span {
-    font-size: 1.2rem;
-    font-weight: 300;
-  }
-
+  margin: 15px 100px;
+  font-family: "Recoleta Alt Light";
   ${media("<=phone")} {
-    display: flex;
-    flex-direction: row;
+    margin: 0px 25px;
+    align-self: center;
+    margin: 15px 30px;
   }
 `;
-const StyledTitle = styled.h2`
+const StyledImportant = styled.span`
+  font-size: 1.5rem;
   text-align: center;
-  color: #6f5f5f;
-  font-family: bodoni, serif;
-  font-size: 1.3rem;
+  font-family: "Inter Tight", sans-serif;
   font-weight: lighter;
-  hyphens: auto;
 `;

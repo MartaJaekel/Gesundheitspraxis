@@ -6,13 +6,38 @@ import media from "css-in-js-media";
 export default function Main() {
   return (
     <>
+      <Waves>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1000 100"
+          preserveAspectRatio="none"
+        >
+          <path
+            class="elementor-shape-fill"
+            opacity="0.33"
+            d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"
+          ></path>
+          <path
+            class="elementor-shape-fill"
+            opacity="0.66"
+            d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"
+          ></path>
+          <path
+            class="elementor-shape-fill"
+            d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"
+          ></path>
+        </svg>
+      </Waves>
       <StyledWrapper>
         <StyledSection>
           <StyledContainer>
             <StyledImage src="/move.jpg" layout="fill" objectFit="cover" />
           </StyledContainer>
           <StyledContent>
-            <StyledTitle>ÜBERBLICK</StyledTitle>
+            <StyledTitle>
+              DIE BOWEN-TECHNIK <br />
+              Sanft - Effektiv - Ganzheitlich
+            </StyledTitle>
             <StyledParagraph>
               Die Bowen Technik (Kurzform: Bowtech) ist eine ganzheitliche,
               sanfte Muskel-und Bindegewebsmethode, die in den 50er Jahren in
@@ -26,12 +51,14 @@ export default function Main() {
         </StyledSection>
 
         <StyledCorridor />
+        <StyledLine></StyledLine>
+
         <StyledSectionReverse>
           <StyledContent>
             <StyledTitle>ANWENDUNGSBEREICHE</StyledTitle>
 
             <StyledParagraph>
-              Die Bowen-Technik kann helfen bei:
+              Die Bowen-Technik wird angewendet bei:
             </StyledParagraph>
             <StyledUl>
               <li>Rückenschmerzen verschiedenen Ursprungs</li>
@@ -49,15 +76,12 @@ export default function Main() {
               <li>Stärkung des Immunsystems</li>
               <li>Entspannung</li>
             </StyledUl>
-            <StyledParagraph>
-              Hinweis: Die Bowen-Technik ersetzt keine ärztlichen Behandlungen
-              und Beratungen.
-            </StyledParagraph>
           </StyledContent>
           <StyledContainer>
             <StyledImage src="/technik.jpeg" layout="fill" objectFit="cover" />
           </StyledContainer>
         </StyledSectionReverse>
+        <StyledLine></StyledLine>
         <StyledSectionThree>
           <StyledContent>
             <StyledTitle>WIRKUNGSWEISE</StyledTitle>
@@ -65,43 +89,72 @@ export default function Main() {
               Die gesetzten Impulse stimulieren bestimmte Nervenrezeptoren
               (Propriozeptoren u. Nozizeptoren) im Muskel und Fasziensystem.
               Dadurch wird der Energiefluss angeregt, die Muskeln entspannen
-              sich und das Nervensystem wird ausbalanciert. Bedeutend sind die 2
-              bis 3 Minuten Pausen zwischen einzelnen Abfolgen von Bowen Moves
-              in denen die Körpersysteme die Zeit bekommen die Impulse zu
-              verarbeiten und sie zu integrieren.
-              <br />
-              <br /> So können in dieser Entspannung z.B. Wirbelknochen oder
-              Gelenke wieder in ihre Position gelangen. Im Bereichen von
-              Schwellung oder Stauung im Gewebe wird das Lymphsystem angeregt.
-              Das Lösen von Spannungen und Verklebungen im Gewebe fördert auch
-              die Durchblutung. Dadurch wird die Aufnahme von Nährstoffen in die
-              Zellen gefördert und unterstützt. <br />
-              <br /> Wie die Bowen-Technik funktioniert kann man sich in etwa so
-              vorstellen: ein Regentropfen fällt ins Wasser. Dadurch entstehen
-              Wellen, die sich immer weiter ausdehnen. Wenn sie ans Ufer
-              gelangen, rollen sie wieder zurück und ein harmonischer Zustand
-              wird erreicht. So etwa funktioniert es auch im Körper, der aus 60
-              bis 75% aus Wasser besteht, eine ideale Voraussetzung um die Bowen
-              Impulse weiterzuleiten.
+              sich und das Nervensystem wird ausbalanciert. Wie die
+              Bowen-Technik funktioniert kann man sich in etwa so vorstellen:
+              ein Regentropfen fällt ins Wasser. Dadurch entstehen Wellen, die
+              sich immer weiter ausdehnen. Wenn sie ans Ufer gelangen, rollen
+              sie wieder zurück und ein harmonischer Zustand wird erreicht. So
+              etwa funktioniert es auch im Körper, der aus 60 bis 75% aus Wasser
+              besteht, eine ideale Voraussetzung um die Bowen Impulse
+              weiterzuleiten.
             </StyledParagraph>
           </StyledContent>
           <StyledContainer>
-            <StyledImage src="/water.jpeg" layout="fill" objectFit="cover" />
+            <StyledImageWater
+              src="/water.png"
+              layout="fill"
+              objectFit="cover"
+            />
           </StyledContainer>
         </StyledSectionThree>
         <StyledQuote>
-          "Die Kraft die den Körper erschaffen hat,
-          <br /> ist auch fähig den Körper zu heilen."
+          "Die Kraft die den Körper erschaffen hat, ist auch fähig den Körper zu
+          heilen."
           <StyledName> J. Dispenza</StyledName>
         </StyledQuote>
       </StyledWrapper>
     </>
   );
 }
+const StyledLine = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 30px 100px;
+  color: #000;
+  &:before,
+  &:after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #000;
+  }
+  &:before {
+    margin-right: 2em;
+  }
+  &:after {
+    margin-left: 2em;
+  }
+  ${media("<=phone")} {
+    display: none;
+  }
+`;
+const Waves = styled.div`
+  position: relative;
+  rotate: 180deg;
+  width: 100%;
+  height: 40px;
+  top: -20px;
+  background-color: white;
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: rgb(245, 245, 237);
+  }
+`;
 const StyledWrapper = styled.div`
   max-width: 1280px;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 30px;
 
   ${media("<=phone")} {
   }
@@ -182,6 +235,13 @@ const StyledImage = styled(Image)`
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   z-index: 0;
 `;
+const StyledImageWater = styled(Image)`
+  position: absolute;
+  width: 100%;
+  inset: 0px;
+  object-fit: cover;
+  color: transparent;
+`;
 
 const StyledContent = styled.div`
   width: 45%;
@@ -201,13 +261,14 @@ const StyledContent = styled.div`
 `;
 
 const StyledTitle = styled.h1`
-  font-family: Recoleta Alt Light, sans-serif !important;
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: 0.15em;
   font-style: normal;
   font-weight: lighter;
   color: #9e8d8d;
   hyphens: auto;
+  margin: 0px;
+
   ${media("<=phone")} {
     font-size: 1.5em;
     color: Black;
@@ -220,6 +281,7 @@ const StyledParagraph = styled.p`
   line-height: 2.3rem;
   width: 100%;
   color: #9e8d8d;
+  font-family: "Recoleta Alt Light";
 
   ${media("<=phone")} {
   }
@@ -229,6 +291,7 @@ const StyledUl = styled.ul`
   font-size: 1.1rem;
   line-height: 2.3rem;
   color: #9e8d8d;
+  font-family: "Recoleta Alt Light";
 `;
 
 const StyledCorridor = styled.div`
@@ -245,6 +308,7 @@ flex-direction: column;
     line-height: 2.3rem;
     font-size: 1.5rem;
     opacity: 2;
+    font-family: "Recoleta Alt Light";
     
   transition: opacity 2s ease-in-out;
   background-color: #f4f1e9;
