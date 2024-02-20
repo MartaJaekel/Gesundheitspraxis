@@ -23,7 +23,7 @@ export default function Navigation() {
       <StyledTitle>
         Gesundheitspraxis
         <br />
-        <h1> Simona Jäkel</h1>
+        Simona Jäkel
       </StyledTitle>
 
       <Burger onClick={handleToggle}>

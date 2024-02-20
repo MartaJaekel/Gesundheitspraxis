@@ -49,8 +49,8 @@ export default function Infos() {
           werden sanfte Griffe gesetzt. Zwischen zwei griffserien Folgen Pausen
           von 2 bis 3 Minuten. Diese Pausen geben den Körper Zeit, die Impulse
           zu verarbeiten und zu integrieren.
-        </StyledParagraphTwo>
-        <ParagraphThree>
+          <br />
+          <br />
           <StyledImportant>Wichtig</StyledImportant>
           <br />
           <br />
@@ -67,7 +67,7 @@ export default function Infos() {
           Anwendungen der Körper benötigt um wieder in die Balance zu kommen ist
           sehr individuell. Hinweis: Die Bowen-Technik ersetzt keine ärztlichen
           Behandlungen und Beratungen.
-        </ParagraphThree>
+        </StyledParagraphTwo>
       </StyledSection>
     </>
   );
@@ -88,6 +88,9 @@ const GridContainer = styled.div`
   background-color: white;
   ${media("<=phone")} {
     margin: 10px;
+  }
+  ${media("<=tablet")} {
+    justify-content: center;
   }
 `;
 
@@ -146,7 +149,7 @@ const StyledWrapper = styled.div`
   flex-direction: row;
 
   background-color: #d9d082;
-  
+
   justify-content: space-evenly;
   gap: 50px;
   padding: 40px 100px;
@@ -157,10 +160,10 @@ const StyledWrapper = styled.div`
     margin: 15px;
   }
 
-  
   ${media("<=tablet")} {
     display: flex;
     flex-direction: column;
+  }
 `;
 const StyledLeftSection = styled.div`
   display: flex;

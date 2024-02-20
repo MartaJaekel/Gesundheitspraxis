@@ -12,7 +12,6 @@ export default function Contact() {
           method="POST"
           id="form"
         >
-          <StyledTitle>Formular</StyledTitle>
           {/* Honeypot that preevnts spammers from filling the form out */}
           <input type="text" name="_honey" style={{ display: "none" }}></input>
           {/* Disable Captcha */}
@@ -44,13 +43,13 @@ export default function Contact() {
             <StyledImage src="/profile.jpeg" height={110} width={110} />
             <StyledDeatails>
               <IconWrapper>
-                <img src="/home.png" alt="home" height={20} width={20} />
+                <img src="/home.png" alt="home" height={18} width={18} />
 
                 <p>Gesundheitspraxis Simona Jäkel</p>
               </IconWrapper>
               <IconWrapper>
-                <img src="/telephone.png" alt="home" height={20} width={20} />
-                <a href="+49 (0) 15788297240">+49 (0) 15788297240</a>
+                <img src="/telephone.png" alt="home" height={18} width={18} />
+                <a href="+49 (0) 15788297240"> +49 (0) 15788297240</a>
               </IconWrapper>
               <IconWrapper>
                 <img src="/email.png" alt="home" height={20} width={20} />
@@ -83,7 +82,7 @@ const StyledDeatails = styled.div`
   text-align: left;
   margin-left: 15px;
   p {
-    margin: 10px;
+    margin: 3px 10px;
     display: flex;
     font-size: 0.9rem;
 
@@ -91,11 +90,15 @@ const StyledDeatails = styled.div`
     font-weight: lighter;
   }
   a {
-    margin: 10px;
+    margin: 5px 10px;
     color: black;
+    font-size: 0.9rem;
   }
   ${media("<=phone")} {
     margin: 10px 0px 10px 20px;
+  }
+  ${media("<=tablet")} {
+    margin-top: 10px;
   }
 `;
 
@@ -106,6 +109,7 @@ const IconWrapper = styled.div`
   felx-direction: row;
   img {
     align-self: center;
+    margin-right: 5px;
   }
 `;
 
@@ -113,20 +117,22 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: row;
   align-items: center;
+
   ${media("<=phone")} {
     flex-direction: column;
+    gap: 25px;
   }
   ${media("<=tablet")} {
     flex-direction: column;
     justify-content: center;
     margin: 10px;
   }
-  ${media("<=desktop")} {
-    flex-direction: row;
-    justify-content: center;
-    margin: 10px;
-    align-items: flex-start;
-  }
+  // ${media("<=desktop")} {
+  //   flex-direction: row;
+  //   justify-content: center;
+  //   margin: 10px;
+  //   align-items: flex-start;
+  // }
 `;
 
 const StyledImage = styled(Image)`
@@ -185,7 +191,10 @@ const StyledInfo = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  margin-top: 50px;
+  gap: 50px;
+
   h2 {
     font-weight: lighter;
   }
@@ -234,8 +243,6 @@ const StyledMap = styled.div`
     display: flex;
     justify-content: center;
     width: 80%;
-
-    margin-top: 40px;
   }
   ${media("<=desktop")} {
     width: 50%;
