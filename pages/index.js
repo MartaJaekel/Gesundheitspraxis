@@ -200,8 +200,8 @@ const StyledImage2 = styled(Image)`
     height: 300px;
   }
   ${media("<=tablet")} {
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
   }
   ${media("<=phone")} {
     width: 300px;

@@ -248,13 +248,15 @@ const StyledImageWater = styled(Image)`
 const StyledContent = styled.div`
   width: 45%;
   align-self: baseline;
-  ${media("<=phone")} {
+  ${media("<=desktop")} {
+    width: 100%;
+    align-self: center;
   }
 
   ${media("<=tablet")} {
     margin: 80px 20px;
     width: calc(100% - 40px);
-    align-self: center;
+    align-items: center;
   }
 `;
 
