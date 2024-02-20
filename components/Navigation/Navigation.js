@@ -50,6 +50,7 @@ const StyledTitle = styled.h1`
   font-weight: lighter;
   color: #958888;
   line-height: 2.1rem;
+  margin:10px
   text-align: center;
   h1 {
     font-size: 1.8rem;

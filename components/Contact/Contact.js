@@ -144,8 +144,7 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 15px;
-  // margin-top: 50px;
-  // margin-bottom: 50px;
+  margin-top: 50px;
   width: 50%;
   input {
     width: calc(100% - 20px);
@@ -201,8 +200,9 @@ const StyledInfo = styled.div`
 
   ${media("<=desktop")} {
     width: 100%;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
   }
 
   ${media("<=tablet")} {
@@ -245,7 +245,7 @@ const StyledMap = styled.div`
     width: 80%;
   }
   ${media("<=desktop")} {
-    width: 50%;
+    width: 100%;
   }
   ${media("<=tablet")} {
     width: 100%;
