@@ -51,7 +51,9 @@ export default function Main() {
         </StyledSection>
 
         <StyledCorridor />
-        <StyledLine></StyledLine>
+        <StyledLine>
+          <img src="/target.png" alt="target" width={40} height={40} />
+        </StyledLine>
 
         <StyledSectionReverse>
           <StyledContent>
@@ -81,7 +83,10 @@ export default function Main() {
             <StyledImage src="/technik.jpeg" layout="fill" objectFit="cover" />
           </StyledContainer>
         </StyledSectionReverse>
-        <StyledLine></StyledLine>
+        <StyledCorridor />
+        <StyledLine>
+          <img src="/target.png" alt="target" width={40} height={40} />
+        </StyledLine>
         <StyledSectionThree>
           <StyledContent>
             <StyledTitle>WIRKUNGSWEISE</StyledTitle>
@@ -133,9 +138,6 @@ const StyledLine = styled.div`
   }
   &:after {
     margin-left: 2em;
-  }
-  ${media("<=phone")} {
-    display: none;
   }
 `;
 const Waves = styled.div`
@@ -246,15 +248,11 @@ const StyledImageWater = styled(Image)`
 const StyledContent = styled.div`
   width: 45%;
   align-self: baseline;
-
-  ${media("<=desktop")} {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 50px;
-    width: calc(100% - 90px);
+  ${media("<=phone")} {
   }
+
   ${media("<=tablet")} {
-    margin: 0px 20px;
+    margin: 80px 20px;
     width: calc(100% - 40px);
     align-self: center;
   }
@@ -268,6 +266,7 @@ const StyledTitle = styled.h1`
   color: #9e8d8d;
   hyphens: auto;
   margin: 0px;
+  font-family: "Inter Tight", sans-serif;
 
   ${media("<=phone")} {
     font-size: 1.5em;
@@ -295,7 +294,7 @@ const StyledUl = styled.ul`
 `;
 
 const StyledCorridor = styled.div`
-  height: 100px; // Adjust as needed
+  height: 20px; // Adjust as needed
 `;
 const StyledQuote = styled.p`
 display: flex;
