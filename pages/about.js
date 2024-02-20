@@ -9,7 +9,7 @@ export default function About() {
   return (
     <>
       <Container>
-        <a href="/home">
+        <a href="/">
           <ImageIcon src="/arrow.svg" alt="arrow" height={30} width={30} />
         </a>
         <StyledProfile>
