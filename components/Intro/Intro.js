@@ -30,7 +30,7 @@ export default function Intro() {
           </svg>
         </Waves>
         <StyledParagraph>
-          Schenke Deinem Körper, Deinem Geist und Deiner Seele. eine wichtige
+          Schenke Deinem Körper, Deinem Geist und Deiner Seele eine wichtige
           Auszeit. <br />
           Komme ins Spüren und finde den Weg zurück in Dein inneres
           Gleichgewicht.
