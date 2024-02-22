@@ -251,11 +251,14 @@ const StyledContent = styled.div`
   ${media("<=desktop")} {
     width: 100%;
     align-self: center;
-    margin: 0px 20px;
+margin: 0px 20px;
   }
   ${media("<=phone")} {
     margin: 0px 20px;
   }
+
+  
+  
 `;
 
 const StyledTitle = styled.h1`
