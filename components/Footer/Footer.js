@@ -20,7 +20,7 @@ const StyledContainer = styled.div`
 `;
 const StyledLink = styled.a`
   text-decoration: none;
-  color: black;
+  color: #9e8d8d;
 
   font-family: "Inter Tight", sans-serif;
   font-weight: lighter;

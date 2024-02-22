@@ -9,7 +9,9 @@ export default function Infos() {
         <GridItem background="#d9b89f">Anwendung</GridItem>
         <GridItem background="#d9b89f">60 Minuten</GridItem>
         <GridItem background="#d9b89f">75 Minuten</GridItem>
-        <GridItem background="#e5d5cd">Ganzkörper(inkl.Kopf und Füße)</GridItem>
+        <GridItem background="#e5d5cd">
+          Ganzkörper (inkl.Kopf und Füße)
+        </GridItem>
         <GridItem background="#e5d5cd">-</GridItem>
         <GridItem background="#e5d5cd">80 Euro</GridItem>
         <GridItem background="#e9e0d9">Bowen Classic</GridItem>
@@ -44,29 +46,30 @@ export default function Infos() {
           <StyledTitle>Ablauf</StyledTitle>
         </StyledLine>
         <StyledParagraphTwo>
-          Die Bowtech-Sitzung findet in der Regel liegend statt, kann aber auch
-          im Sitzen durchgeführt werden. Auf der Haut oder über leichte Kleidung
-          werden sanfte Griffe gesetzt. Zwischen zwei griffserien Folgen Pausen
-          von 2 bis 3 Minuten. Diese Pausen geben den Körper Zeit, die Impulse
-          zu verarbeiten und zu integrieren.
+          Die Bowtech-Sitzung umfasst ein kurzes Vorgespräch und findet in der
+          Regel liegend statt, kann aber auch im Sitzen durchgeführt werden. Auf
+          der Haut oder über leichte Kleidung werden sanfte Griffe gesetzt.
+          Zwischen zwei Griffserien folgen Pausen von 2 bis 3 Minuten. Diese
+          Pausen geben dem Körper Zeit, die Impulse zu verarbeiten und zu
+          integrieren.
           <br />
           <br />
           <StyledImportant>Wichtig</StyledImportant>
           <br />
           <br />
           Vor und nach der Sitzung sollte ausreichend Wasser getrunken werden,
-          da das Fasziensystem aktiviert wird und ausreichend Flüssigkeit
-          benötigt. Zudem sollte Überanstrengung, Sauna oder andere Wärme oder
-          Kälteanwendungen vermieden werden, sowie weitere manuelle Behandlungen
+          da das Fasziensystem aktiviert und ausreichend Flüssigkeit benötigt
+          wird. Zudem sollten Überanstrengung, Sauna oder andere Wärme oder
+          Kälteanwendungen vermieden werden sowie weitere manuelle Behandlungen
           um einige Tage verschoben werden. Der Körper soll sich die Zeit nehmen
           können, um angestoßene Prozesse wirken zu lassen. Für den weiteren Tag
-          nach der Anwendung ist darauf zu achten nicht länger als 30 Minuten am
-          Stück zu sitzen, um den Blut und Lymphfluss positiv zu beeinflussen.
-          Kurzes aufstehen und wenige Schritte genügen. Nach 2 bis 4 Tagen
-          istswitch häufig eine deutliche Veränderung wahrnehmbar. Wie viele
-          Anwendungen der Körper benötigt um wieder in die Balance zu kommen ist
-          sehr individuell. Hinweis: Die Bowen-Technik ersetzt keine ärztlichen
-          Behandlungen und Beratungen.
+          nach der Anwendung ist darauf zu achten, nicht länger als 30 Minuten
+          am Stück zu sitzen, um den Blut und Lymphfluss positiv zu
+          beeinflussen. Kurzes Aufstehen und wenige Schritte genügen. Nach 2 bis
+          4 Tagen istswitch häufig eine deutliche Veränderung wahrnehmbar. Wie
+          viele Anwendungen der Körper benötigt, um wieder in die Balance zu
+          kommen, ist sehr individuell. Hinweis: Die Bowen-Technik ersetzt keine
+          ärztlichen Behandlungen und Beratungen.
         </StyledParagraphTwo>
       </StyledSection>
     </>
@@ -77,6 +80,10 @@ const StyledTitle = styled.h1`
   text-align: center;
   font-family: "Inter Tight", sans-serif;
   font-weight: lighter;
+  color: #9e8d8d;
+
+  ${media("<=phone")} {
+  }
 `;
 
 const GridContainer = styled.div`
@@ -99,9 +106,8 @@ const GridItem = styled.div`
   text-align: center;
   background-color: ${(props) => props.background || "transparent"};
   font-family: "Recoleta Alt Light";
-
-  ${media("<=phone")} {
-  }
+  hyphens: auto;
+  color: #9e8d8d;
 `;
 const StyledLine = styled.div`
   display: flex;
@@ -113,13 +119,16 @@ const StyledLine = styled.div`
   &:after {
     content: "";
     flex: 1;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #9e8d8d;
   }
   &:before {
     margin-right: 2em;
   }
   &:after {
     margin-left: 2em;
+  }
+  ${media("<=tablet")} {
+    margin: 30px 70px;
   }
 `;
 
@@ -134,7 +143,7 @@ const StyledParagraphTwo = styled.p`
   text-align: center;
   margin: 0px 100px;
   font-family: "Recoleta Alt Light";
-
+  color: #9e8d8d;
   ${media("<=phone")} {
     margin: 0px 25px;
     align-self: center;

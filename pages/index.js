@@ -72,7 +72,6 @@ const StyledNavigation = styled(Navigation)`
 const ImageContainer = styled.div`
   width: 100%;
   height: calc(105vh - 100px);
-
   padding-top: 120px;
   z-index: -1;
   ${media("<=phone")} {
@@ -80,7 +79,7 @@ const ImageContainer = styled.div`
     padding-top: 100px;
   }
   ${media("<=tablet")} {
-    height: calc(81vh - 200px);
+    height: calc(100vh - 200px);
   }
   ${media("<=desktop")} {
     height: calc(100vh - 200px);
@@ -130,12 +129,12 @@ const StyledLine = styled.div`
   align-items: center;
   text-align: center;
   margin: 30px 100px;
-  color: #000;
+
   &:before,
   &:after {
     content: "";
     flex: 1;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #9e8d8d;
   }
   &:before {
     margin-right: 2em;
@@ -155,6 +154,7 @@ const StyledText = styled.h1`
   text-align: center;
   font-family: "Inter Tight", sans-serif;
   font-weight: lighter;
+  color: #9e8d8d;
   #contact {
     scroll-margin-top: 10px;
   }

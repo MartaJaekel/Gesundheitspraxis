@@ -44,7 +44,7 @@ export default function Main() {
               Australien entwickelt wurde. Eine Reihe von sanften Impulsen im
               Bereich des Muskel- und Fasziensystems helfen dem Körper, seine
               Ressourcen der Selbstregulation optimal zu nutzen und wieder in
-              Balance zu kommen. Die Bowen-Technik ist hervorragend geeignet,
+              Balance zu kommen. Die Bowen-Technik ist hervorragend geeignet,um
               Wohlbefinden und Gesundheit zu erlangen und zu erhalten.
             </StyledParagraph>
           </StyledContent>
@@ -65,7 +65,7 @@ export default function Main() {
             <StyledUl>
               <li>Rückenschmerzen verschiedenen Ursprungs</li>
               <li>
-                Verspannungen und Verhärtungen bei Muskulatur im
+                Verspannungen und Verhärtungen der Muskulatur im
                 Rücken-Schulter- und Nackenbereich
               </li>
               <li>ISG-Blockaden</li>
@@ -76,7 +76,7 @@ export default function Main() {
               <li>Baby-Koliken, Schlafprobleme bei Babys</li>
               <li>Körperwahrnehmung</li>
               <li>Stärkung des Immunsystems</li>
-              <li>Entspannung</li>
+              <li>bei innerer Spannung</li>
             </StyledUl>
           </StyledContent>
           <StyledContainer>
@@ -95,8 +95,8 @@ export default function Main() {
               (Propriozeptoren u. Nozizeptoren) im Muskel und Fasziensystem.
               Dadurch wird der Energiefluss angeregt, die Muskeln entspannen
               sich und das Nervensystem wird ausbalanciert. Wie die
-              Bowen-Technik funktioniert kann man sich in etwa so vorstellen:
-              ein Regentropfen fällt ins Wasser. Dadurch entstehen Wellen, die
+              Bowen-Technik funktioniert, kann man sich so in etwa vorstellen:
+              Ein Regentropfen fällt ins Wasser. Dadurch entstehen Wellen, die
               sich immer weiter ausdehnen. Wenn sie ans Ufer gelangen, rollen
               sie wieder zurück und ein harmonischer Zustand wird erreicht. So
               etwa funktioniert es auch im Körper, der aus 60 bis 75% aus Wasser
@@ -113,7 +113,7 @@ export default function Main() {
           </StyledContainer>
         </StyledSectionThree>
         <StyledQuote>
-          "Die Kraft die den Körper erschaffen hat, ist auch fähig den Körper zu
+          "Die Kraft,die den Körper erschaffen hat, ist auch fähig den Körper zu
           heilen."
           <StyledName> J. Dispenza</StyledName>
         </StyledQuote>
@@ -131,7 +131,7 @@ const StyledLine = styled.div`
   &:after {
     content: "";
     flex: 1;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #9e8d8d;
   }
   &:before {
     margin-right: 2em;
@@ -159,6 +159,7 @@ const StyledWrapper = styled.div`
   margin-top: 30px;
 
   ${media("<=phone")} {
+    margin-top: 0px;
   }
   ${media("<=desktop")} {
   }
@@ -171,16 +172,15 @@ const StyledSection = styled.section`
   justify-content: space-between;
   margin: 0 100px;
 
-  ${media("<=phone")} {
-    margin: 15px;
-  }
-
   ${media("<=desktop")} {
     display: flex;
     flex-direction: column-reverse;
   }
   ${media("<=tablet")} {
-    margin: 0 10px;
+    margin: 0 30px;
+  }
+  ${media("<=phone")} {
+    margin: 0px 20px;
   }
 `;
 
@@ -211,7 +211,7 @@ const StyledSectionReverse = styled(StyledSection)`
   ${media("<=phone")} {
     display: flex;
     flex-direction: column;
-    margin-top: -60px;
+    margin-top: 0px;
   }
   ${media("<=desktop")} {
     flex-direction: column;
@@ -228,7 +228,7 @@ const StyledSectionThree = styled(StyledSection)`
   }
   ${media("<=desktop")} {
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 35px;
   }
 `;
 
@@ -251,13 +251,14 @@ const StyledContent = styled.div`
   ${media("<=desktop")} {
     width: 100%;
     align-self: center;
+margin: 0px 20px;
+  }
+  ${media("<=phone")} {
+    margin: 0px 20px;
   }
 
-  ${media("<=tablet")} {
-    margin: 80px 20px;
-    width: calc(100% - 40px);
-    align-items: center;
-  }
+  
+  
 `;
 
 const StyledTitle = styled.h1`
@@ -272,7 +273,7 @@ const StyledTitle = styled.h1`
 
   ${media("<=phone")} {
     font-size: 1.5em;
-    color: Black;
+
     text-align: center;
   }
 `;
@@ -310,7 +311,7 @@ flex-direction: column;
     font-size: 1.5rem;
     opacity: 2;
     font-family: "Recoleta Alt Light";
-    
+    color:#9e8d8d;
   transition: opacity 2s ease-in-out;
   background-color: #f4f1e9;
  

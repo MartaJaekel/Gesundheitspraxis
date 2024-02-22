@@ -189,7 +189,7 @@ const StyledAbout = styled.div`
 
   h1 {
     font-size: 2em; // Make the name larger
-    color: black; // Use a different color for the name
+    color: #928585; // Use a different color for the name
     font-weight: lighter;
     font-family: "Inter Tight", sans-serif;
   }
@@ -237,5 +237,5 @@ const Author = styled.span`
   font-size: 0.9em;
 
   width: 100%;
-  color: black;
+  color: #9f887e;
 `;

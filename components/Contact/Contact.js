@@ -20,27 +20,23 @@ export default function Contact() {
           <input
             type="hidden"
             name="_next"
-            value="http://localhost:3000/"
+            value="https://gesundheitspraxis-jaekel.de"
           ></input>
 
           <StyledLabel htmlFor="fname">Vorname </StyledLabel>
-          <input
-            type="text"
-            name="Vorname"
-            placeholder="Dein Vorname"
-            required
-          />
+          <input type="text" name="Vorname" required />
           <StyledLabel htmlFor="sname">Name </StyledLabel>
-          <input type="text" name="Name" placeholder="Dein Name" required />
+          <input type="text" name="Name" required />
           <StyledLabel htmlFor="email">Email </StyledLabel>
-          <input type="text" name="email" placeholder="Deine Email" required />
+          <input type="text" name="email" required />
+          <StyledLabel htmlFor="Nachricht">Nachricht</StyledLabel>
           <StyledTextArea name="message"></StyledTextArea>
 
           <StyledButton type="submit">Senden</StyledButton>
         </StyledForm>
         <StyledInfo>
           <StyledSection>
-            <StyledImage src="/profile.jpeg" height={110} width={110} />
+            <StyledImage src="/profiletwo.jpeg" height={110} width={110} />
             <StyledDeatails>
               <IconWrapper>
                 <img src="/home.png" alt="home" height={18} width={18} />
@@ -85,13 +81,14 @@ const StyledDeatails = styled.div`
     margin: 3px 10px;
     display: flex;
     font-size: 0.9rem;
+    color: #9e8d8d;
 
     font-family: "Inter Tight", sans-serif;
     font-weight: lighter;
   }
   a {
     margin: 5px 10px;
-    color: black;
+    color: #9e8d8d;
     font-size: 0.9rem;
   }
   ${media("<=phone")} {
@@ -213,7 +210,7 @@ const StyledLabel = styled.label`
   display: block;
   text-align: left;
   margin-right: 200px;
-
+  color: #9e8d8d;
   font-family: "Inter Tight", sans-serif;
   font-weight: lighter;
 
@@ -232,7 +229,7 @@ const StyledTextArea = styled.textarea`
   height: 100px;
   padding: 10px;
   font-size: 0.9rem;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
   resize: none;
 `;

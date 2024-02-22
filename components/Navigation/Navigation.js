@@ -50,7 +50,10 @@ const StyledTitle = styled.h1`
   font-weight: lighter;
   color: #958888;
   line-height: 2.1rem;
-  margin:10px
+  margin: 10px;
+
+ 
+
   text-align: center;
   h1 {
     font-size: 1.8rem;
@@ -103,13 +106,6 @@ const Burger = styled.div`
     right: 40px;
   }
 
-  div {
-    width: 2rem;
-    height: 0.2rem;
-    background-color: black;
-
-    transition: all 0.3s linear;
-  }
   ${media("<=tablet")} {
     display: flex;
     flex-direction: column;
@@ -121,7 +117,7 @@ const Burger = styled.div`
   div {
     width: 2rem;
     height: 0.2rem;
-    background-color: white;
+    background-color: #ab9c88;
 
     transition: all 0.3s linear;
   }
@@ -175,7 +171,7 @@ const StyledList = styled.li`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #000;
+  color: #958888;
 
   &:hover {
     color: #ffffff;
