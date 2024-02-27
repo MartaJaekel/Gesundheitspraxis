@@ -4,7 +4,7 @@ import media from "css-in-js-media";
 export default function Infos() {
   return (
     <>
-      <StyledTitle>Preise</StyledTitle>
+      <StyledTitle id="prices">Preise</StyledTitle>
       <GridContainer>
         <GridItem background="#d9b89f">Anwendung</GridItem>
         <GridItem background="#d9b89f">60 Minuten</GridItem>
@@ -46,11 +46,11 @@ export default function Infos() {
           <StyledTitle>Ablauf</StyledTitle>
         </StyledLine>
         <StyledParagraphTwo>
-          Die Bowtech-Sitzung umfasst ein kurzes Vorgespräch und findet in der
-          Regel liegend statt, kann aber auch im Sitzen durchgeführt werden. Auf
-          der Haut oder über leichte Kleidung werden sanfte Griffe gesetzt.
-          Zwischen zwei Griffserien folgen Pausen von 2 bis 3 Minuten. Diese
-          Pausen geben dem Körper Zeit, die Impulse zu verarbeiten und zu
+          Die Anwendung beinhaltet ein kurzes Vor - und Nachgespräch und findet
+          in der Regel liegend statt, kann aber auch im Sitzen durchgeführt
+          werden. Auf der Haut oder über leichte Kleidung werden sanfte Griffe
+          gesetzt. Zwischen zwei Griffserien folgen Pausen von 2 bis 3 Minuten.
+          Diese Pausen geben dem Körper Zeit, die Impulse zu verarbeiten und zu
           integrieren.
           <br />
           <br />
@@ -66,9 +66,9 @@ export default function Infos() {
           nach der Anwendung ist darauf zu achten, nicht länger als 30 Minuten
           am Stück zu sitzen, um den Blut und Lymphfluss positiv zu
           beeinflussen. Kurzes Aufstehen und wenige Schritte genügen. Nach 2 bis
-          4 Tagen istswitch häufig eine deutliche Veränderung wahrnehmbar. Wie
-          viele Anwendungen der Körper benötigt, um wieder in die Balance zu
-          kommen, ist sehr individuell. Hinweis: Die Bowen-Technik ersetzt keine
+          4 Tagen ist häufig eine deutliche Veränderung wahrnehmbar. Wie viele
+          Anwendungen der Körper benötigt, um wieder in die Balance zu kommen,
+          ist sehr individuell. Hinweis: Die Bowen-Technik ersetzt keine
           ärztlichen Behandlungen und Beratungen.
         </StyledParagraphTwo>
       </StyledSection>
@@ -81,9 +81,8 @@ const StyledTitle = styled.h1`
   font-family: "Inter Tight", sans-serif;
   font-weight: lighter;
   color: #9e8d8d;
-
-  ${media("<=phone")} {
-  }
+  margin-top: 50px;
+  scroll-margin-top: 20%;
 `;
 
 const GridContainer = styled.div`
