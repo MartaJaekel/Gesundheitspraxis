@@ -9,8 +9,8 @@ export default function About() {
   return (
     <>
       <Container>
-        <a href="/home">
-          <ImageIcon src="/arrow.svg" alt="arrow" height={30} width={30} />
+        <a href="/">
+          <ImageIcon src="/arrow.svg" alt="arrow" height={20} width={20} />
         </a>
         <AboutMe>
           <Section>
@@ -103,7 +103,8 @@ const WavesTwo = styled.div`
 const Waves = styled.div`
   position: absolute;
   width: 100%;
-  height: 30px;
+  height: 43px;
+  top: 210px;
 
   svg {
     width: 100%;
@@ -122,6 +123,7 @@ const Section = styled.div`
   width: 100%;
 
   margin: 0px 0px;
+  padding: 10px 0px;
 `;
 const ImageIcon = styled(Image)`
   position: absolute;
@@ -133,13 +135,9 @@ const ImageIcon = styled(Image)`
   border-radius: 100%;
   border: 2px solid #ccc1c1;
   cursor: pointer;
+  z-index: 100;
+  padding: 5px;
 
-  font-size: 1.3em;
-  font-weight: lighter;
-  &:hover {
-    background-color: white;
-    color: #dac8a6;
-  }
   ${media("<=phone")} {
     top: 10px;
   }
@@ -165,10 +163,12 @@ const Description = styled.div`
   color: #333; // Dark text color for better readability
   text-align: center; // Center the text
   font-weight: lighter;
+  margin-top: 10px;
   h1 {
     font-size: 2em; // Make the name larger
     color: black; // Use a different color for the name
     font-weight: lighter;
+    font-family: "Inter Tight", sans-serif;
   }
 
   p {
@@ -183,6 +183,7 @@ const Description = styled.div`
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     transition: transform 0.3s ease-in-out; /* Add smooth transition on hover */
     background-color: #d2c19d; /* Use a light background color */
+    font-family: recoleta alt light;
   }
 `;
 const Container = styled.div`
@@ -212,7 +213,7 @@ const Quote = styled.div`
   text-align: center;
 
   line-height: 1.5em;
-
+  font-family: "Recoleta Alt Light";
   font-style: italic;
   font-size: 1.5em;
   color: #9f887e;
@@ -224,7 +225,7 @@ const Quote = styled.div`
 const Author = styled.span`
   margin-top: 5px;
   font-size: 0.9em;
-
+  font-family: "Recoleta Alt Light";
   width: 100%;
   color: black;
 `;

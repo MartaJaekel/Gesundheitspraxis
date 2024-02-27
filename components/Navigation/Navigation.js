@@ -44,7 +44,7 @@ export default function Navigation() {
   );
 }
 const StyledTitle = styled.h1`
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-family: "Inter Tight", sans-serif;
   font-style: Italic;
   font-weight: lighter;
@@ -52,17 +52,15 @@ const StyledTitle = styled.h1`
   line-height: 2.1rem;
   margin: 10px;
 
- 
-
   text-align: center;
   h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin: 0px;
     font-style: Italic;
     font-weight: lighter;
   }
   ${media("<=phone")} {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 `;
 const NavContainer = styled.nav`

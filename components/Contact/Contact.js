@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Contact() {
   return (
     <>
-      <StyledContainer>
+      <StyledContainer id="contact">
         <StyledForm
           action="https://formsubmit.co/bccef37a920cca07b4c018121eb17f7f"
           method="POST"
@@ -169,6 +169,7 @@ const StyledContainer = styled.div`
   margin: 0 100px;
   margin-bottom: 50px;
   width: calc(100% - 200px);
+  scroll-margin-top: 150px;
 
   ${media("<=desktop")} {
     display: flex;

@@ -34,17 +34,17 @@ export default function Main() {
             <StyledImage src="/move.jpg" layout="fill" objectFit="cover" />
           </StyledContainer>
           <StyledContent>
-            <StyledTitle>
+            <StyledTitle id="bowen-technik">
               DIE BOWEN-TECHNIK <br />
               Sanft - Effektiv - Ganzheitlich
             </StyledTitle>
             <StyledParagraph>
               Die Bowen Technik (Kurzform: Bowtech) ist eine ganzheitliche,
-              sanfte Muskel-und Bindegewebsmethode, die in den 50er Jahren in
+              sanfte Muskel und Bindegewebsmethode, die in den 50er Jahren in
               Australien entwickelt wurde. Eine Reihe von sanften Impulsen im
-              Bereich des Muskel- und Fasziensystems helfen dem Körper, seine
+              Bereich des Muskel und Fasziensystems helfen dem Körper, seine
               Ressourcen der Selbstregulation optimal zu nutzen und wieder in
-              Balance zu kommen. Die Bowen-Technik ist hervorragend geeignet,um
+              Balance zu kommen. Die Bowen-Technik ist hervorragend geeignet, um
               Wohlbefinden und Gesundheit zu erlangen und zu erhalten.
             </StyledParagraph>
           </StyledContent>
@@ -65,8 +65,8 @@ export default function Main() {
             <StyledUl>
               <li>Rückenschmerzen verschiedenen Ursprungs</li>
               <li>
-                Verspannungen und Verhärtungen der Muskulatur im
-                Rücken-Schulter- und Nackenbereich
+                Verspannungen und Verhärtungen der Muskulatur im Rücken-Schulter
+                und Nackenbereich
               </li>
               <li>ISG-Blockaden</li>
               <li>Kniebeschwerden</li>
@@ -76,7 +76,7 @@ export default function Main() {
               <li>Baby-Koliken, Schlafprobleme bei Babys</li>
               <li>Körperwahrnehmung</li>
               <li>Stärkung des Immunsystems</li>
-              <li>bei innerer Spannung</li>
+              <li>bei innerer Anspannung</li>
             </StyledUl>
           </StyledContent>
           <StyledContainer>
@@ -113,8 +113,8 @@ export default function Main() {
           </StyledContainer>
         </StyledSectionThree>
         <StyledQuote>
-          "Die Kraft,die den Körper erschaffen hat, ist auch fähig den Körper zu
-          heilen."
+          "Die Kraft, die den Körper erschaffen hat, ist auch fähig den Körper
+          zu heilen."
           <StyledName> J. Dispenza</StyledName>
         </StyledQuote>
       </StyledWrapper>
@@ -251,14 +251,11 @@ const StyledContent = styled.div`
   ${media("<=desktop")} {
     width: 100%;
     align-self: center;
-margin: 0px 20px;
+    margin: 0px 20px;
   }
   ${media("<=phone")} {
     margin: 0px 20px;
   }
-
-  
-  
 `;
 
 const StyledTitle = styled.h1`
@@ -271,6 +268,7 @@ const StyledTitle = styled.h1`
   margin: 0px;
   font-family: "Inter Tight", sans-serif;
 
+  scroll-margin-top: 150px;
   ${media("<=phone")} {
     font-size: 1.5em;
 
