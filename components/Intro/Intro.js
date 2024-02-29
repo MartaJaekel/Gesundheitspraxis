@@ -1,9 +1,38 @@
-import styled from "styled-components";
 import React from "react";
-import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import media from "css-in-js-media";
+import styled, { keyframes } from "styled-components";
 
 export default function Intro() {
+  const [isVisible, setIsVisible] = useState(false);
+  const paragraphRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Update state to indicate whether paragraph is visible
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5, // Change this threshold as needed
+      }
+    );
+
+    // Start observing the paragraph element
+    if (paragraphRef.current) {
+      observer.observe(paragraphRef.current);
+    }
+
+    // Clean up observer on unmount
+    return () => {
+      if (paragraphRef.current) {
+        observer.unobserve(paragraphRef.current);
+      }
+    };
+  }, []);
+
   return (
     <>
       <StyledContainer>
@@ -29,7 +58,11 @@ export default function Intro() {
             ></path>
           </svg>
         </Waves>
-        <StyledParagraph>
+
+        <StyledParagraph
+          ref={paragraphRef}
+          className={isVisible ? "fade-in-text" : ""}
+        >
           Schenke Deinem Körper, Deinem Geist und Deiner Seele eine wichtige
           Auszeit. <br />
           Komme ins Spüren und finde den Weg zurück in Dein inneres
@@ -52,13 +85,25 @@ const Waves = styled.div`
     fill: #ffffff;
   }
 `;
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`;
 
 const StyledParagraph = styled.p`
   text-align: center;
   font-size: 1.5rem;
   line-height: 3rem;
   font-family: "Recoleta Alt Light";
+  margin: 0px 0px;
   color: #9e8d8d;
+  &.fade-in-text {
+    line-height: 1.5;
+    text-align: center;
+    font-size: 1.4rem;
+
+    animation: ${fadeIn} 5s;
+  }
 
   ${media("<=phone")} {
     font-family: "Recoleta Alt Light";

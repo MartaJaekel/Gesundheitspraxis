@@ -27,7 +27,7 @@ export default function Contact() {
           <input type="text" name="Vorname" required />
           <StyledLabel htmlFor="sname">Name </StyledLabel>
           <input type="text" name="Name" required />
-          <StyledLabel htmlFor="email">Email </StyledLabel>
+          <StyledLabel htmlFor="email">E-Mail </StyledLabel>
           <input type="text" name="email" required />
           <StyledLabel htmlFor="Nachricht">Nachricht</StyledLabel>
           <StyledTextArea name="message"></StyledTextArea>

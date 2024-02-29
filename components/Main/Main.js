@@ -40,12 +40,13 @@ export default function Main() {
             </StyledTitle>
             <StyledParagraph>
               Die Bowen Technik (Kurzform: Bowtech) ist eine ganzheitliche,
-              sanfte Muskel und Bindegewebsmethode, die in den 50er Jahren in
-              Australien entwickelt wurde. Eine Reihe von sanften Impulsen im
-              Bereich des Muskel und Fasziensystems helfen dem Körper, seine
-              Ressourcen der Selbstregulation optimal zu nutzen und wieder in
-              Balance zu kommen. Die Bowen-Technik ist hervorragend geeignet, um
-              Wohlbefinden und Gesundheit zu erlangen und zu erhalten.
+              sanfte Muskel und Bindegewebsmethode, die in den 50er Jahren von
+              Tom Bowen in Australien entwickelt wurde. Eine Reihe von sanften
+              Impulsen im Bereich des Muskel- und Fasziensystems helfen dem
+              Körper, seine Ressourcen der Selbstregulation optimal zu nutzen
+              und wieder in Balance zu kommen. Die Bowen-Technik ist
+              hervorragend geeignet, um Wohlbefinden und Gesundheit zu erlangen
+              und zu erhalten.
             </StyledParagraph>
           </StyledContent>
         </StyledSection>
@@ -60,7 +61,7 @@ export default function Main() {
             <StyledTitle>ANWENDUNGSBEREICHE</StyledTitle>
 
             <StyledParagraph>
-              Die Bowen-Technik wird angewendet bei:
+              Die Bowen-Technik wird u. a. angewendet bei:
             </StyledParagraph>
             <StyledUl>
               <li>Rückenschmerzen verschiedenen Ursprungs</li>
@@ -74,9 +75,7 @@ export default function Main() {
                 Schwangerschaftsbegleitung wie z. B. Rückenschmerzen, Übelkeit
               </li>
               <li>Baby-Koliken, Schlafprobleme bei Babys</li>
-              <li>Körperwahrnehmung</li>
-              <li>Stärkung des Immunsystems</li>
-              <li>bei innerer Anspannung</li>
+              <li>Kinderwunsch</li>
             </StyledUl>
           </StyledContent>
           <StyledContainer>
@@ -95,10 +94,10 @@ export default function Main() {
               (Propriozeptoren u. Nozizeptoren) im Muskel und Fasziensystem.
               Dadurch wird der Energiefluss angeregt, die Muskeln entspannen
               sich und das Nervensystem wird ausbalanciert. Wie die
-              Bowen-Technik funktioniert, kann man sich so in etwa vorstellen:
-              Ein Regentropfen fällt ins Wasser. Dadurch entstehen Wellen, die
-              sich immer weiter ausdehnen. Wenn sie ans Ufer gelangen, rollen
-              sie wieder zurück und ein harmonischer Zustand wird erreicht. So
+              Bowen-Technik funktioniert, kann man sich so vorstellen: Ein
+              Regentropfen fällt ins Wasser. Dadurch entstehen Wellen, die sich
+              immer weiter ausdehnen. Wenn sie ans Ufer gelangen, rollen sie
+              wieder zurück und ein harmonischer Zustand wird erreicht. So in
               etwa funktioniert es auch im Körper, der aus 60 bis 75% aus Wasser
               besteht, eine ideale Voraussetzung um die Bowen Impulse
               weiterzuleiten.
@@ -195,10 +194,10 @@ const StyledContainer = styled.div`
   }
   ${media("<=phone")} {
     width: 100%;
-    height: 300px;
+    height: 250px;
   }
   ${media("<=tablet")} {
-    width: calc(100% - 20px);
+    width: calc(85% - 20px);
   }
 `;
 
@@ -271,7 +270,7 @@ const StyledTitle = styled.h1`
   scroll-margin-top: 150px;
   ${media("<=phone")} {
     font-size: 1.5em;
-
+    hyphens: auto;
     text-align: center;
   }
 `;
@@ -282,9 +281,6 @@ const StyledParagraph = styled.p`
   width: 100%;
   color: #9e8d8d;
   font-family: "Recoleta Alt Light";
-
-  ${media("<=phone")} {
-  }
 `;
 
 const StyledUl = styled.ul`
@@ -298,22 +294,24 @@ const StyledCorridor = styled.div`
   height: 20px; // Adjust as needed
 `;
 const StyledQuote = styled.p`
-display: flex;
-flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-top: 150px;
-    margin-bottom: 50px;
-    padding: 30px;
-    line-height: 2.3rem;
-    font-size: 1.5rem;
-    opacity: 2;
-    font-family: "Recoleta Alt Light";
-    color:#9e8d8d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  padding: 30px;
+  line-height: 2.3rem;
+  font-size: 1.5rem;
+  opacity: 2;
+  font-family: "Recoleta Alt Light";
+  color: #9e8d8d;
   transition: opacity 2s ease-in-out;
   background-color: #f4f1e9;
- 
-}`;
+  ${media("<=phone")} {
+    margin-top: 50px;
+  }
+`;
 const StyledName = styled.span`
   font-size: 1.2rem;
 `;
