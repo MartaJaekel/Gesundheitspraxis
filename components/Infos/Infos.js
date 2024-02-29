@@ -14,16 +14,16 @@ export default function Infos() {
         </GridItem>
         <GridItem background="#e5d5cd">-</GridItem>
         <GridItem background="#e5d5cd">80 Euro</GridItem>
-        <GridItem background="#e9e0d9">Bowen Classic</GridItem>
+        <GridItem background="#e9e0d9">Bowen Basis</GridItem>
         <GridItem background="#e9e0d9">60 Euro</GridItem>
         <GridItem background="#e9e0d9">-</GridItem>
         <GridItem background="#e5d5cd">Kopf-Nacken-Rücken</GridItem>
         <GridItem background="#e5d5cd">60 Euro</GridItem>
         <GridItem background="#e5d5cd">-</GridItem>
-        <GridItem background="#e9e0d9">Arme-schultern-Rücken</GridItem>
+        <GridItem background="#e9e0d9">Becken-Beine-Füße</GridItem>
         <GridItem background="#e9e0d9">60 Euro</GridItem>
         <GridItem background="#e9e0d9">-</GridItem>
-        <GridItem background="#e5d5cd">Becken-Beine-Füße</GridItem>
+        <GridItem background="#e5d5cd">Bowen für Mütter und Babys</GridItem>
         <GridItem background="#e5d5cd">60 Euro</GridItem>
         <GridItem background="#e5d5cd">-</GridItem>
         <GridItem background="#e9e0d9">Bowen für Schwangere</GridItem>
@@ -46,7 +46,7 @@ export default function Infos() {
           <StyledTitle>Ablauf</StyledTitle>
         </StyledLine>
         <StyledParagraphTwo>
-          Die Anwendung beinhaltet ein kurzes Vor - und Nachgespräch und findet
+          Die Anwendung beinhaltet ein kurzes Vor- und Nachgespräch und findet
           in der Regel liegend statt, kann aber auch im Sitzen durchgeführt
           werden. Auf der Haut oder über leichte Kleidung werden sanfte Griffe
           gesetzt. Zwischen zwei Griffserien folgen Pausen von 2 bis 3 Minuten.
@@ -54,34 +54,54 @@ export default function Infos() {
           integrieren.
           <br />
           <br />
-          <StyledImportant>Wichtig</StyledImportant>
-          <br />
-          <br />
-          Vor und nach der Sitzung sollte ausreichend Wasser getrunken werden,
-          da das Fasziensystem aktiviert und ausreichend Flüssigkeit benötigt
-          wird. Zudem sollten Überanstrengung, Sauna oder andere Wärme oder
-          Kälteanwendungen vermieden werden sowie weitere manuelle Behandlungen
-          um einige Tage verschoben werden. Der Körper soll sich die Zeit nehmen
-          können, um angestoßene Prozesse wirken zu lassen. Für den weiteren Tag
-          nach der Anwendung ist darauf zu achten, nicht länger als 30 Minuten
-          am Stück zu sitzen, um den Blut und Lymphfluss positiv zu
-          beeinflussen. Kurzes Aufstehen und wenige Schritte genügen. Nach 2 bis
-          4 Tagen ist häufig eine deutliche Veränderung wahrnehmbar. Wie viele
-          Anwendungen der Körper benötigt, um wieder in die Balance zu kommen,
-          ist sehr individuell. Hinweis: Die Bowen-Technik ersetzt keine
+          WICHTIG: Vor und nach der Sitzung sollte ausreichend Wasser getrunken
+          werden, da das Fasziensystem aktiviert und ausreichend Flüssigkeit
+          benötigt wird. Zudem sollten Überanstrengung, Sauna oder andere Wärme
+          oder Kälteanwendungen vermieden werden sowie weitere manuelle
+          Behandlungen um einige Tage verschoben werden. Der Körper soll sich
+          die Zeit nehmen können, um angestoßene Prozesse wirken zu lassen. Für
+          den weiteren Tag nach der Anwendung ist darauf zu achten, nicht länger
+          als 30 Minuten am Stück zu sitzen, um den Blut und Lymphfluss positiv
+          zu beeinflussen. Kurzes Aufstehen und wenige Schritte genügen. Nach 2
+          bis 4 Tagen ist häufig eine deutliche Veränderung wahrnehmbar. Wie
+          viele Anwendungen der Körper benötigt, um wieder in die Balance zu
+          kommen, ist sehr individuell. Hinweis: Die Bowen-Technik ersetzt keine
           ärztlichen Behandlungen und Beratungen.
         </StyledParagraphTwo>
+        <StyledButton
+          onClick={() =>
+            window.open(
+              "https://buchung.treatwell.de/ort/gesundheitspraxis-simona-jaekel/",
+              "_blank"
+            )
+          }
+        >
+          Jetzt Buchen
+        </StyledButton>
+        {/* </StyledLink> */}
       </StyledSection>
+      {/* <StyledLink href="https://buchung.treatwell.de/ort/gesundheitspraxis-simona-jaekel/"> */}
     </>
   );
 }
+const StyledLink = styled.div`
+  text-align: center;
+  margin: 30px 100px;
+`;
+const StyledButton = styled.button`
+  padding: 10px 20px;
+  width: 150px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: solid 1px #9e8d8d;
+`;
 const StyledTitle = styled.h1`
   font-size: 1.7rem;
   text-align: center;
   font-family: "Inter Tight", sans-serif;
   font-weight: lighter;
   color: #9e8d8d;
-  margin-top: 50px;
+
   scroll-margin-top: 20%;
 `;
 
@@ -134,6 +154,8 @@ const StyledLine = styled.div`
 const StyledSection = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text horizontally */
 `;
 const StyledParagraphTwo = styled.p`
   font-size: 1.1rem;

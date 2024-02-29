@@ -45,8 +45,8 @@ export default function Navigation() {
 }
 const StyledTitle = styled.h1`
   font-size: 1.9rem;
-  font-family: "Inter Tight", sans-serif;
-  font-style: Italic;
+  font-family: Recoleta Alt Light;
+
   font-weight: lighter;
   color: #958888;
   line-height: 2.1rem;
