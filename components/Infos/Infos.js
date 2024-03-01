@@ -4,7 +4,9 @@ import media from "css-in-js-media";
 export default function Infos() {
   return (
     <>
-      <StyledTitle id="prices">Preise</StyledTitle>
+      <StyledLine>
+        <StyledTitle id="prices">Preise</StyledTitle>
+      </StyledLine>
       <GridContainer>
         <GridItem background="#d9b89f">Anwendung</GridItem>
         <GridItem background="#d9b89f">60 Minuten</GridItem>
@@ -45,6 +47,7 @@ export default function Infos() {
         <StyledLine>
           <StyledTitle>Ablauf</StyledTitle>
         </StyledLine>
+
         <StyledParagraphTwo>
           Die Anwendung beinhaltet ein kurzes Vor- und Nachgespräch und findet
           in der Regel liegend statt, kann aber auch im Sitzen durchgeführt
@@ -84,16 +87,18 @@ export default function Infos() {
     </>
   );
 }
-const StyledLink = styled.div`
-  text-align: center;
-  margin: 30px 100px;
-`;
+
 const StyledButton = styled.button`
-  padding: 10px 20px;
+  padding: 15px 20px;
   width: 150px;
   margin-top: 20px;
   border-radius: 10px;
-  border: solid 1px #9e8d8d;
+  border: none;
+  background-color: #ede6d8;
+  &:hover {
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
 `;
 const StyledTitle = styled.h1`
   font-size: 1.7rem;
@@ -133,7 +138,7 @@ const StyledLine = styled.div`
   align-items: center;
   text-align: center;
   margin: 30px 100px;
-  color: #000;
+  color: #9e8d8d;
   &:before,
   &:after {
     content: "";
@@ -152,10 +157,8 @@ const StyledLine = styled.div`
 `;
 
 const StyledSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center items horizontally */
-  text-align: center; /* Center text horizontally */
+  align-items: center;
+  text-align: center;
 `;
 const StyledParagraphTwo = styled.p`
   font-size: 1.1rem;
@@ -165,71 +168,6 @@ const StyledParagraphTwo = styled.p`
   margin: 0px 100px;
   font-family: "Recoleta Alt Light";
   color: #9e8d8d;
-  ${media("<=phone")} {
-    margin: 0px 25px;
-    align-self: center;
-  }
-  ${media("<=tablet")} {
-    margin: 0px 15px;
-  }
-`;
-
-const StyledWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-
-  background-color: #d9d082;
-
-  justify-content: space-evenly;
-  gap: 50px;
-  padding: 40px 100px;
-  margin: 2px 0px;
-  ${media("<=phone")} {
-    display: flex;
-    flex-direction: column;
-    margin: 15px;
-  }
-
-  ${media("<=tablet")} {
-    display: flex;
-    flex-direction: column;
-  }
-`;
-const StyledLeftSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  ${media("<=phone")} {
-  }
-`;
-const StyledRightSection = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-const StyledDiv1 = styled.div`
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 15px 100px;
-  font-family: "Recoleta Alt Light";
-  ${media("<=phone")} {
-    margin: 0px 25px;
-    align-self: center;
-    margin: 15px 30px;
-  }
-`;
-const StyledImportant = styled.span`
-  font-size: 1.5rem;
-  text-align: center;
-  font-family: "Inter Tight", sans-serif;
-  font-weight: lighter;
-`;
-const ParagraphThree = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.8rem;
-  margin: 30px;
-  text-align: center;
-  margin: 0px 100px;
-  font-family: "Recoleta Alt Light";
   ${media("<=phone")} {
     margin: 0px 25px;
     align-self: center;

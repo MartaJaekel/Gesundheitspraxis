@@ -196,11 +196,11 @@ const StyledImage2 = styled(Image)`
 
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   ${media("<=desktop")} {
-    width: 400px;
-    height: 300px;
+    width: 500px;
+    height: 350px;
   }
   ${media("<=tablet")} {
-    width: 400px;
+    width: 450px;
     height: 300px;
   }
   ${media("<=phone")} {

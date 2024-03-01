@@ -16,7 +16,7 @@ export default function Intro() {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5, // Change this threshold as needed
+        threshold: 0.1, // Change this threshold as needed
       }
     );
 

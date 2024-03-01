@@ -1,7 +1,13 @@
 import styled from "styled-components";
+import Image from "next/image";
+import media from "css-in-js-media";
+
 export default function Impressum() {
   return (
     <>
+      <a href="/">
+        <ImageIcon src="/arrow.svg" alt="arrow" height={20} width={20} />
+      </a>
       <StyledWrapper>
         <h1>Impressum</h1>
         <h2>Angaben gemäß § 5 TMG:</h2>
@@ -66,5 +72,23 @@ export default function Impressum() {
   );
 }
 const StyledWrapper = styled.div`
-  margin-left: 30px;
+  margin: 60px 30px;
+`;
+const ImageIcon = styled(Image)`
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  align-items: center;
+
+  background-color: white;
+  border-radius: 100%;
+  border: 2px solid #ccc1c1;
+  cursor: pointer;
+
+  padding: 5px;
+  margin: 10px;
+
+  ${media("<=phone")} {
+    top: 10px;
+  }
 `;
