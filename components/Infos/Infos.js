@@ -94,6 +94,8 @@ const StyledButton = styled.button`
   margin-top: 20px;
   border-radius: 10px;
   border: none;
+  color: black;
+
   background-color: #ede6d8;
   &:hover {
     color: #ffffff;
