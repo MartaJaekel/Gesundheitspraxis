@@ -190,7 +190,7 @@ const StyledContainer = styled.div`
   height: 500px;
 
   ${media("<=desktop")} {
-    width: calc(100% - 90px);
+    width: calc(82% - 90px);
   }
   ${media("<=phone")} {
     width: 100%;
@@ -250,7 +250,7 @@ const StyledContent = styled.div`
   ${media("<=desktop")} {
     width: 100%;
     align-self: center;
-    margin: 0px 20px;
+    margin: 15px 20px;
   }
   ${media("<=phone")} {
     margin: 0px 20px;

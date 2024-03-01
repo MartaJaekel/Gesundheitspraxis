@@ -256,6 +256,9 @@ const StyledButton = styled.button`
   border: none;
   border-radius: 13px;
   cursor: pointer;
+  &:hover {
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
 `;
 const StyledFrame = styled.iframe`
   border-style: none;
