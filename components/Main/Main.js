@@ -11,6 +11,7 @@ export default function Main() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1000 100"
           preserveAspectRatio="none"
+          alt="waves"
         >
           <path
             class="elementor-shape-fill"
@@ -31,7 +32,12 @@ export default function Main() {
       <StyledWrapper>
         <StyledSection>
           <StyledContainer>
-            <StyledImage src="/move.jpg" layout="fill" objectFit="cover" />
+            <StyledImage
+              src="/move.jpg"
+              layout="fill"
+              objectFit="cover"
+              alt="massage"
+            />
           </StyledContainer>
           <StyledContent>
             <StyledTitle id="bowen-technik">
@@ -79,7 +85,12 @@ export default function Main() {
             </StyledUl>
           </StyledContent>
           <StyledContainer>
-            <StyledImage src="/technik.jpeg" layout="fill" objectFit="cover" />
+            <StyledImage
+              src="/technik.jpeg"
+              layout="fill"
+              objectFit="cover"
+              alt="technik"
+            />
           </StyledContainer>
         </StyledSectionReverse>
         <StyledCorridor />
@@ -108,6 +119,7 @@ export default function Main() {
               src="/water.png"
               layout="fill"
               objectFit="cover"
+              alt="drop"
             />
           </StyledContainer>
         </StyledSectionThree>
@@ -190,7 +202,7 @@ const StyledContainer = styled.div`
   height: 500px;
 
   ${media("<=desktop")} {
-    width: calc(82% - 90px);
+    width: calc(100% - 90px);
   }
   ${media("<=phone")} {
     width: 100%;

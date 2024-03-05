@@ -24,13 +24,13 @@ export default function Contact() {
           ></input>
 
           <StyledLabel htmlFor="fname">Vorname </StyledLabel>
-          <input type="text" name="Vorname" required />
+          <input type="text" name="Vorname" />
           <StyledLabel htmlFor="sname">Name </StyledLabel>
-          <input type="text" name="Name" required />
+          <input type="text" name="Name" />
           <StyledLabel htmlFor="email">E-Mail </StyledLabel>
           <input type="text" name="email" required />
           <StyledLabel htmlFor="Nachricht">Nachricht</StyledLabel>
-          <StyledTextArea name="message"></StyledTextArea>
+          <StyledTextArea name="message" required></StyledTextArea>
 
           <StyledButton type="submit">Senden</StyledButton>
         </StyledForm>

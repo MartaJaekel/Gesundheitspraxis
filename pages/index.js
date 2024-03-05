@@ -39,13 +39,13 @@ export default function Home() {
         <ImageWrapper>
           <StyledImage2
             src="/massageroom.jpeg"
-            alt="massage"
+            alt="massage-room"
             width={700}
             height={500}
           />
           <StyledImage2
             src="/living.jpeg"
-            alt="massage"
+            alt="living-room"
             width={700}
             height={500}
           />
