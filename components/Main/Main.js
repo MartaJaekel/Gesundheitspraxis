@@ -124,7 +124,7 @@ export default function Main() {
           </StyledContainer>
         </StyledSectionThree>
         <StyledQuote>
-          "Die Kraft, die den Körper erschaffen hat, ist auch fähig den Körper
+          "Die Kraft, die den Körper erschaffen hat, ist auch fähig, den Körper
           zu heilen."
           <StyledName> J. Dispenza</StyledName>
         </StyledQuote>
