@@ -45,7 +45,7 @@ export default function Contact() {
               </IconWrapper>
               <IconWrapper>
                 <img src="/telephone.png" alt="home" height={18} width={18} />
-                <a href="+49 (0) 15788297240"> +49 (0) 15788297240</a>
+                <a href="tel:+49 (0) 15788297240"> +49 (0) 15788297240</a>
               </IconWrapper>
               <IconWrapper>
                 <img src="/email.png" alt="home" height={20} width={20} />
