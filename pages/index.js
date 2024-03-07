@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 import Navigation from "../components/Navigation/Navigation.js";
@@ -5,13 +6,18 @@ import Intro from "../components/Intro/Intro.js";
 import media from "css-in-js-media";
 import Main from "../components/Main/Main.js";
 import Infos from "../components/Infos/Infos.js";
-
 import Contact from "../components/Contact/Contact.js";
 import Footer from "../components/Footer/Footer.js";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Gesundheitspraxis Simona Jäkel</title>
+        <meta name="description" content="Bowen Praxis" />
+        <meta property="og:title" content="Gesundheitspraxis Simona Jäkel" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <StyledNavigation />
       <ImageContainer>
         <StyledImage>
