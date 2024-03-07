@@ -169,7 +169,7 @@ const StyledContainer = styled.div`
   margin: 0 100px;
   margin-bottom: 50px;
   width: calc(100% - 200px);
-  scroll-margin-top: 150px;
+  // scroll-margin-top: 150px;
 
   ${media("<=desktop")} {
     display: flex;

@@ -162,7 +162,7 @@ const StyledText = styled.h1`
   font-weight: lighter;
   color: #9e8d8d;
   #contact {
-    scroll-margin-top: 10px;
+    // scroll-margin-top: 10px;
   }
   ${media("<=phone")} {
     margin: 0px;

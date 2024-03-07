@@ -109,7 +109,7 @@ const StyledTitle = styled.h1`
   font-weight: lighter;
   color: #9e8d8d;
 
-  scroll-margin-top: 20%;
+  // scroll-margin-top: 20%;
 `;
 
 const GridContainer = styled.div`
