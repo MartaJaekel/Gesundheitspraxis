@@ -1,11 +1,73 @@
-import styled from "styled-components";
 import Image from "next/image";
-import React from "react";
+
 import media from "css-in-js-media";
+import styled, { keyframes } from "styled-components";
+import React, { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Main() {
+  const container = useRef();
+
+  useGSAP(
+    () => {
+      gsap.from(".move", {
+        x: -500, // move to right by 500px
+        duration: 0.5,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".move-trigger",
+          start: "top center",
+          end: "bottom bottom", // end after scrolling 500px beyond the start
+          duration: 1,
+          scrub: 2, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          markers: false,
+        },
+      });
+    },
+    { scope: container }
+  );
+  useGSAP(
+    () => {
+      gsap.from(".move-two", {
+        x: 500, // move to right by 500px
+        duration: 0.5,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".move-trigger-two",
+          start: "top center", // when the top of the trigger hits the center of the viewport
+          end: "bottom bottom", // end after scrolling 500px beyond the start
+
+          scrub: 2, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          markers: false,
+        },
+      });
+    },
+    { scope: container }
+  );
+  useGSAP(
+    () => {
+      gsap.from(".move-three", {
+        x: -500, // move to right by 500px
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: ".move-trigger-three",
+          start: "top center", // when the top of the trigger hits the center of the viewport
+          end: "bottom bottom", // end after scrolling 500px beyond the start
+          scrub: 2, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          markers: false,
+        },
+      });
+    },
+    { scope: container }
+  );
+
   return (
-    <>
+    <div ref={container}>
       <Waves>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,13 +92,16 @@ export default function Main() {
         </svg>
       </Waves>
       <StyledWrapper>
-        <StyledSection>
+        <StyledSection className="move-trigger">
           <StyledContainer>
             <StyledImage
+
+              className="move"
               src="/move.jpg"
               layout="fill"
               objectFit="cover"
-              alt="massage"
+              
+
             />
           </StyledContainer>
           <StyledContent>
@@ -62,7 +127,7 @@ export default function Main() {
           <img src="/target.png" alt="target" width={40} height={40} />
         </StyledLine>
 
-        <StyledSectionReverse>
+        <StyledSectionReverse className="move-trigger-two">
           <StyledContent>
             <StyledTitle>ANWENDUNGSBEREICHE</StyledTitle>
 
@@ -86,10 +151,14 @@ export default function Main() {
           </StyledContent>
           <StyledContainer>
             <StyledImage
+
+              className="move-two"
               src="/technik.jpeg"
               layout="fill"
               objectFit="cover"
-              alt="technik"
+
+             
+
             />
           </StyledContainer>
         </StyledSectionReverse>
@@ -97,7 +166,7 @@ export default function Main() {
         <StyledLine>
           <img src="/target.png" alt="target" width={40} height={40} />
         </StyledLine>
-        <StyledSectionThree>
+        <StyledSectionThree className="move-trigger-three">
           <StyledContent>
             <StyledTitle>WIRKUNGSWEISE</StyledTitle>
             <StyledParagraph>
@@ -116,6 +185,7 @@ export default function Main() {
           </StyledContent>
           <StyledContainer>
             <StyledImageWater
+              className="move-three"
               src="/water.png"
               layout="fill"
               objectFit="cover"
@@ -129,9 +199,10 @@ export default function Main() {
           <StyledName> J. Dispenza</StyledName>
         </StyledQuote>
       </StyledWrapper>
-    </>
+    </div>
   );
 }
+
 const StyledLine = styled.div`
   display: flex;
   align-items: center;
@@ -246,7 +317,6 @@ const StyledSectionThree = styled(StyledSection)`
 const StyledImage = styled(Image)`
   position: relative;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  z-index: 0;
 `;
 const StyledImageWater = styled(Image)`
   position: absolute;
