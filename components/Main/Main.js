@@ -23,7 +23,7 @@ export default function Main() {
           start: "top center",
           end: "bottom bottom", // end after scrolling 500px beyond the start
           duration: 1,
-          scrub: 2, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
           markers: false,
         },
       });
@@ -41,7 +41,7 @@ export default function Main() {
           start: "top center", // when the top of the trigger hits the center of the viewport
           end: "bottom bottom", // end after scrolling 500px beyond the start
 
-          scrub: 2, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
           markers: false,
         },
       });
@@ -58,7 +58,7 @@ export default function Main() {
           trigger: ".move-trigger-three",
           start: "top center", // when the top of the trigger hits the center of the viewport
           end: "bottom bottom", // end after scrolling 500px beyond the start
-          scrub: 2, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
           markers: false,
         },
       });
@@ -95,13 +95,10 @@ export default function Main() {
         <StyledSection className="move-trigger">
           <StyledContainer>
             <StyledImage
-
               className="move"
               src="/move.jpg"
               layout="fill"
               objectFit="cover"
-              
-
             />
           </StyledContainer>
           <StyledContent>
@@ -151,14 +148,10 @@ export default function Main() {
           </StyledContent>
           <StyledContainer>
             <StyledImage
-
               className="move-two"
               src="/technik.jpeg"
               layout="fill"
               objectFit="cover"
-
-             
-
             />
           </StyledContainer>
         </StyledSectionReverse>
