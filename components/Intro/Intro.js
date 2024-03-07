@@ -128,5 +128,5 @@ position: relative;
 
   padding:50px 0px;
    #bowen-technik {
-    scroll-margin-top: 110px;
+    // scroll-margin-top: 110px;
 `;
