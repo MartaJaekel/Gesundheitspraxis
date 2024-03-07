@@ -73,6 +73,7 @@ export default function Main() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1000 100"
           preserveAspectRatio="none"
+          alt="waves"
         >
           <path
             class="elementor-shape-fill"
@@ -94,10 +95,13 @@ export default function Main() {
         <StyledSection className="move-trigger">
           <StyledContainer>
             <StyledImage
+
               className="move"
               src="/move.jpg"
               layout="fill"
               objectFit="cover"
+              
+
             />
           </StyledContainer>
           <StyledContent>
@@ -147,10 +151,14 @@ export default function Main() {
           </StyledContent>
           <StyledContainer>
             <StyledImage
+
               className="move-two"
               src="/technik.jpeg"
               layout="fill"
               objectFit="cover"
+
+             
+
             />
           </StyledContainer>
         </StyledSectionReverse>
@@ -181,11 +189,12 @@ export default function Main() {
               src="/water.png"
               layout="fill"
               objectFit="cover"
+              alt="drop"
             />
           </StyledContainer>
         </StyledSectionThree>
         <StyledQuote>
-          "Die Kraft, die den Körper erschaffen hat, ist auch fähig den Körper
+          "Die Kraft, die den Körper erschaffen hat, ist auch fähig, den Körper
           zu heilen."
           <StyledName> J. Dispenza</StyledName>
         </StyledQuote>
@@ -264,7 +273,7 @@ const StyledContainer = styled.div`
   height: 500px;
 
   ${media("<=desktop")} {
-    width: calc(82% - 90px);
+    width: calc(100% - 90px);
   }
   ${media("<=phone")} {
     width: 100%;
