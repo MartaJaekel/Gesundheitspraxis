@@ -4,10 +4,20 @@ import Image from "next/image";
 import Navigation from "../components/Navigation/Navigation";
 import media from "css-in-js-media";
 import Footer from "../components/Footer/Footer";
+import Head from "next/head";
 
 export default function About() {
   return (
     <>
+      <Head>
+        <title>Über mich</title>
+        <meta name="description" content=" Über Simona Jäkel" />
+        <meta
+          property="og:title"
+          content=" Über mich - Gesundheitspraxis Simona Jäkel"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Container>
         <a href="/">
           <ImageIcon src="/arrow.svg" alt="arrow" height={20} width={20} />

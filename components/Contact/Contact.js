@@ -59,7 +59,7 @@ export default function Contact() {
           </StyledSection>
           <StyledMap>
             <StyledFrame
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.5572798608396!2d13.4392619!3d52.4871512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84fafca314ff5%3A0xdc6795d0065c3bc9!2sWeichselpl.%204%2C%2012045%20Berlin!5e0!3m2!1sit!2sde!4v1707649157027!5m2!1sit!2sde"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.5571009700934!2d13.436686976643177!3d52.48715443866087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84fafca314ff5%3A0xdc6795d0065c3bc9!2sWeichselpl.%204%2C%2012045%20Berlin!5e0!3m2!1sde!2sde!4v1709820044582!5m2!1sde!2sde"
               width="100%"
               height="300"
               allowfullscreen=""

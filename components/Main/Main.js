@@ -95,13 +95,11 @@ export default function Main() {
         <StyledSection className="move-trigger">
           <StyledContainer>
             <StyledImage
-
               className="move"
               src="/move.jpg"
               layout="fill"
               objectFit="cover"
-              
-
+              alt="move"
             />
           </StyledContainer>
           <StyledContent>
@@ -151,14 +149,11 @@ export default function Main() {
           </StyledContent>
           <StyledContainer>
             <StyledImage
-
               className="move-two"
               src="/technik.jpeg"
               layout="fill"
               objectFit="cover"
-
-             
-
+              alt="technik"
             />
           </StyledContainer>
         </StyledSectionReverse>

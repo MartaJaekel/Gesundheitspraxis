@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 import Navigation from "../components/Navigation/Navigation.js";
@@ -7,7 +8,6 @@ import Main from "../components/Main/Main.js";
 import Infos from "../components/Infos/Infos.js";
 import Contact from "../components/Contact/Contact.js";
 import Footer from "../components/Footer/Footer.js";
-import Head from "next/head";
 
 export default function Home() {
   return (
