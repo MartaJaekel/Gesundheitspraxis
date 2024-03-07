@@ -1,37 +1,37 @@
 import React from "react";
-import { useEffect, useRef, useState } from "react";
+// import { useEffect, useRef, useState } from "react";
 import media from "css-in-js-media";
 import styled, { keyframes } from "styled-components";
 
 export default function Intro() {
-  const [isVisible, setIsVisible] = useState(false);
-  const paragraphRef = useRef(null);
+  // const [isVisible, setIsVisible] = useState(false);
+  // const paragraphRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Update state to indicate whether paragraph is visible
-        setIsVisible(entry.isIntersecting);
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1, // Change this threshold as needed
-      }
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       // Update state to indicate whether paragraph is visible
+  //       setIsVisible(entry.isIntersecting);
+  //     },
+  //     {
+  //       root: null,
+  //       rootMargin: "0px",
+  //       threshold: 0.1, // Change this threshold as needed
+  //     }
+  //   );
 
-    // Start observing the paragraph element
-    if (paragraphRef.current) {
-      observer.observe(paragraphRef.current);
-    }
+  //   // Start observing the paragraph element
+  //   if (paragraphRef.current) {
+  //     observer.observe(paragraphRef.current);
+  //   }
 
-    // Clean up observer on unmount
-    return () => {
-      if (paragraphRef.current) {
-        observer.unobserve(paragraphRef.current);
-      }
-    };
-  }, []);
+  //   // Clean up observer on unmount
+  //   return () => {
+  //     if (paragraphRef.current) {
+  //       observer.unobserve(paragraphRef.current);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <>
@@ -60,8 +60,8 @@ export default function Intro() {
         </Waves>
 
         <StyledParagraph
-          ref={paragraphRef}
-          className={isVisible ? "fade-in-text" : ""}
+        // ref={paragraphRef}
+        // className={isVisible ? "fade-in-text" : ""}
         >
           Schenke Deinem Körper, Deinem Geist und Deiner Seele eine wichtige
           Auszeit. <br />

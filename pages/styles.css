@@ -9,9 +9,10 @@ body {
   scroll-behavior: smooth;
   background-color: rgb(245, 245, 237);
 
+  overflow-x: hidden;
+
   #prices,
   #about,
-  #contact,
   #contact {
     scroll-margin-top: 100px;
   }
