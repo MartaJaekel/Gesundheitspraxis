@@ -23,7 +23,11 @@ export default function Main() {
           start: "top center",
           end: "bottom bottom", // end after scrolling 500px beyond the start
           duration: 1,
+<<<<<<< HEAD
           scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+=======
+          scrub: 5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+>>>>>>> 1456b05 (seo)
           markers: false,
         },
       });
@@ -41,7 +45,11 @@ export default function Main() {
           start: "top center", // when the top of the trigger hits the center of the viewport
           end: "bottom bottom", // end after scrolling 500px beyond the start
 
+<<<<<<< HEAD
           scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+=======
+          scrub: 5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+>>>>>>> 1456b05 (seo)
           markers: false,
         },
       });
@@ -58,7 +66,11 @@ export default function Main() {
           trigger: ".move-trigger-three",
           start: "top center", // when the top of the trigger hits the center of the viewport
           end: "bottom bottom", // end after scrolling 500px beyond the start
+<<<<<<< HEAD
           scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+=======
+          scrub: 5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+>>>>>>> 1456b05 (seo)
           markers: false,
         },
       });

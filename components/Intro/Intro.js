@@ -1,41 +1,38 @@
 import React from "react";
 // import { useEffect, useRef, useState } from "react";
 import media from "css-in-js-media";
+import { useRef } from "react";
 import styled, { keyframes } from "styled-components";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Intro() {
-  // const [isVisible, setIsVisible] = useState(false);
-  // const paragraphRef = useRef(null);
+  const container = useRef();
+  useGSAP(
+    () => {
+      gsap.from(".appear", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".appear-trigger",
+          start: "top center",
+          end: "bottom bottom", // end after scrolling 500px beyond the start
+          duration: 1,
+          duration: 1,
 
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       // Update state to indicate whether paragraph is visible
-  //       setIsVisible(entry.isIntersecting);
-  //     },
-  //     {
-  //       root: null,
-  //       rootMargin: "0px",
-  //       threshold: 0.1, // Change this threshold as needed
-  //     }
-  //   );
-
-  //   // Start observing the paragraph element
-  //   if (paragraphRef.current) {
-  //     observer.observe(paragraphRef.current);
-  //   }
-
-  //   // Clean up observer on unmount
-  //   return () => {
-  //     if (paragraphRef.current) {
-  //       observer.unobserve(paragraphRef.current);
-  //     }
-  //   };
-  // }, []);
+          scrub: 2, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          markers: true,
+        },
+      });
+    },
+    { scope: container }
+  );
 
   return (
     <>
-      <StyledContainer>
+      <StyledContainer className="appear-trigger">
         <Waves>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -59,10 +56,7 @@ export default function Intro() {
           </svg>
         </Waves>
 
-        <StyledParagraph
-        // ref={paragraphRef}
-        // className={isVisible ? "fade-in-text" : ""}
-        >
+        <StyledParagraph className="appear">
           Schenke Deinem Körper, Deinem Geist und Deiner Seele eine wichtige
           Auszeit. <br />
           Komme ins Spüren und finde den Weg zurück in Dein inneres
