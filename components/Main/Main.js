@@ -3,71 +3,10 @@ import Image from "next/image";
 import media from "css-in-js-media";
 import styled, { keyframes } from "styled-components";
 import React, { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Main() {
-  const container = useRef();
-
-  useGSAP(
-    () => {
-      gsap.from(".move", {
-        x: -500, // move to right by 500px
-        duration: 0.5,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: ".move-trigger",
-          start: "top center",
-          end: "bottom bottom", // end after scrolling 500px beyond the start
-          duration: 1,
-          scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-          markers: false,
-        },
-      });
-    },
-    { scope: container }
-  );
-  useGSAP(
-    () => {
-      gsap.from(".move-two", {
-        x: 500, // move to right by 500px
-        duration: 0.5,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: ".move-trigger-two",
-          start: "top center", // when the top of the trigger hits the center of the viewport
-          end: "bottom bottom", // end after scrolling 500px beyond the start
-
-          scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-          markers: false,
-        },
-      });
-    },
-    { scope: container }
-  );
-  useGSAP(
-    () => {
-      gsap.from(".move-three", {
-        x: -500, // move to right by 500px
-        opacity: 0,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: ".move-trigger-three",
-          start: "top center", // when the top of the trigger hits the center of the viewport
-          end: "bottom bottom", // end after scrolling 500px beyond the start
-          scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-          markers: false,
-        },
-      });
-    },
-    { scope: container }
-  );
-
   return (
-    <div ref={container}>
+    <div>
       <Waves>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -92,15 +31,18 @@ export default function Main() {
         </svg>
       </Waves>
       <StyledWrapper>
-        <StyledSection className="move-trigger">
+        <StyledSection>
           <StyledContainer>
             <StyledImage
-              className="move"
               src="/move.jpg"
               layout="fill"
               objectFit="cover"
 
               alt="move"
+
+
+              
+
 
 
             />
@@ -128,7 +70,7 @@ export default function Main() {
           <img src="/target.png" alt="target" width={40} height={40} />
         </StyledLine>
 
-        <StyledSectionReverse className="move-trigger-two">
+        <StyledSectionReverse>
           <StyledContent>
             <StyledTitle>ANWENDUNGSBEREICHE</StyledTitle>
 
@@ -152,12 +94,12 @@ export default function Main() {
           </StyledContent>
           <StyledContainer>
             <StyledImage
-              className="move-two"
               src="/technik.jpeg"
               layout="fill"
               objectFit="cover"
 
               alt="technik"
+
 
 
             />
@@ -167,7 +109,7 @@ export default function Main() {
         <StyledLine>
           <img src="/target.png" alt="target" width={40} height={40} />
         </StyledLine>
-        <StyledSectionThree className="move-trigger-three">
+        <StyledSectionThree>
           <StyledContent>
             <StyledTitle>WIRKUNGSWEISE</StyledTitle>
             <StyledParagraph>
@@ -184,15 +126,14 @@ export default function Main() {
               weiterzuleiten.
             </StyledParagraph>
           </StyledContent>
-          <StyledContainer>
+          <StyledContainerWater>
             <StyledImageWater
-              className="move-three"
               src="/water.png"
               layout="fill"
               objectFit="cover"
               alt="drop"
             />
-          </StyledContainer>
+          </StyledContainerWater>
         </StyledSectionThree>
         <StyledQuote>
           "Die Kraft, die den Körper erschaffen hat, ist auch fähig, den Körper
@@ -270,18 +211,35 @@ const StyledSection = styled.section`
 const StyledContainer = styled.div`
   position: relative;
   width: 50%;
-
-  height: 500px;
+   height: 500px;
 
   ${media("<=desktop")} {
-    width: calc(100% - 90px);
+    width: 100%;
+    height: 450px;
   }
   ${media("<=phone")} {
     width: 100%;
-    height: 250px;
+    height: 280px;
   }
   ${media("<=tablet")} {
-    width: calc(85% - 20px);
+    width: 100%;
+    300px;
+  }
+`;
+const StyledContainerWater = styled.div`
+  position: relative;
+  width: 50%;
+  height: 500px;
+
+  ${media("<=desktop")} {
+    width: 100%;
+  }
+  ${media("<=phone")} {
+    width: 100%;
+    height: 280px;
+  }
+  ${media("<=tablet")} {
+    width: 100%;
   }
 `;
 
@@ -325,6 +283,16 @@ const StyledImageWater = styled(Image)`
   inset: 0px;
   object-fit: cover;
   color: transparent;
+  ${media("<=tablet")} {
+    width: 100%;
+    height: 500px;
+  }
+  ${media("<=phone")} {
+    width: 100%;
+    height: 300px;
+  }
+  ${media("<=desktop")} {
+  }
 `;
 
 const StyledContent = styled.div`
@@ -346,6 +314,9 @@ const StyledTitle = styled.h1`
   font-style: normal;
   font-weight: lighter;
   color: #9e8d8d;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
   hyphens: auto;
   margin: 0px;
   font-family: "Inter Tight", sans-serif;

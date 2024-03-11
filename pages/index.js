@@ -197,20 +197,21 @@ const ImageWrapper = styled.div`
   }
 `;
 const StyledImage2 = styled(Image)`
-  width: 500px; // adjust as needed
-  height: 350px;
+  width: 100%;
+  height: 500px;
 
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   ${media("<=desktop")} {
-    width: 500px;
-    height: 350px;
+    width: 80%;
+    height: 500px;
   }
   ${media("<=tablet")} {
-    width: 450px;
-    height: 300px;
+    width: 100%; /* Adjusted value */
+    height: 300px; /* Adjusted value */
+    object-fit: scale-down;
   }
   ${media("<=phone")} {
-    width: 300px;
+    width: 100%;
     height: 200px;
   }
 `;
