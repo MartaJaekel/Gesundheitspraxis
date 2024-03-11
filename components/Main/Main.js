@@ -37,7 +37,14 @@ export default function Main() {
               src="/move.jpg"
               layout="fill"
               objectFit="cover"
+
               alt="move"
+
+
+              
+
+
+
             />
           </StyledContainer>
           <StyledContent>
@@ -90,7 +97,11 @@ export default function Main() {
               src="/technik.jpeg"
               layout="fill"
               objectFit="cover"
+
               alt="technik"
+
+
+
             />
           </StyledContainer>
         </StyledSectionReverse>
