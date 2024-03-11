@@ -125,6 +125,10 @@ const GridContainer = styled.div`
   ${media("<=tablet")} {
     justify-content: center;
   }
+  ${media("<=desktop")} {
+    justify-content: center;
+    margin: 0px 30px;
+  }
 `;
 
 const GridItem = styled.div`

@@ -6,33 +6,32 @@ import styled, { keyframes } from "styled-components";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 export default function Intro() {
-  const container = useRef();
-  useGSAP(
-    () => {
-      gsap.from(".appear", {
-        opacity: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".appear-trigger",
-          start: "top center",
-          end: "bottom bottom", // end after scrolling 500px beyond the start
-          duration: 1,
-          duration: 1,
+  // const container = useRef();
+  // useGSAP(
+  //   () => {
+  //     gsap.from(".appear", {
+  //       opacity: 0,
+  //       duration: 3,
+  //       scrollTrigger: {
+  //         trigger: ".appear-trigger",
+  //         start: "top center",
+  //         end: "bottom bottom", // end after scrolling 500px beyond the start
 
-          scrub: 2, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-          markers: true,
-        },
-      });
-    },
-    { scope: container }
-  );
+  //         scrub: false, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+  //         markers: false,
+  //       },
+  //     });
+  //   },
+  //   { scope: container }
+  // );
 
   return (
     <>
-      <StyledContainer className="appear-trigger">
+      {/* <div ref={container}> */}
+      <StyledContainer>
         <Waves>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -56,13 +55,14 @@ export default function Intro() {
           </svg>
         </Waves>
 
-        <StyledParagraph className="appear">
+        <StyledParagraph className="fade-in-text">
           Schenke Deinem Körper, Deinem Geist und Deiner Seele eine wichtige
           Auszeit. <br />
           Komme ins Spüren und finde den Weg zurück in Dein inneres
           Gleichgewicht.
         </StyledParagraph>
       </StyledContainer>
+      {/* </div> */}
     </>
   );
 }
@@ -96,7 +96,7 @@ const StyledParagraph = styled.p`
     text-align: center;
     font-size: 1.4rem;
 
-    animation: ${fadeIn} 5s;
+    animation: ${fadeIn} 6s;
   }
 
   ${media("<=phone")} {
