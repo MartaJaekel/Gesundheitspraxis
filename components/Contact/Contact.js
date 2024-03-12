@@ -12,14 +12,16 @@ export default function Contact() {
 
     // Show confirmation modal
     setShowConfirmation(true);
+    event.target.submit();
 
     // Reset form
-    event.target.reset();
   }
 
   function handleConfirmationClose() {
     // Hide confirmation modal
     setShowConfirmation(false);
+
+    document.getElementById("form").reset();
   }
 
   return (
@@ -39,7 +41,7 @@ export default function Contact() {
           <input
             type="hidden"
             name="_next"
-            value="https://www.gesundheitspraxis-jaekel.de"
+            value="https://www.gesundheitspraxis-jaekel.de/#contact"
           ></input>
 
           <StyledLabel htmlFor="fname">Vorname </StyledLabel>
