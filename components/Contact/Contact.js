@@ -2,8 +2,26 @@ import React from "react";
 import styled from "styled-components";
 import media from "css-in-js-media";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Contact() {
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    // Show confirmation modal
+    setShowConfirmation(true);
+
+    // Reset form
+    event.target.reset();
+  }
+
+  function handleConfirmationClose() {
+    // Hide confirmation modal
+    setShowConfirmation(false);
+  }
+
   return (
     <>
       <StyledContainer id="contact">
@@ -11,6 +29,7 @@ export default function Contact() {
           action="https://formsubmit.co/bccef37a920cca07b4c018121eb17f7f"
           method="POST"
           id="form"
+          onSubmit={handleSubmit}
         >
           {/* Honeypot that preevnts spammers from filling the form out */}
           <input type="text" name="_honey" style={{ display: "none" }}></input>
@@ -34,6 +53,19 @@ export default function Contact() {
 
           <StyledButton type="submit">Senden</StyledButton>
         </StyledForm>
+        {showConfirmation && (
+          <StyledConfirmationModal>
+            <StyledConfirmationContent>
+              <StyledCloseButton
+                className="close"
+                onClick={handleConfirmationClose}
+              >
+                &times;
+              </StyledCloseButton>
+              <p>Ihre Nachricht wurde erfolgreich versendet!</p>
+            </StyledConfirmationContent>
+          </StyledConfirmationModal>
+        )}
         <StyledInfo>
           <StyledSection>
             <StyledImage src="/profiletwo.jpeg" height={110} width={110} />
@@ -72,6 +104,33 @@ export default function Contact() {
     </>
   );
 }
+
+const StyledConfirmationModal = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+`;
+
+const StyledConfirmationContent = styled.div`
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+`;
+
+const StyledCloseButton = styled.span`
+  position: relative;
+  top: 0px;
+  right: 10px;
+  font-size: 25px;
+  cursor: pointer;
+`;
 const StyledDeatails = styled.div`
   display: flex;
   flex-direction: column;
