@@ -9,19 +9,29 @@ export default function Contact() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    const formData = new FormData(event.target);
 
-    // Show confirmation modal
-    setShowConfirmation(true);
-    event.target.submit();
+    fetch(event.target.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then(() => {
+        // Check if form submission was successful
 
-    // Reset form
+        // Show confirmation modal
+        setShowConfirmation(true);
+      })
+      .catch((error) => {
+        // Handle error
+        console.error("Form submission failed", error);
+      });
   }
-
   function handleConfirmationClose() {
     // Hide confirmation modal
     setShowConfirmation(false);
-
-    document.getElementById("form").reset();
   }
 
   return (
@@ -55,7 +65,7 @@ export default function Contact() {
 
           <StyledButton type="submit">Senden</StyledButton>
         </StyledForm>
-        {showConfirmation && (
+        {/* {showConfirmation && (
           <StyledConfirmationModal>
             <StyledConfirmationContent>
               <StyledCloseButton
@@ -67,7 +77,21 @@ export default function Contact() {
               <p>Ihre Nachricht wurde erfolgreich versendet!</p>
             </StyledConfirmationContent>
           </StyledConfirmationModal>
+        )} */}
+        {showConfirmation && (
+          <StyledConfirmationModal>
+            <StyledConfirmationContent>
+              <StyledCloseButton
+                className="close"
+                onClick={handleConfirmationClose}
+              >
+                &times;
+              </StyledCloseButton>
+              <p> Ihre Nachricht wurde erfolgreich versendet!</p>
+            </StyledConfirmationContent>
+          </StyledConfirmationModal>
         )}
+
         <StyledInfo>
           <StyledSection>
             <StyledImage src="/profiletwo.jpeg" height={110} width={110} />
