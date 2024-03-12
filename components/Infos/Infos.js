@@ -79,7 +79,7 @@ export default function Infos() {
             )
           }
         >
-          Jetzt Buchen
+          <span>Jetzt Buchen</span>
         </StyledButton>
         {/* </StyledLink> */}
       </StyledSection>
@@ -100,6 +100,9 @@ const StyledButton = styled.button`
   &:hover {
     color: #ffffff;
     transition: all 0.3s ease-in-out;
+  }
+  span {
+    font-size: 0.9rem;
   }
 `;
 const StyledTitle = styled.h1`
