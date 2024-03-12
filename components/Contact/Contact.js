@@ -20,7 +20,7 @@ export default function Contact() {
           <input
             type="hidden"
             name="_next"
-            value="https://gesundheitspraxis-jaekel.de"
+            value="https://www.gesundheitspraxis-jaekel.de/#contact"
           ></input>
 
           <StyledLabel htmlFor="fname">Vorname </StyledLabel>

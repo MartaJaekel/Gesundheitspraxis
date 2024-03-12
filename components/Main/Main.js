@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import css from "styled-components";
 import media from "css-in-js-media";
 import styled, { keyframes } from "styled-components";
 import React, { useEffect, useRef, useState } from "react";
@@ -37,14 +37,7 @@ export default function Main() {
               src="/move.jpg"
               layout="fill"
               objectFit="cover"
-
               alt="move"
-
-
-              
-
-
-
             />
           </StyledContainer>
           <StyledContent>
@@ -97,11 +90,7 @@ export default function Main() {
               src="/technik.jpeg"
               layout="fill"
               objectFit="cover"
-
               alt="technik"
-
-
-
             />
           </StyledContainer>
         </StyledSectionReverse>
@@ -230,9 +219,14 @@ const StyledContainerWater = styled.div`
   position: relative;
   width: 50%;
   height: 500px;
+  @media (max-width: 768px) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    width: 10%;
+    height: 100px; /* Adjust height as needed for iPad Mini */
+  }
 
   ${media("<=desktop")} {
-    width: 100%;
+    width: 70%;
+    height: 450px;
   }
   ${media("<=phone")} {
     width: 100%;
@@ -240,6 +234,7 @@ const StyledContainerWater = styled.div`
   }
   ${media("<=tablet")} {
     width: 100%;
+    height: 300px;
   }
 `;
 
@@ -274,15 +269,9 @@ const StyledSectionThree = styled(StyledSection)`
 `;
 
 const StyledImage = styled(Image)`
-  position: relative;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  position: absolute;
 `;
 const StyledImageWater = styled(Image)`
-  position: absolute;
-  width: 100%;
-  inset: 0px;
-  object-fit: cover;
-  color: transparent;
   ${media("<=tablet")} {
     width: 100%;
     height: 500px;
