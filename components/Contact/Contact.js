@@ -9,6 +9,7 @@ export default function Contact() {
 
   function handleSubmit(event) {
     event.preventDefault();
+
     const formData = new FormData(event.target);
 
     fetch(event.target.action, {
@@ -23,6 +24,7 @@ export default function Contact() {
 
         // Show confirmation modal
         setShowConfirmation(true);
+        event.target.reset();
       })
       .catch((error) => {
         // Handle error
