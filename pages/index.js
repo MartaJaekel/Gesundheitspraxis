@@ -174,13 +174,13 @@ const StyledContainer = styled.div`
   background: linear-gradient(to right, #d8c5a1, #9b9a99);
 `;
 const ImageWrapper = styled.div`
+  max-width: 1280px;
   display: flex;
   flex-direction: row;
   gap: 50px;
-  justify-content: center;
+  justify-content: space-around;
 
-  margin: 50px 30px;
-  display: flex;
+  margin: 50px auto;
 
   ${media("<=tablet")} {
     flex-direction: column;
@@ -199,7 +199,6 @@ const ImageWrapper = styled.div`
 const StyledImage2 = styled(Image)`
   width: 100%;
   height: 500px;
-
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   ${media("<=desktop")} {
     width: 80%;

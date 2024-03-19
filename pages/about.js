@@ -57,20 +57,21 @@ export default function About() {
               ></path>
             </svg>
           </Waves>
-
-          <Description>
-            <h1>Simona Jäkel</h1>
-            <p>Bowen-Practitioner</p>
-            <p>Gesundheitspraktikerin (BfG)</p>
-            <p>Mutter von 3 Kindern</p>
-          </Description>
-          <Quote>
-            <p>
-              " Through hands we SERVE, through serving we LOVE
-              <br /> through loving we CREATE "
-            </p>
-            <Author>- J. Norton</Author>
-          </Quote>
+          <StyledAboutMe>
+            <Description>
+              <h1>Simona Jäkel</h1>
+              <p>Bowen-Practitioner</p>
+              <p>Gesundheitspraktikerin (BfG)</p>
+              <p>Mutter von 3 Kindern</p>
+            </Description>
+            <Quote>
+              <p>
+                " Through hands we SERVE, through serving we LOVE
+                <br /> through loving we CREATE "
+              </p>
+              <Author>- J. Norton</Author>
+            </Quote>
+          </StyledAboutMe>
           <WavesTwo>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -98,6 +99,11 @@ export default function About() {
     </>
   );
 }
+const StyledAboutMe = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`;
 const WavesTwo = styled.div`
   width: 100%;
   height: 60px;

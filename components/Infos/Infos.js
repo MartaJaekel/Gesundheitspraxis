@@ -117,7 +117,7 @@ const StyledTitle = styled.h1`
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 500px)); /* 3 columns */
+  grid-template-columns: repeat(3, minmax(100px, 1000px)); /* 3 columns */
   grid-template-rows: repeat(9, auto); /* 9 rows */
   grid-gap: 1px; /* Gap between grid items */
   margin: 0px 100px;
