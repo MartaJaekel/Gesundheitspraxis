@@ -12,17 +12,17 @@ export default function Infos() {
         <GridItem background="#d9b89f">60 Minuten</GridItem>
         <GridItem background="#d9b89f">75 Minuten</GridItem>
         <GridItem background="#e5d5cd">
-          Ganzkörper (inkl.Kopf und Füße)
+          Bowen Ganzkörper (inkl.Kopf und Füße)
         </GridItem>
         <GridItem background="#e5d5cd">-</GridItem>
         <GridItem background="#e5d5cd">80 Euro</GridItem>
         <GridItem background="#e9e0d9">Bowen Basis</GridItem>
         <GridItem background="#e9e0d9">60 Euro</GridItem>
         <GridItem background="#e9e0d9">-</GridItem>
-        <GridItem background="#e5d5cd">Kopf-Nacken-Rücken</GridItem>
+        <GridItem background="#e5d5cd">Bowen Kopf-Nacken-Rücken</GridItem>
         <GridItem background="#e5d5cd">60 Euro</GridItem>
         <GridItem background="#e5d5cd">-</GridItem>
-        <GridItem background="#e9e0d9">Becken-Beine-Füße</GridItem>
+        <GridItem background="#e9e0d9">Bowen Becken-Beine-Füße</GridItem>
         <GridItem background="#e9e0d9">60 Euro</GridItem>
         <GridItem background="#e9e0d9">-</GridItem>
         <GridItem background="#e5d5cd">Bowen für Mütter und Babys</GridItem>
