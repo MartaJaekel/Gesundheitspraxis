@@ -8,8 +8,19 @@ import Main from "../components/Main/Main.js";
 import Infos from "../components/Infos/Infos.js";
 import Contact from "../components/Contact/Contact.js";
 import Footer from "../components/Footer/Footer.js";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [showPopUp, setShowPopUp] = useState(false);
+  useEffect(() => {
+    setShowPopUp(true);
+  }, []);
+  function closePopUp() {
+    setShowPopUp(false);
+  }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Head>
@@ -19,6 +30,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <StyledNavigation />
+
       <ImageContainer>
         <StyledImage>
           <Image
@@ -30,6 +42,7 @@ export default function Home() {
               objectPosition: "top",
             }}
           />
+
           <Overlay>
             <ImageText className="fade-in-text">
               Sanfte Impulse für innere Balance
@@ -37,6 +50,14 @@ export default function Home() {
           </Overlay>
         </StyledImage>
       </ImageContainer>
+      {showPopUp && (
+        <PopUp>
+          <h1>Die Praxis bleibt von 30.07 bis 14.08 geschlossen.</h1>
+          <button onClick={closePopUp}>
+            <Image src="/cross.svg" width={15} height={15}></Image>
+          </button>
+        </PopUp>
+      )}
 
       <Intro />
       <Main />
@@ -44,7 +65,7 @@ export default function Home() {
       <StyledContainer>
         <ImageWrapper>
           <StyledImage2
-            src="/lamp.JPEG"
+            src="/lighted-room.jpg"
             alt="massage-room"
             width={700}
             height={500}
@@ -67,6 +88,39 @@ export default function Home() {
     </>
   );
 }
+const PopUp = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: auto;
+  min-height: 60px;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #958888;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  h1 {
+    font-size: 1rem;
+    color: #958888;
+    font-weight: 400;
+    background-color: white;
+    padding: 15px;
+  }
+  button {
+    border: solid 0px #958888;
+    border-radius: 30%;
+    position: absolute;
+    background-color: white;
+    top: 0px;
+    right: 0px;
+    padding: 8px;
+  }
+`;
 
 const StyledNavigation = styled(Navigation)`
   position: fixed;

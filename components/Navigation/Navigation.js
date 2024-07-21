@@ -19,30 +19,33 @@ export default function Navigation() {
   }
 
   return (
-    <NavContainer>
-      <StyledTitle>
-        Gesundheitspraxis
-        <br />
-        Simona Jäkel
-      </StyledTitle>
+    <>
+      <NavContainer>
+        <StyledTitle>
+          Gesundheitspraxis
+          <br />
+          Simona Jäkel
+        </StyledTitle>
 
-      <Burger onClick={handleToggle}>
-        <div />
-        <div />
-        <div />
-      </Burger>
-      <StyledContainer isOpen={isOpen}>
-        {links.map((link) => (
-          <StyledList key={link.name}>
-            <StyledLink href={link.href} onClick={() => setIsOpen(false)}>
-              {link.name}
-            </StyledLink>
-          </StyledList>
-        ))}
-      </StyledContainer>
-    </NavContainer>
+        <Burger onClick={handleToggle}>
+          <div />
+          <div />
+          <div />
+        </Burger>
+        <StyledContainer isOpen={isOpen}>
+          {links.map((link) => (
+            <StyledList key={link.name}>
+              <StyledLink href={link.href} onClick={() => setIsOpen(false)}>
+                {link.name}
+              </StyledLink>
+            </StyledList>
+          ))}
+        </StyledContainer>
+      </NavContainer>
+    </>
   );
 }
+
 const StyledTitle = styled.h1`
   font-size: 1.9rem;
   font-family: Recoleta Alt Light;
