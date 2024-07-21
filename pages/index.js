@@ -13,8 +13,13 @@ import { useState, useEffect } from "react";
 export default function Home() {
   const [showPopUp, setShowPopUp] = useState(false);
   useEffect(() => {
-    setShowPopUp(true);
+    const timer = setTimeout(() => {
+      setShowPopUp(true);
+    }, 500); // 500 milliseconds for a half-second delay
+  
+    return () => clearTimeout(timer); // Cleanup the timer
   }, []);
+   
   function closePopUp() {
     setShowPopUp(false);
   }
