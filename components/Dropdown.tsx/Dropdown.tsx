@@ -42,14 +42,14 @@ export default function Dropdown({ onLinkClick, onCloseMenu}: DropdownProps) {
   );
 }
 const DropdownContainer = styled.div`
-  width: 230px;
+  width: 238px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   overflow: hidden;
   position: absolute;
   ${media("<=tablet")} {
- left: -30px;
+ left: -51px;
     z-index: 100;
   
   }
