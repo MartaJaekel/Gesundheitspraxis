@@ -38,7 +38,7 @@ export default function Infos() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1000 100"
           preserveAspectRatio="none"
-          alt="waves"
+          
         >
           <path
             class="elementor-shape-fill"
@@ -101,28 +101,7 @@ const Waves = styled.div`
     fill: rgb(245, 245, 237);
   }
 `;
-const StyledLine = styled.div`
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 30px 100px;
-  color: #9e8d8d;
-  &:before,
-  &:after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid #9e8d8d;
-  }
-  &:before {
-    margin-right: 2em;
-  }
-  &:after {
-    margin-left: 2em;
-  }
-  ${media("<=tablet")} {
-    margin: 30px 70px;
-  }
-`;
+
 
 const Container = styled.div`
   display: flex;
