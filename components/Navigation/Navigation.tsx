@@ -6,6 +6,10 @@ import { useState } from "react";
 import Dropdown from "../Dropdown.tsx/Dropdown";
 import { MouseEvent } from "react";
 
+interface StyledContainerProps {
+  isOpen: boolean;
+}
+
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
@@ -164,7 +168,7 @@ const Burger = styled.div`
   }
 `;
 
-const StyledContainer = styled.ul`
+const StyledContainer = styled.ul<StyledContainerProps>`
   display: flex;
   gap: 30px;
   align-items: center;
