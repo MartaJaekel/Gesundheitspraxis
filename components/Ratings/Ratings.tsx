@@ -29,6 +29,13 @@ const BackgroundWrapper = styled.div`
   }
   ${media("<=tablet")} {
     min-height: 42vh;
+    background-position: -706px center;
+   
+  }
+     ${media("<=phone")} {
+    min-height: 42vh;
+    background-position: -600px center;
+   
   }
 `;
 
@@ -109,6 +116,10 @@ const Bewertungen = styled.div`
   }
   ${media("<=phone")} {
     left: 1rem;
+    top: 8rem;
+  }
+  ${media("<=tablet")} {
+    left: 2rem;
     top: 8rem;
   }
 `;
