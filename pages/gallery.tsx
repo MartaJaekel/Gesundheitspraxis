@@ -63,28 +63,6 @@ const Image = styled.img`
   transition: transform 0.4s ease, filter 0.4s ease;
 `;
 
-const ImageOverlay = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  text-align: center;
-  padding: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-
-  ${GalleryItem}:hover & {
-    opacity: 1;
-  }
-`;
-
-const ImageTitle = styled.h3`
-  margin: 0;
-  font-size: 1rem;
-`;
-
 const ImageGallery = () => {
   const images = [
     { src: "/bh.JPG", title: "bowen" },
@@ -108,9 +86,6 @@ const ImageGallery = () => {
                   width={500}
                   height={500}
                 />
-                <ImageOverlay>
-                  <ImageTitle>{image.title}</ImageTitle>
-                </ImageOverlay>
               </GalleryItem>
             ))}
           </GalleryContainer>
