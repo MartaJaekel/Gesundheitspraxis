@@ -10,7 +10,6 @@ const GalleryWrapper = styled.div`
   overflow-y: auto;
   min-height: 100vh;
   max-width: 1018px;
-
   margin: auto;
   ${media("<=tablet")} {
   }

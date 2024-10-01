@@ -1,6 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 import Image from "next/image";
+import media from "css-in-js-media";
 
 export default function About() {
   return (
@@ -12,8 +13,8 @@ export default function About() {
               <Image
                 src="/beauty.png"
                 alt="Simona Jäkel"
-                width={300}
-                height={300}
+                width={200}
+                height={200}
                 style={{
                   borderRadius: "50%",
                   objectFit: "cover",
@@ -111,9 +112,8 @@ const ProfileSection = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 220px;
-  height: 220px;
-  position: relative;
+  width: 160px;
+  height: 160px;
   margin-bottom: 20px;
 `;
 
