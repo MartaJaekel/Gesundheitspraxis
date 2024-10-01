@@ -1,55 +1,54 @@
 import styled from "styled-components";
-import media from "css-in-js-media";
-import Image from "next/image";
+import Link from "next/link";
+
 export default function Datenschutz() {
   return (
     <>
-      <a href="/">
-        <ImageIcon src="/arrow.svg" alt="arrow" height={20} width={20} />
-      </a>
       <StyledWrapper>
-        <h1>Datenschutz&shy;erkl&auml;rung</h1>
-        <h2>1. Datenschutz auf einen Blick</h2>
-        <h3>Allgemeine Hinweise</h3>{" "}
-        <p>
+        <StyledHeading1>Datenschutz&shy;erkl&auml;rung</StyledHeading1>
+        <StyledHeading2>1. Datenschutz auf einen Blick</StyledHeading2>
+        <StyledHeading3>Allgemeine Hinweise</StyledHeading3>
+        <StyledParagraph>
           Die folgenden Hinweise geben einen einfachen &Uuml;berblick
           dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie
           diese Website besuchen. Personenbezogene Daten sind alle Daten, mit
           denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen.
           Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie
           unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.
-        </p>
-        <h3>Datenerfassung auf dieser Website</h3>{" "}
-        <h4>
+        </StyledParagraph>
+        <StyledHeading3>Datenerfassung auf dieser Website</StyledHeading3>
+        <StyledHeading4>
           Wer ist verantwortlich f&uuml;r die Datenerfassung auf dieser Website?
-        </h4>{" "}
-        <p>
+        </StyledHeading4>
+        <StyledParagraph>
           Die Datenverarbeitung auf dieser Website erfolgt durch den
           Websitebetreiber. Dessen Kontaktdaten k&ouml;nnen Sie dem Abschnitt
           &bdquo;Hinweis zur Verantwortlichen Stelle&ldquo; in dieser
           Datenschutzerkl&auml;rung entnehmen.
-        </p>{" "}
-        <h4>Wie erfassen wir Ihre Daten?</h4>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading4>Wie erfassen wir Ihre Daten?</StyledHeading4>
+        <StyledParagraph>
           Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese
           mitteilen. Hierbei kann es sich z.&nbsp;B. um Daten handeln, die Sie
           in ein Kontaktformular eingeben.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Andere Daten werden automatisch oder nach Ihrer Einwilligung beim
           Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem
           technische Daten (z.&nbsp;B. Internetbrowser, Betriebssystem oder
           Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt
           automatisch, sobald Sie diese Website betreten.
-        </p>{" "}
-        <h4>Wof&uuml;r nutzen wir Ihre Daten?</h4>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading4>Wof&uuml;r nutzen wir Ihre Daten?</StyledHeading4>
+        <StyledParagraph>
           Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung
           der Website zu gew&auml;hrleisten. Andere Daten k&ouml;nnen zur
           Analyse Ihres Nutzerverhaltens verwendet werden.
-        </p>{" "}
-        <h4>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</h4>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading4>
+          Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?
+        </StyledHeading4>
+        <StyledParagraph>
           Sie haben jederzeit das Recht, unentgeltlich Auskunft &uuml;ber
           Herkunft, Empf&auml;nger und Zweck Ihrer gespeicherten
           personenbezogenen Daten zu erhalten. Sie haben au&szlig;erdem ein
@@ -60,33 +59,37 @@ export default function Datenschutz() {
           Umst&auml;nden die Einschr&auml;nkung der Verarbeitung Ihrer
           personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein
           Beschwerderecht bei der zust&auml;ndigen Aufsichtsbeh&ouml;rde zu.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Hierzu sowie zu weiteren Fragen zum Thema Datenschutz k&ouml;nnen Sie
           sich jederzeit an uns wenden.
-        </p>
-        <h3>Analyse-Tools und Tools von Dritt&shy;anbietern</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading3>
+          Analyse-Tools und Tools von Dritt&shy;anbietern
+        </StyledHeading3>
+        <StyledParagraph>
           Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch
           ausgewertet werden. Das geschieht vor allem mit sogenannten
           Analyseprogrammen.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in
           der folgenden Datenschutzerkl&auml;rung.
-        </p>
-        <h2>2. Hosting</h2>
-        <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
-        <h3>Externes Hosting</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading2>2. Hosting</StyledHeading2>
+        <StyledParagraph>
+          Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
+        </StyledParagraph>
+        <StyledHeading3>Externes Hosting</StyledHeading3>
+        <StyledParagraph>
           Diese Website wird extern gehostet. Die personenbezogenen Daten, die
           auf dieser Website erfasst werden, werden auf den Servern des Hosters
           / der Hoster gespeichert. Hierbei kann es sich v.&nbsp;a. um
           IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten,
           Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige
           Daten, die &uuml;ber eine Website generiert werden, handeln.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Das externe Hosting erfolgt zum Zwecke der Vertragserf&uuml;llung
           gegen&uuml;ber unseren potenziellen und bestehenden Kunden (Art. 6
           Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und
@@ -98,74 +101,76 @@ export default function Datenschutz() {
           Cookies oder den Zugriff auf Informationen im Endger&auml;t des
           Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne des TTDSG umfasst.
           Die Einwilligung ist jederzeit widerrufbar.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten,
           wie dies zur Erf&uuml;llung seiner Leistungspflichten erforderlich ist
           und unsere Weisungen in Bezug auf diese Daten befolgen.
-        </p>{" "}
-        <p>Wir setzen folgende(n) Hoster ein:</p>
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>Wir setzen folgende(n) Hoster ein:</StyledParagraph>
+        <StyledParagraph>
           Vercel
           <br />
           Anschrift: Vercel Inc, 340 S Lemon Ave #4133, Walnut, CA 91789, U.S.A.
-        </p>
-        <h4>Auftragsverarbeitung</h4>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading4>Auftragsverarbeitung</StyledHeading4>
+        <StyledParagraph>
           Wir haben einen Vertrag &uuml;ber Auftragsverarbeitung (AVV) zur
           Nutzung des oben genannten Dienstes geschlossen. Hierbei handelt es
           sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der
           gew&auml;hrleistet, dass dieser die personenbezogenen Daten unserer
           Websitebesucher nur nach unseren Weisungen und unter Einhaltung der
           DSGVO verarbeitet.
-        </p>
-        <h2>3. Allgemeine Hinweise und Pflicht&shy;informationen</h2>
-        <h3>Datenschutz</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading2>
+          3. Allgemeine Hinweise und Pflicht&shy;informationen
+        </StyledHeading2>
+        <StyledHeading3>Datenschutz</StyledHeading3>
+        <StyledParagraph>
           Die Betreiber dieser Seiten nehmen den Schutz Ihrer pers&ouml;nlichen
           Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten
           vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften
           sowie dieser Datenschutzerkl&auml;rung.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Wenn Sie diese Website benutzen, werden verschiedene personenbezogene
           Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie
           pers&ouml;nlich identifiziert werden k&ouml;nnen. Die vorliegende
           Datenschutzerkl&auml;rung erl&auml;utert, welche Daten wir erheben und
           wof&uuml;r wir sie nutzen. Sie erl&auml;utert auch, wie und zu welchem
           Zweck das geschieht.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet
           (z.&nbsp;B. bei der Kommunikation per E-Mail) Sicherheitsl&uuml;cken
           aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff
           durch Dritte ist nicht m&ouml;glich.
-        </p>
-        <h3>Hinweis zur verantwortlichen Stelle</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading3>Hinweis zur verantwortlichen Stelle</StyledHeading3>
+        <StyledParagraph>
           Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser
           Website ist:
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Simona J&auml;kel
           <br />
           Mehringdamm 31
           <br />
           10961 Berlin
-        </p>
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Telefon: 015788297240
           <br />
           E-Mail: simona.jaekel1@gmail.com
-        </p>
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Verantwortliche Stelle ist die nat&uuml;rliche oder juristische
           Person, die allein oder gemeinsam mit anderen &uuml;ber die Zwecke und
           Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen,
           E-Mail-Adressen o. &Auml;.) entscheidet.
-        </p>
-        <h3>Speicherdauer</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading3>Speicherdauer</StyledHeading3>
+        <StyledParagraph>
           Soweit innerhalb dieser Datenschutzerkl&auml;rung keine speziellere
           Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten
           bei uns, bis der Zweck f&uuml;r die Datenverarbeitung entf&auml;llt.
@@ -176,12 +181,12 @@ export default function Datenschutz() {
           haben (z.&nbsp;B. steuer- oder handelsrechtliche
           Aufbewahrungsfristen); im letztgenannten Fall erfolgt die
           L&ouml;schung nach Fortfall dieser Gr&uuml;nde.
-        </p>
-        <h3>
+        </StyledParagraph>
+        <StyledHeading3>
           Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf
           dieser Website
-        </h3>{" "}
-        <p>
+        </StyledHeading3>
+        <StyledParagraph>
           Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten
           wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit.
           a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere
@@ -203,9 +208,9 @@ export default function Datenschutz() {
           Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. &Uuml;ber die
           jeweils im Einzelfall einschl&auml;gigen Rechtsgrundlagen wird in den
           folgenden Abs&auml;tzen dieser Datenschutzerkl&auml;rung informiert.
-        </p>
-        <h3>Empfänger von personenbezogenen Daten</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading3>Empfänger von personenbezogenen Daten</StyledHeading3>
+        <StyledParagraph>
           Im Rahmen unserer Gesch&auml;ftst&auml;tigkeit arbeiten wir mit
           verschiedenen externen Stellen zusammen. Dabei ist teilweise auch eine
           &Uuml;bermittlung von personenbezogenen Daten an diese externen
@@ -220,20 +225,22 @@ export default function Datenschutz() {
           nur auf Grundlage eines g&uuml;ltigen Vertrags &uuml;ber
           Auftragsverarbeitung weiter. Im Falle einer gemeinsamen Verarbeitung
           wird ein Vertrag &uuml;ber gemeinsame Verarbeitung geschlossen.
-        </p>
-        <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading3>
+          Widerruf Ihrer Einwilligung zur Datenverarbeitung
+        </StyledHeading3>
+        <StyledParagraph>
           Viele Datenverarbeitungsvorg&auml;nge sind nur mit Ihrer
           ausdr&uuml;cklichen Einwilligung m&ouml;glich. Sie k&ouml;nnen eine
           bereits erteilte Einwilligung jederzeit widerrufen. Die
           Rechtm&auml;&szlig;igkeit der bis zum Widerruf erfolgten
           Datenverarbeitung bleibt vom Widerruf unber&uuml;hrt.
-        </p>
-        <h3>
+        </StyledParagraph>
+        <StyledHeading3>
           Widerspruchsrecht gegen die Datenerhebung in besonderen F&auml;llen
           sowie gegen Direktwerbung (Art. 21 DSGVO)
-        </h3>{" "}
-        <p>
+        </StyledHeading3>
+        <StyledParagraph>
           WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER
           F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GR&Uuml;NDEN, DIE
           SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG
@@ -247,8 +254,8 @@ export default function Datenschutz() {
           DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN &Uuml;BERWIEGEN ODER DIE
           VERARBEITUNG DIENT DER GELTENDMACHUNG, AUS&Uuml;BUNG ODER VERTEIDIGUNG
           VON RECHTSANSPR&Uuml;CHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU
           BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE
           VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE
@@ -257,75 +264,80 @@ export default function Datenschutz() {
           WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT
           MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21
           ABS. 2 DSGVO).
-        </p>
-        <h3>
+        </StyledParagraph>
+        <StyledHeading3>
           Beschwerde&shy;recht bei der zust&auml;ndigen
           Aufsichts&shy;beh&ouml;rde
-        </h3>{" "}
-        <p>
+        </StyledHeading3>
+        <StyledParagraph>
           Im Falle von Verst&ouml;&szlig;en gegen die DSGVO steht den
           Betroffenen ein Beschwerderecht bei einer Aufsichtsbeh&ouml;rde,
           insbesondere in dem Mitgliedstaat ihres gew&ouml;hnlichen Aufenthalts,
           ihres Arbeitsplatzes oder des Orts des mutma&szlig;lichen
           Versto&szlig;es zu. Das Beschwerderecht besteht unbeschadet
           anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
-        </p>
-        <h3>Recht auf Daten&shy;&uuml;bertrag&shy;barkeit</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading3>
+          Recht auf Daten&shy;&uuml;bertrag&shy;barkeit
+        </StyledHeading3>
+        <StyledParagraph>
           Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung
           oder in Erf&uuml;llung eines Vertrags automatisiert verarbeiten, an
           sich oder an einen Dritten in einem g&auml;ngigen, maschinenlesbaren
           Format aush&auml;ndigen zu lassen. Sofern Sie die direkte
           &Uuml;bertragung der Daten an einen anderen Verantwortlichen
           verlangen, erfolgt dies nur, soweit es technisch machbar ist.
-        </p>
-        <h3>Auskunft, Berichtigung und L&ouml;schung</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading3>
+          Auskunft, Berichtigung und L&ouml;schung
+        </StyledHeading3>
+        <StyledParagraph>
           Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit
           das Recht auf unentgeltliche Auskunft &uuml;ber Ihre gespeicherten
           personenbezogenen Daten, deren Herkunft und Empf&auml;nger und den
           Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder
           L&ouml;schung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema
           personenbezogene Daten k&ouml;nnen Sie sich jederzeit an uns wenden.
-        </p>
-        <h3>Recht auf Einschr&auml;nkung der Verarbeitung</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading3>
+          Recht auf Einschr&auml;nkung der Verarbeitung
+        </StyledHeading3>
+        <StyledParagraph>
           Sie haben das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer
           personenbezogenen Daten zu verlangen. Hierzu k&ouml;nnen Sie sich
           jederzeit an uns wenden. Das Recht auf Einschr&auml;nkung der
           Verarbeitung besteht in folgenden F&auml;llen:
-        </p>{" "}
-        <ul>
-          {" "}
-          <li>
+        </StyledParagraph>
+        <StyledList>
+          <StyledListItem>
             Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten
             personenbezogenen Daten bestreiten, ben&ouml;tigen wir in der Regel
             Zeit, um dies zu &uuml;berpr&uuml;fen. F&uuml;r die Dauer der
             Pr&uuml;fung haben Sie das Recht, die Einschr&auml;nkung der
             Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
-          </li>{" "}
-          <li>
+          </StyledListItem>
+          <StyledListItem>
             Wenn die Verarbeitung Ihrer personenbezogenen Daten
             unrechtm&auml;&szlig;ig geschah/geschieht, k&ouml;nnen Sie statt der
             L&ouml;schung die Einschr&auml;nkung der Datenverarbeitung
             verlangen.
-          </li>{" "}
-          <li>
+          </StyledListItem>
+          <StyledListItem>
             Wenn wir Ihre personenbezogenen Daten nicht mehr ben&ouml;tigen, Sie
             sie jedoch zur Aus&uuml;bung, Verteidigung oder Geltendmachung von
             Rechtsanspr&uuml;chen ben&ouml;tigen, haben Sie das Recht, statt der
             L&ouml;schung die Einschr&auml;nkung der Verarbeitung Ihrer
             personenbezogenen Daten zu verlangen.
-          </li>{" "}
-          <li>
+          </StyledListItem>
+          <StyledListItem>
             Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt
             haben, muss eine Abw&auml;gung zwischen Ihren und unseren Interessen
             vorgenommen werden. Solange noch nicht feststeht, wessen Interessen
             &uuml;berwiegen, haben Sie das Recht, die Einschr&auml;nkung der
             Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
-          </li>{" "}
-        </ul>{" "}
-        <p>
+          </StyledListItem>
+        </StyledList>
+        <StyledParagraph>
           Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten
           eingeschr&auml;nkt haben, d&uuml;rfen diese Daten &ndash; von ihrer
           Speicherung abgesehen &ndash; nur mit Ihrer Einwilligung oder zur
@@ -334,9 +346,9 @@ export default function Datenschutz() {
           nat&uuml;rlichen oder juristischen Person oder aus Gr&uuml;nden eines
           wichtigen &ouml;ffentlichen Interesses der Europ&auml;ischen Union
           oder eines Mitgliedstaats verarbeitet werden.
-        </p>
-        <h3>SSL- bzw. TLS-Verschl&uuml;sselung</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading3>SSL- bzw. TLS-Verschl&uuml;sselung</StyledHeading3>
+        <StyledParagraph>
           Diese Seite nutzt aus Sicherheitsgr&uuml;nden und zum Schutz der
           &Uuml;bertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen
           oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL-
@@ -344,22 +356,22 @@ export default function Datenschutz() {
           erkennen Sie daran, dass die Adresszeile des Browsers von
           &bdquo;http://&ldquo; auf &bdquo;https://&ldquo; wechselt und an dem
           Schloss-Symbol in Ihrer Browserzeile.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Wenn die SSL- bzw. TLS-Verschl&uuml;sselung aktiviert ist, k&ouml;nnen
           die Daten, die Sie an uns &uuml;bermitteln, nicht von Dritten
           mitgelesen werden.
-        </p>
-        <h2>4. Datenerfassung auf dieser Website</h2>
-        <h3>Kontaktformular</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading2>4. Datenerfassung auf dieser Website</StyledHeading2>
+        <StyledHeading3>Kontaktformular</StyledHeading3>
+        <StyledParagraph>
           Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre
           Angaben aus dem Anfrageformular inklusive der von Ihnen dort
           angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und f&uuml;r
           den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben
           wir nicht ohne Ihre Einwilligung weiter.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1
           lit. b DSGVO, sofern Ihre Anfrage mit der Erf&uuml;llung eines
           Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung
@@ -369,24 +381,26 @@ export default function Datenschutz() {
           gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer
           Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt
           wurde; die Einwilligung ist jederzeit widerrufbar.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei
           uns, bis Sie uns zur L&ouml;schung auffordern, Ihre Einwilligung zur
           Speicherung widerrufen oder der Zweck f&uuml;r die Datenspeicherung
           entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihrer
           Anfrage). Zwingende gesetzliche Bestimmungen &ndash; insbesondere
           Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.
-        </p>
-        <h3>Anfrage per E-Mail, Telefon oder Telefax</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading3>
+          Anfrage per E-Mail, Telefon oder Telefax
+        </StyledHeading3>
+        <StyledParagraph>
           Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre
           Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten
           (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns
           gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre
           Einwilligung weiter.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1
           lit. b DSGVO, sofern Ihre Anfrage mit der Erf&uuml;llung eines
           Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung
@@ -396,8 +410,8 @@ export default function Datenschutz() {
           gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer
           Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt
           wurde; die Einwilligung ist jederzeit widerrufbar.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Die von Ihnen an uns per Kontaktanfragen &uuml;bersandten Daten
           verbleiben bei uns, bis Sie uns zur L&ouml;schung auffordern, Ihre
           Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die
@@ -405,15 +419,15 @@ export default function Datenschutz() {
           Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen
           &ndash; insbesondere gesetzliche Aufbewahrungsfristen &ndash; bleiben
           unber&uuml;hrt.
-        </p>
-        <h2>5. Plugins und Tools</h2>
-        <h3>Google Maps</h3>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledHeading2>5. Plugins und Tools</StyledHeading2>
+        <StyledHeading3>Google Maps</StyledHeading3>
+        <StyledParagraph>
           Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die
           Google Ireland Limited (&bdquo;Google&ldquo;), Gordon House, Barrow
           Street, Dublin 4, Irland.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre
           IP-Adresse zu speichern. Diese Informationen werden in der Regel an
           einen Server von Google in den USA &uuml;bertragen und dort
@@ -423,8 +437,8 @@ export default function Datenschutz() {
           verwenden. Beim Aufruf von Google Maps l&auml;dt Ihr Browser die
           ben&ouml;tigten Web Fonts in ihren Browsercache, um Texte und
           Schriftarten korrekt anzuzeigen.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden
           Darstellung unserer Online-Angebote und an einer leichten
           Auffindbarkeit der von uns auf der Website angegebenen Orte. Dies
@@ -436,41 +450,41 @@ export default function Datenschutz() {
           Informationen im Endger&auml;t des Nutzers (z.&nbsp;B.
           Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung
           ist jederzeit widerrufbar.
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Die Daten&uuml;bertragung in die USA wird auf die
           Standardvertragsklauseln der EU-Kommission gest&uuml;tzt. Details
           finden Sie hier:{" "}
-          <a
+          <StyledLink
             href="https://privacy.google.com/businesses/gdprcontrollerterms/"
             target="_blank"
             rel="noopener noreferrer"
           >
             https://privacy.google.com/businesses/gdprcontrollerterms/
-          </a>{" "}
+          </StyledLink>{" "}
           und{" "}
-          <a
+          <StyledLink
             href="https://privacy.google.com/businesses/gdprcontrollerterms/sccs/"
             target="_blank"
             rel="noopener noreferrer"
           >
             https://privacy.google.com/businesses/gdprcontrollerterms/sccs/
-          </a>
+          </StyledLink>
           .
-        </p>{" "}
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der
           Datenschutzerkl&auml;rung von Google:{" "}
-          <a
+          <StyledLink
             href="https://policies.google.com/privacy?hl=de"
             target="_blank"
             rel="noopener noreferrer"
           >
             https://policies.google.com/privacy?hl=de
-          </a>
+          </StyledLink>
           .
-        </p>
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Das Unternehmen verf&uuml;gt &uuml;ber eine Zertifizierung nach dem
           &bdquo;EU-US Data Privacy Framework&ldquo; (DPF). Der DPF ist ein
           &Uuml;bereinkommen zwischen der Europ&auml;ischen Union und den USA,
@@ -479,40 +493,69 @@ export default function Datenschutz() {
           DPF zertifizierte Unternehmen verpflichtet sich, diese
           Datenschutzstandards einzuhalten. Weitere Informationen hierzu
           erhalten Sie vom Anbieter unter folgendem Link:{" "}
-          <a
+          <StyledLink
             href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active"
             target="_blank"
             rel="noopener noreferrer"
           >
             https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active
-          </a>
-        </p>
-        <p>
+          </StyledLink>
+        </StyledParagraph>
+        <StyledParagraph>
           Quelle:{" "}
-          <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>
-        </p>
+          <StyledLink href="https://www.e-recht24.de">
+            https://www.e-recht24.de
+          </StyledLink>
+        </StyledParagraph>
       </StyledWrapper>
     </>
   );
 }
 const StyledWrapper = styled.div`
-  margin: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 138px 30px 30px 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
+  overflow-y: auto;
 `;
-const ImageIcon = styled(Image)`
-  position: absolute;
-  top: 7px;
-  left: 5px;
-  align-items: center;
 
-  background-color: white;
-  border-radius: 100%;
-  border: 2px solid #ccc1c1;
-  cursor: pointer;
+const StyledHeading1 = styled.h1`
+  font-size: 2em;
+  margin-bottom: 0.5em;
+`;
 
-  padding: 5px;
-  margin: 10px;
+const StyledHeading2 = styled.h2`
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+`;
 
-  ${media("<=phone")} {
-    top: 10px;
-  }
+const StyledHeading3 = styled.h3`
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+`;
+
+const StyledHeading4 = styled.h4`
+  font-size: 1em;
+  margin-bottom: 0.5em;
+`;
+
+const StyledParagraph = styled.p`
+  font-size: 1em;
+  margin-bottom: 1em;
+`;
+const StyledList = styled.ul`
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 1em;
+`;
+
+const StyledListItem = styled.li`
+  font-size: 1em;
+  margin-bottom: 0.5em;
+`;
+const StyledLink = styled(Link)`
+  color: black;
+  text-decoration: underline;
 `;

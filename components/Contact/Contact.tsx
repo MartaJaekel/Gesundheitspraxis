@@ -1,14 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import media from "css-in-js-media";
-import Image from "next/image";
 import { useState } from "react";
-
 
 export default function Contact() {
   const [showConfirmation, setShowConfirmation] = useState(false);
 
-  function handleSubmit(event:any) {
+  function handleSubmit(event: any) {
     event.preventDefault();
     const formData = new FormData(event.target);
 
@@ -20,19 +18,14 @@ export default function Contact() {
       },
     })
       .then(() => {
-        // Check if form submission was successful
-
-        // Show confirmation modal
         setShowConfirmation(true);
         event.target.reset();
       })
       .catch((error) => {
-        // Handle error
         console.error("Form submission failed", error);
       });
   }
   function handleConfirmationClose() {
-    // Hide confirmation modal
     setShowConfirmation(false);
   }
 
@@ -45,41 +38,51 @@ export default function Contact() {
           id="form"
           onSubmit={handleSubmit}
         >
-          {/* Honeypot that preevnts spammers from filling the form out */}
           <input type="text" name="_honey" style={{ display: "none" }}></input>
-          {/* Disable Captcha */}
           <input type="hidden" name="_captcha" value="false"></input>
-          {/* redirecting */}
           <input
             type="hidden"
             name="_next"
             value="https://www.gesundheitspraxis-jaekel.de/#contact"
           ></input>
 
-          <StyledLabel htmlFor="fname">Vorname </StyledLabel>
-          <input type="text" name="Vorname" />
-          <StyledLabel htmlFor="sname">Name </StyledLabel>
-          <input type="text" name="Name" />
-          <StyledLabel htmlFor="email">E-Mail </StyledLabel>
-          <input type="text" name="email" required />
-          <StyledLabel htmlFor="Nachricht">Nachricht</StyledLabel>
-          <StyledTextArea name="message" required></StyledTextArea>
+          <FormHeader>Kontakt</FormHeader>
+
+          <InputWrapper>
+            <StyledLabel htmlFor="fname">
+              Vorname<RequiredAsterisk>*</RequiredAsterisk>
+            </StyledLabel>
+            <StyledInput id="fname" type="text" name="Vorname" required />
+          </InputWrapper>
+
+          <InputWrapper>
+            <StyledLabel htmlFor="sname">
+              Name<RequiredAsterisk>*</RequiredAsterisk>
+            </StyledLabel>
+            <StyledInput id="sname" type="text" name="Name" required />
+          </InputWrapper>
+
+          <InputWrapper>
+            <StyledLabel htmlFor="email">
+              E-Mail<RequiredAsterisk>*</RequiredAsterisk>
+            </StyledLabel>
+            <StyledInput id="email" type="email" name="email" required />
+          </InputWrapper>
+
+          <InputWrapper>
+            <StyledLabel htmlFor="message">
+              Nachricht<RequiredAsterisk>*</RequiredAsterisk>
+            </StyledLabel>
+            <StyledTextArea
+              id="message"
+              name="message"
+              required
+              aria-label="Message"
+            ></StyledTextArea>
+          </InputWrapper>
 
           <StyledButton type="submit">Senden</StyledButton>
         </StyledForm>
-        {/* {showConfirmation && (
-          <StyledConfirmationModal>
-            <StyledConfirmationContent>
-              <StyledCloseButton
-                className="close"
-                onClick={handleConfirmationClose}
-              >
-                &times;
-              </StyledCloseButton>
-              <p>Ihre Nachricht wurde erfolgreich versendet!</p>
-            </StyledConfirmationContent>
-          </StyledConfirmationModal>
-        )} */}
         {showConfirmation && (
           <StyledConfirmationModal>
             <StyledConfirmationContent>
@@ -96,35 +99,33 @@ export default function Contact() {
 
         <StyledInfo>
           <StyledSection>
-            <StyledImage src="/profiletwo.jpeg" height={110} width={110} alt="profile" />
-            <StyledDeatails>
-              <IconWrapper>
-                <img src="/home.png" alt="home" height={18} width={18} />
+            <ImageContainer>
+              <StyledImage src="/beauty.png" alt="profile-picture" />
+            </ImageContainer>
+            <h2>Gesundheitspraxis</h2>
+            <h3>Simona Jaekel</h3>
 
-                <p>Gesundheitspraxis Simona Jäkel</p>
+            <StyledDetails>
+              <IconWrapper>
+                <img src="/telephone.png" alt="phone" />
+                <a href="tel:+49 (0) 15788297240">+49 (0) 15788297240</a>
               </IconWrapper>
               <IconWrapper>
-                <img src="/telephone.png" alt="home" height={18} width={18} />
-                <a href="tel:+49 (0) 15788297240"> +49 (0) 15788297240</a>
-              </IconWrapper>
-              <IconWrapper>
-                <img src="/email.png" alt="home" height={20} width={20} />
+                <img src="/email.png" alt="email" />
                 <p>info@gesundheitspraxis-jaekel.de</p>
               </IconWrapper>
               <IconWrapper>
-                <img src="/location.png" alt="home" height={20} width={20} />
+                <img src="/location.png" alt="location" />
                 <p>Weichselplatz 4 - 12045 Berlin</p>
               </IconWrapper>
-            </StyledDeatails>
+            </StyledDetails>
           </StyledSection>
+
           <StyledMap>
             <StyledFrame
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d765.2126612823455!2d13.438750715891967!3d52.48724006029397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84f059d8c8f17%3A0x32b463fde3c289c7!2sGesundheitspraxis%20Simona%20Jaekel!5e0!3m2!1sit!2sde!4v1721932168470!5m2!1sit!2sde"
-              width="100%"
-              height="300"
-              allowFullScreen
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              title="Map showing the location of Gesundheitspraxis Simona Jäkel"
             ></StyledFrame>
           </StyledMap>
         </StyledInfo>
@@ -132,6 +133,108 @@ export default function Contact() {
     </>
   );
 }
+const RequiredAsterisk = styled.span`
+  color: red;
+  margin-left: 2px;
+`;
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px 100px;
+  background: #fbfbfb;
+  gap: 80px;
+  flex-wrap: wrap;
+  ${media("<=desktop")} {
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px;
+  }
+`;
+
+const StyledForm = styled.form`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 15px;
+`;
+
+const FormHeader = styled.h1`
+  color: #6e6969;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 36px;
+  margin-bottom: 30px;
+`;
+
+const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
+const StyledLabel = styled.label`
+  font-size: 16px;
+  color: #a1a1a1;
+`;
+
+const StyledInput = styled.input`
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #efebeb;
+  border-radius: 10px;
+
+  &:focus {
+    border-color: #e1d9d0;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #c0c0c0;
+  }
+`;
+
+const StyledTextArea = styled.textarea`
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #efebeb;
+  border-radius: 10px;
+  resize: none;
+  height: 120px;
+
+  &:focus {
+    border-color: #e1d9d0;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #c0c0c0;
+  }
+`;
+
+const StyledButton = styled.button`
+  padding: 15px;
+  font-size: 18px;
+  background-color: #d2c4b5;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    font-size 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: #d2c4b5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+  }
+`;
 
 const StyledConfirmationModal = styled.div`
   display: flex;
@@ -146,202 +249,90 @@ const StyledConfirmationModal = styled.div`
 `;
 
 const StyledConfirmationContent = styled.div`
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
+  background-color: #fefaf7;
+  padding: 30px;
+  border-radius: 10px;
   text-align: center;
 `;
 
 const StyledCloseButton = styled.span`
-  position: relative;
-  top: 0px;
-  right: 10px;
-  font-size: 25px;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
   cursor: pointer;
 `;
-const StyledDeatails = styled.div`
+
+const StyledInfo = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: column;
-  text-align: left;
-  margin-left: 15px;
-  p {
-    margin: 3px 10px;
-    display: flex;
-    font-size: 0.9rem;
-    color: #9e8d8d;
-
-    font-family: "Inter Tight", sans-serif;
-    font-weight: lighter;
-  }
-  a {
-    margin: 5px 10px;
-    color: #9e8d8d;
-    font-size: 0.9rem;
-  }
-  ${media("<=phone")} {
-    margin: 10px 0px 10px 20px;
-  }
-  ${media("<=tablet")} {
-    margin-top: 10px;
-  }
-`;
-
-// Define a styled component for your SVG icon wrapper
-const IconWrapper = styled.div`
-  margin-right: 10px; /* Adjust margin as needed */
-  display: flex;
-  felx-direction: row;
-  img {
-    align-self: center;
-    margin-right: 5px;
-  }
+  gap: 72px;
 `;
 
 const StyledSection = styled.section`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  ${media("<=phone")} {
-    flex-direction: column;
-    gap: 25px;
-  }
-  ${media("<=tablet")} {
-    flex-direction: column;
-    justify-content: center;
-    margin: 10px;
-  }
-  // ${media("<=desktop")} {
-  //   flex-direction: row;
-  //   justify-content: center;
-  //   margin: 10px;
-  //   align-items: flex-start;
-  // }
-`;
-
-const StyledImage = styled(Image)`
-  border-radius: 50%;
-  object-fit: cover;
-  border: 0.6px solid #523816;
-`;
-const StyledForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 50px;
-  width: 50%;
-  input {
-    width: calc(100% - 20px);
-    padding: 10px;
-  }
-  // ${media("<=phone")} {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   width: 100%;
-  //   justify-content: space-evenly;
-  //   margin-top: 0px;
-  // }
-  ${media("<=desktop")} {
-    width: 100%;
-  }
-`;
-
-const StyledContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  // padding: 100px;
-  gap: 100px;
-  margin: 0 100px;
-  margin-bottom: 50px;
-  width: calc(100% - 200px);
-  // scroll-margin-top: 150px;
-
-  ${media("<=desktop")} {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  ${media("<=tablet")} {
-    margin: 0 20px;
-    width: calc(100% - 40px);
-    margin-bottom: 20px;
-  }
-`;
-const StyledInfo = styled.div`
-  width: 50%;
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  justify-content: flex-end;
-  margin-top: 50px;
-  gap: 50px;
-
   h2 {
-    font-weight: lighter;
+    font-family: "Inter Tight", sans-serif;
+    font-size: xx-large;
+    color: #6e6969;
+    font-weight: 100;
   }
 
-  ${media("<=desktop")} {
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  ${media("<=tablet")} {
-    flex-direction: column;
-  }
-`;
-const StyledLabel = styled.label`
-  display: block;
-  text-align: left;
-  margin-right: 200px;
-  color: #9e8d8d;
-  font-family: "Inter Tight", sans-serif;
-  font-weight: lighter;
-
-  ${media("<=phone")} {
-    margin: 0px;
+  h3 {
+    font-family: "Inter Tight", sans-serif;
+    font-size: x-large;
+    color: #6e6969;
+    font-weight: 100;
   }
 `;
 
-const StyledTextArea = styled.textarea`
-  width: calc(100% - 20px);
-  height: 100px;
-  padding: 10px;
-  font-size: 0.9rem;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  resize: none;
+const StyledImage = styled.img`
+  border-radius: 50%;
+  height: 110px;
+  width: 110px;
+  object-fit: cover;
 `;
+
+const StyledDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+`;
+
+const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    height: 25px;
+    width: 25px;
+  }
+
+  p,
+  a {
+    font-size: 19px;
+    color: #6e6969;
+  }
+
+  a {
+    text-decoration: none;
+    color: #6e6969;
+    font-size: 20px;
+    &:hover {
+      color: #b08c6c;
+    }
+  }
+`;
+
 const StyledMap = styled.div`
   width: 100%;
+  height: 300px;
+`;
 
-  ${media("<=phone")} {
-    display: flex;
-    justify-content: center;
-    width: 80%;
-  }
-  ${media("<=desktop")} {
-    width: 100%;
-  }
-  ${media("<=tablet")} {
-    width: 100%;
-  }
-`;
-const StyledButton = styled.button`
-  width: 100%;
-  padding: 15px;
-  background-color: #ede6d8;
-  border: none;
-  border-radius: 13px;
-  cursor: pointer;
-  &:hover {
-    color: #ffffff;
-    transition: all 0.3s ease-in-out;
-`;
 const StyledFrame = styled.iframe`
-  border-style: none;
+  width: 100%;
+  height: 100%;
 `;

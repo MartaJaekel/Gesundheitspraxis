@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -9,19 +10,31 @@ export default function Footer() {
     </StyledContainer>
   );
 }
+
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: row;
-
   justify-content: center;
-  gap: 50px;
-  padding: 20px;
-  background-color: #ede6d8;
+  gap: 40px;
+  padding: 15px;
+  background-color: #f3f0ea;
 `;
-const StyledLink = styled.a`
+
+const StyledLink = styled(Link)`
   text-decoration: none;
   color: #9e8d8d;
-
   font-family: "Inter Tight", sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #706c6c; /* Subtle color change on hover */
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;

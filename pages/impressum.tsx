@@ -1,94 +1,106 @@
 import styled from "styled-components";
-import Image from "next/image";
-import media from "css-in-js-media";
+import Link from "next/link";
 
 export default function Impressum() {
   return (
     <>
-      <a href="/">
-        <ImageIcon src="/arrow.svg" alt="arrow" height={20} width={20} />
-      </a>
       <StyledWrapper>
-        <h1>Impressum</h1>
-        <h2>Angaben gemäß § 5 TMG:</h2>
-        <p>
+        <StyledHeading1>Impressum</StyledHeading1>
+        <StyledHeading2>Angaben gemäß § 5 TMG:</StyledHeading2>
+        <StyledParagraph>
           Simona Jäkel Gesundheitspraxis
           <br />
           Gesundheitspraktikerin BfG
           <br />
           Simona Jäkel
-        </p>
-        <h3>Postanschrift:</h3>
-        <p>
+        </StyledParagraph>
+        <StyledHeading3>Postanschrift:</StyledHeading3>
+        <StyledParagraph>
           Mehringdamm 31
           <br />
           10961, Berlin
           <br />
-        </p>
-        <h3>Kontakt:</h3>
-        <p>
+        </StyledParagraph>
+        <StyledHeading3>Kontakt:</StyledHeading3>
+        <StyledParagraph>
           Telefon: +49(0)15788297240
           <br />
           E-Mail: simona.jaekel1@gmail.com
-        </p>
+        </StyledParagraph>
         <br />
-        <h3>Die Berufshaftpflichtversicherung wurde abgeschlossen bei:</h3>
-        <p>
+        <StyledHeading3>
+          Die Berufshaftpflichtversicherung wurde abgeschlossen bei:
+        </StyledHeading3>
+        <StyledParagraph>
           Continentale AG
           <br />
           Ruhrallee 92, 44139 Dortmund
-        </p>
-
+        </StyledParagraph>
         <br />
-        <h2>Hinweise zur Website</h2>
-        <h3>Urheberrechtliche Hinweise</h3>
-        <p>
+        <StyledHeading2>Hinweise zur Website</StyledHeading2>
+        <StyledHeading3>Urheberrechtliche Hinweise</StyledHeading3>
+        <StyledParagraph>
           Simona Jäkel
           <br />
-          Web Entwickler Marta Jäkel
-        </p>
-        <p></p>
-        <h2>Information gemäß § 36 VSBG</h2>
-        <p>
+          Web Entwickler: Marta Jäkel
+          <br />
+          Fotograph: Johan Yesid Corrales Lopez
+        </StyledParagraph>
+        <StyledHeading2>Information gemäß § 36 VSBG</StyledHeading2>
+        <StyledParagraph>
           Gemäß § 36 VSBG (Verbraucherstreitbeilegungsgesetz – Gesetz über die
           alternative Streitbeilegung in Verbrauchersachen) erklärt der
           Betreiber dieser Website:
-        </p>
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren
           vor einer Verbraucherschlichtungsstelle teilzunehmen.
-        </p>
-        <p>
+        </StyledParagraph>
+        <StyledParagraph>
           <em>
             Das Impressum wurde mit dem{" "}
-            <a href="https://www.activemind.de/datenschutz/generatoren/impressum/">
+            <StyledLink href="https://www.activemind.de/datenschutz/generatoren/impressum/">
               Impressums-Generator der activeMind AG
-            </a>{" "}
+            </StyledLink>{" "}
             erstellt.
           </em>
-        </p>
+        </StyledParagraph>
       </StyledWrapper>
     </>
   );
 }
+
 const StyledWrapper = styled.div`
-  margin: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 138px 30px 30px 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
+  overflow-y: auto;
 `;
-const ImageIcon = styled(Image)`
-  position: absolute;
-  top: 7px;
-  left: 5px;
-  align-items: center;
 
-  background-color: white;
-  border-radius: 100%;
-  border: 2px solid #ccc1c1;
-  cursor: pointer;
+const StyledHeading1 = styled.h1`
+  font-size: 2em;
+  margin-bottom: 0.5em;
+`;
 
-  padding: 5px;
-  margin: 10px;
+const StyledHeading2 = styled.h2`
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+`;
 
-  ${media("<=phone")} {
-    top: 10px;
-  }
+const StyledHeading3 = styled.h3`
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+`;
+
+const StyledParagraph = styled.p`
+  font-size: 1em;
+  margin-bottom: 1em;
+`;
+
+const StyledLink = styled(Link)`
+  color: blue;
+  text-decoration: underline;
 `;
