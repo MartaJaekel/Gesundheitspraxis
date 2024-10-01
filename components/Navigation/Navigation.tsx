@@ -23,19 +23,25 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-const router = useRouter();
+  const router = useRouter();
   function handleLinkClick(event: MouseEvent<HTMLAnchorElement>, href: string) {
     event.preventDefault();
+
     if (href.startsWith("#")) {
-      const targetElement = document.querySelector(href);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "instant" });
+      if (router.pathname === "/") {
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+        }
+      } else {
+        router.push(`/${href}`);
       }
     } else {
       router.push(href);
     }
-    setIsOpen(false); 
+
+    setIsOpen(false);
   }
+
   function toggleMobile(event: MouseEvent<HTMLButtonElement>) {
     event.preventDefault();
     event.stopPropagation();
@@ -81,35 +87,33 @@ const router = useRouter();
   const [isDesktop, setIsDesktop] = useState(false);
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth > 768); 
+      setIsDesktop(window.innerWidth > 768);
     };
 
-    handleResize(); 
-    window.addEventListener("resize", handleResize); 
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize); 
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
     <>
       <NavContainer>
-      <Logo>
-  <Link href="/" passHref aria-label="Home">
-   
-      <StyledTitle>
-        HOLISTIC
-        <br />
-        TOUCH
-      </StyledTitle>
-      <StyledLine>
-        <img src="/lotus.svg" height={40} width={40} alt="lotus" />
-      </StyledLine>
-   
-  </Link>
-  <Name> SIMONA JÄKEL </Name>
-</Logo>
+        <Logo>
+          <Link href="/" passHref aria-label="Home">
+            <StyledTitle>
+              HOLISTIC
+              <br />
+              TOUCH
+            </StyledTitle>
+            <StyledLine>
+              <img src="/lotus.svg" height={40} width={40} alt="lotus" />
+            </StyledLine>
+          </Link>
+          <Name> SIMONA JÄKEL </Name>
+        </Logo>
         {isDesktop ? (
           <StyledContainer isOpen={isOpen}>
             {links.map((link) => (
@@ -169,7 +173,7 @@ const router = useRouter();
             <Burger onClick={() => setIsOpen(!isOpen)}>
               <img src="/menu.svg" width={30} height={30} alt="menu" />
             </Burger>
-           <MobileMenu isOpen={isOpen}>
+            <MobileMenu isOpen={isOpen}>
               <div className="flex justify-end p-4">
                 <CloseButton onClick={() => setIsOpen(false)}>
                   <img src="/cross.svg" alt="cross" className="h-6 w-6" />
@@ -177,7 +181,9 @@ const router = useRouter();
               </div>
               <MobileLinks isOpen={isOpen}>
                 <img src="/lotus.svg" width={30} height={30} alt="lotus" />
-                <Button onClick={toggleMobile} aria-label="Angebote">Angebote</Button>
+                <Button onClick={toggleMobile} aria-label="Angebote">
+                  Angebote
+                </Button>
                 {isSubMenuOpen && (
                   <SubMenu isSubMenuOpen={isSubMenuOpen}>
                     <li>
@@ -268,7 +274,7 @@ const StyledLine = styled.div`
   ${media("<=tablet")} {
     &:before,
     &:after {
-      flex: 0.1; 
+      flex: 0.1;
     }
     &:before {
       margin-right: 0.4em;
@@ -296,7 +302,7 @@ const StyledList = styled.li`
   text-decoration: none;
   cursor: pointer;
 
-  display: block; 
+  display: block;
   font-family: "Recoleta Alt Light";
 `;
 const fadeIn = keyframes`

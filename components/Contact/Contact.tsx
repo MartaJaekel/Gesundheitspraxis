@@ -33,7 +33,7 @@ export default function Contact() {
     <>
       <StyledContainer id="contact">
         <StyledForm
-          action="https://formsubmit.co/ f1b26fd1000b61ce6f8b1d7f4678455e"
+          action="https://formsubmit.co/info@holistictouch-jaekel.de"
           method="POST"
           id="form"
           onSubmit={handleSubmit}
@@ -112,7 +112,7 @@ export default function Contact() {
               </IconWrapper>
               <IconWrapper>
                 <img src="/email.png" alt="email" />
-                <p>info@holistictouch-jaekel.de</p>
+                <p>info@gesundheitspraxis-jaekel.de</p>
               </IconWrapper>
               <IconWrapper>
                 <img src="/location.png" alt="location" />
