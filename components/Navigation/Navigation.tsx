@@ -31,6 +31,7 @@ export default function Navigation() {
       if (router.pathname === "/") {
         const targetElement = document.querySelector(href);
         if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "instant" });
         }
       } else {
         router.push(`/${href}`);
