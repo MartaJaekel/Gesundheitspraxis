@@ -1,7 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
 import Image from "next/image";
-import media from "css-in-js-media";
 
 export default function About() {
   return (
