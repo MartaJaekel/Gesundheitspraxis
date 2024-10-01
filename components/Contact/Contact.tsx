@@ -112,7 +112,7 @@ export default function Contact() {
               </IconWrapper>
               <IconWrapper>
                 <img src="/email.png" alt="email" />
-                <p>info@gesundheitspraxis-jaekel.de</p>
+                <p>info@holistictouch-jaekel.de</p>
               </IconWrapper>
               <IconWrapper>
                 <img src="/location.png" alt="location" />
