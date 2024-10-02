@@ -2,29 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import media from "css-in-js-media";
 import { useState } from "react";
+import { useEffect } from "react";
+
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function Contact() {
+  const [state, handleSubmit] = useForm("mgvwgbjl");
   const [showConfirmation, setShowConfirmation] = useState(false);
 
-  function handleSubmit(event: any) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
+  useEffect(() => {
+    if (state.succeeded) {
+      setShowConfirmation(true);
+    }
+  }, [state.succeeded]);
 
-    fetch(event.target.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then(() => {
-        setShowConfirmation(true);
-        event.target.reset();
-      })
-      .catch((error) => {
-        console.error("Form submission failed", error);
-      });
-  }
   function handleConfirmationClose() {
     setShowConfirmation(false);
   }
@@ -32,18 +23,13 @@ export default function Contact() {
   return (
     <>
       <StyledContainer id="contact">
-        <StyledForm
-          action="https://formsubmit.co/info@holistictouch-jaekel.de"
-          method="POST"
-          id="form"
-          onSubmit={handleSubmit}
-        >
+        <StyledForm id="form" onSubmit={handleSubmit}>
           <input type="text" name="_honey" style={{ display: "none" }}></input>
           <input type="hidden" name="_captcha" value="false"></input>
           <input
             type="hidden"
             name="_next"
-            value="https://www.holistictouch-jaekel.de/#contact"
+            value="https://www.holistictouch-jaekel/#contact"
           ></input>
 
           <FormHeader>Kontakt</FormHeader>
@@ -53,6 +39,11 @@ export default function Contact() {
               Vorname<RequiredAsterisk>*</RequiredAsterisk>
             </StyledLabel>
             <StyledInput id="fname" type="text" name="Vorname" required />
+            <ValidationError
+              prefix="Vorname"
+              field="Vorname"
+              errors={state.errors}
+            />
           </InputWrapper>
 
           <InputWrapper>
@@ -60,6 +51,7 @@ export default function Contact() {
               Name<RequiredAsterisk>*</RequiredAsterisk>
             </StyledLabel>
             <StyledInput id="sname" type="text" name="Name" required />
+            <ValidationError prefix="Name" field="Name" errors={state.errors} />
           </InputWrapper>
 
           <InputWrapper>
@@ -67,6 +59,11 @@ export default function Contact() {
               E-Mail<RequiredAsterisk>*</RequiredAsterisk>
             </StyledLabel>
             <StyledInput id="email" type="email" name="email" required />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
           </InputWrapper>
 
           <InputWrapper>
@@ -79,9 +76,16 @@ export default function Contact() {
               required
               aria-label="Message"
             ></StyledTextArea>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
           </InputWrapper>
 
-          <StyledButton type="submit">Senden</StyledButton>
+          <StyledButton type="submit" disabled={state.submitting}>
+            Senden
+          </StyledButton>
         </StyledForm>
         {showConfirmation && (
           <StyledConfirmationModal>
