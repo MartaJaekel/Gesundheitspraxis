@@ -459,7 +459,7 @@ const MobileLinks = styled.ul<MobileLinksProps>`
   padding: 0;
   margin: 0;
   width: 100%;
-  animation: ${fadeIn} 3s ease-in-out;
+  animation: ${fadeIn} 2s ease-in-out;
 
   li {
     font-size: 1.5rem;

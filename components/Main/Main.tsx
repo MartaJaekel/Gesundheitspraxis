@@ -195,14 +195,9 @@ export default function Main() {
                 Fuß deutet auf Beschwerden des dazugehörigen Organs hin.
               </StyledParagraph>
             </StyledContent>
-            <StyledContainer>
-              <StyledImage
-                src="/fuss.jpg"
-                layout="fill"
-                objectFit="cover"
-                alt="fuss"
-              />
-            </StyledContainer>
+            <StyledContainerFeet>
+              <StyledImageFeet src="/organe.png" alt="fuss" />
+            </StyledContainerFeet>
           </FußReflexZonen>
         </Div>
         <Div>
@@ -333,13 +328,31 @@ const StyledContainer = styled.div`
   }
   ${media("<=phone")} {
     width: 100%;
-    height: 280px;
+    height: 235px;
   }
   ${media("<=tablet")} {
     width: 100%;
     300px;
   }
 `;
+const StyledContainerFeet = styled.div`
+  position: relative;
+  width: 50%;
+  height: 500px;
+  ${media("<=desktop")} {
+    width: 100%;
+    height: 600px;
+  }
+  ${media("<=tablet")} {
+    width: 100%;
+    height: 300px;
+  }
+  ${media("<=phone")} {
+    width: 100%;
+    height: 235px;
+  }
+`;
+
 const StyledContent = styled.div`
   width: 45%;
   align-self: baseline;
@@ -491,9 +504,27 @@ const StyledLine = styled.div`
 
 const StyledImage = styled(Image)`
   float: left;
-  margin-right: 20px;
+
   width: 300px;
   height: auto;
+`;
+const StyledImageFeet = styled.img`
+  position: absolute;
+  height: 85%;
+  width: 100%;
+  object-fit: cover;
+  color: transparent;
+
+  ${media("<=tablet")} {
+    object-fit: contain;
+    height: 100%;
+    inset: -5px;
+  }
+  ${media("<=phone")} {
+    object-fit: contain;
+    height: 100%;
+    inset: -5px;
+  }
 `;
 
 const StyledTitle = styled.h2`
