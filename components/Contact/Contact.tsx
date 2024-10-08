@@ -106,7 +106,7 @@ export default function Contact() {
             <ImageContainer>
               <StyledImage src="/beauty.png" alt="profile-picture" />
             </ImageContainer>
-            <h2>Gesundheitspraxis</h2>
+            <h2>Holistic Touch</h2>
             <h3>Simona Jaekel</h3>
 
             <StyledDetails>
@@ -116,7 +116,7 @@ export default function Contact() {
               </IconWrapper>
               <IconWrapper>
                 <img src="/email.png" alt="email" />
-                <p>info@gesundheitspraxis-jaekel.de</p>
+                <p>info@holistictouch-jaekel.com </p>
               </IconWrapper>
               <IconWrapper>
                 <img src="/location.png" alt="location" />

@@ -30,12 +30,10 @@ const BackgroundWrapper = styled.div`
   ${media("<=tablet")} {
     min-height: 42vh;
     background-position: -706px center;
-   
   }
-     ${media("<=phone")} {
+  ${media("<=phone")} {
     min-height: 42vh;
     background-position: -600px center;
-   
   }
 `;
 
@@ -174,10 +172,10 @@ const CardSection: React.FC = () => {
         "Ich war neugierig auf diese Art der Behandlung und es hat sich gelohnt. Es ist weniger eine Massage als eine sehr angenehme Berührungsbehandlung, die kleinen Pausen zwischen den Berührungen fand ich persönlich toll, um wirklich reinzuspüren in meinen Körper und die Entspannung und Weitung wahrzunehmen. Ich bin tiefenentspannt und gelockert nach Hause gegangen!",
     },
     {
-      title: "Yve",
+      title: "Beatrice",
       rating: 5,
       description:
-        "Absolut tolle Erfahrung - man kommt direkt in eine kleine Oase und die Praxis und Simona strahlen eine tolle Ruhe und Kompetenz aus. Die Behandlung war individuell und ich komme gerne wieder",
+        "Ich war kürzlich bei Holistic Touch bei Simona Jäkel und kann sie nur wärmstens empfehlen. Von dem Moment an, als ich eintrat, war Simona unglaublich freundlich und einladend, sodass ich mich sofort wohl fühlte. Ihre Liebe zum Detail und ihr intuitives Verständnis dafür, was mein Körper braucht, waren bemerkenswert. Die Umgebung war beruhigend und durch ihren ganzheitlichen Ansatz fühlte ich mich nicht nur körperlich besser, sondern auch geistig und emotional ausgeglichener und zentrierter. Simona nahm sich die Zeit, sich meine Bedenken anzuhören und passte die Sitzung speziell darauf an. Wenn Sie jemanden suchen, der Professionalität mit echter Sorgfalt und Fachwissen verbindet, sind Sie bei Simona an der richtigen Adresse. Ich bin wirklich dankbar für ihre Hilfe und werde auf jeden Fall für weitere Sitzungen wiederkommen!"
     },
     {
       title: "Carmen",

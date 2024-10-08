@@ -30,7 +30,7 @@ const StyledLink = styled(Link)`
   transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: #706c6c; /* Subtle color change on hover */
+    color: #706c6c;
   }
 
   a {
