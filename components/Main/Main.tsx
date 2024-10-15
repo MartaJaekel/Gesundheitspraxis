@@ -528,23 +528,19 @@ const StyledImageFeet = styled.img`
 `;
 
 const StyledTitle = styled.h2`
-  font-size: 1.9em;
+  font-size: 1.4em;
   font-style: normal;
   font-weight: 400;
   color: #9e8d8d;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
+  -webkit-hyphens: none; 
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; 
   margin: 0px;
   font-family: "Inter Tight", sans-serif;
   scroll-margin-top: 150px;
-
-  ${media("<=phone")} {
-    font-size: 1.5em;
-    hyphens: auto;
-    text-align: left;
-  }
+  word-break: normal; 
+  overflow-wrap: normal; 
 `;
 
 const StyledParagraph = styled.p`
