@@ -107,7 +107,7 @@ export default function Contact() {
               <StyledImage src="/beauty.png" alt="profile-picture" />
             </ImageContainer>
             <h2>Holistic Touch</h2>
-            <h3>Simona Jaekel</h3>
+            <h3>Simona Jäkel</h3>
 
             <StyledDetails>
               <IconWrapper>
