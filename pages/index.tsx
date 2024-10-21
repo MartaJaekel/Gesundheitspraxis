@@ -17,7 +17,7 @@ export default function Home() {
           content="Erleben Sie ganzheitliche Heilung mit Simona Jäkel. Spezialisiert auf Bowen-Therapie, Lomi Lomi Massage und Fußreflexzonenmassage, bietet Simona individuell abgestimmte Behandlungen zur Förderung von Entspannung, Balance und Wohlbefinden."
         />
         <meta property="og:title" content="Holistic Touch Simona Jäkel" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico"/>
       </Head>
 
       <ImageContainer>
