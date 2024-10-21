@@ -127,10 +127,10 @@ export default function Contact() {
 
           <StyledMap>
             <StyledFrame
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d765.2126612823455!2d13.438750715891967!3d52.48724006029397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84f059d8c8f17%3A0x32b463fde3c289c7!2sGesundheitspraxis%20Simona%20Jaekel!5e0!3m2!1sit!2sde!4v1721932168470!5m2!1sit!2sde"
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1366.8341437444726!2d13.438556141852365!3d52.48727449331691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84f059d8c8f17%3A0x32b463fde3c289c7!2sHolistic%20Touch%20Simona%20J%C3%A4kel!5e0!3m2!1sde!2sde!4v1729531052888!5m2!1sde!2sde" width="600" height="450"  loading="lazy">
               loading="lazy"
               title="Map showing the location of Gesundheitspraxis Simona Jäkel"
-            ></StyledFrame>
+            </StyledFrame>
           </StyledMap>
         </StyledInfo>
       </StyledContainer>
