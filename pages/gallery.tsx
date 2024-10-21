@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import media from "css-in-js-media";
+import Image from "next/image";
 
 const GalleryWrapper = styled.div`
   display: flex;
@@ -55,7 +56,7 @@ const GalleryItem = styled.div`
   }
 `;
 
-const Image = styled.img`
+const StyledImage = styled(Image)`
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -79,7 +80,7 @@ const ImageGallery = () => {
           <GalleryContainer>
             {images.map((image, index) => (
               <GalleryItem key={index}>
-                <Image
+                <StyledImage
                   src={image.src}
                   alt={image.title}
                   width={500}
