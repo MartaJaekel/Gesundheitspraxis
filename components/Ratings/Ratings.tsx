@@ -28,11 +28,11 @@ const BackgroundWrapper = styled.div`
     pointer-events: none;
   }
   ${media("<=tablet")} {
-    min-height: 42vh;
+
     background-position: -706px center;
   }
   ${media("<=phone")} {
-    min-height: 42vh;
+   
     background-position: -600px center;
   }
 `;
