@@ -10,7 +10,7 @@ const BackgroundWrapper = styled.div`
 
   height: 400px;
   width: 100%;
-
+  position: relative;
   overflow: hidden;
   &::before {
     content: "";
@@ -28,11 +28,11 @@ const BackgroundWrapper = styled.div`
   }
   ${media("<=tablet")} {
 
-    background-position: -706px center;
+   
   }
   ${media("<=phone")} {
    
-    background-position: -600px center;
+   
   }
 `;
 
