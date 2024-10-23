@@ -8,7 +8,7 @@ const BackgroundWrapper = styled.div`
   background-position: center;
   background-attachment: fixed;
   padding: 100px 0;
-  min-height: 50vh;
+  height: 400px;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -66,7 +66,6 @@ const CardTitle = styled.h3`
   margin: 0;
   font-size: 16px;
   color: #b0a9a9;
-
   text-align: left;
   margin-left: 70px;
 `;
