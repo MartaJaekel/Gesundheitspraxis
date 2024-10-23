@@ -91,8 +91,7 @@ const Description = styled.p`
   color: #666;
   text-align: left;
   margin-top: 56px;
-
-  font-weight: 100;
+font-weight: 100;
 `;
 const Bewertungen = styled.div`
   display: flex;
@@ -118,6 +117,10 @@ const Bewertungen = styled.div`
   }
   ${media("<=tablet")} {
     left: 2rem;
+    top: 8rem;
+  }
+  ${media("<=phone")} {
+    left: 1rem;
     top: 8rem;
   }
 `;
