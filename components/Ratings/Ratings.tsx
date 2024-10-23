@@ -4,19 +4,18 @@ import styled from "styled-components";
 
 const BackgroundWrapper = styled.div`
   background-image: url("/other.png");
-  background-size: cover;
+ 
   background-position: center;
   background-attachment: fixed;
-  padding: 100px 0;
+
   height: 400px;
   width: 100%;
   position: relative;
   overflow: hidden;
   &::before {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+    
+    
     width: 100%;
     height: 100%;
     background: linear-gradient(
