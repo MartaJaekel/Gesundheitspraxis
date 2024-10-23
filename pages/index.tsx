@@ -99,6 +99,9 @@ const ImageContainer = styled.div`
   ${media("<=desktop")} {
     height: calc(90vh - 200px);
   }
+  ${media("<=phone")} {
+    height: calc(90vh - 135px);
+  }
 `;
 
 const StyledImage = styled.div`
