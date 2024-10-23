@@ -4,13 +4,13 @@ import styled from "styled-components";
 
 const BackgroundWrapper = styled.div`
   background-image: url("/other.png");
- 
+
   background-position: center;
   background-attachment: fixed;
 
   height: 400px;
   width: 100%;
-  position: relative;
+
   overflow: hidden;
   &::before {
     content: "";
