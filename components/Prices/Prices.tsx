@@ -26,8 +26,22 @@ export default function Prices() {
       durations: [{ duration: "60 Minuten", price: "60 €" }],
     },
     {
-      name: "Rückenmassage mit Johanneskrautöl",
-      durations: [{ duration: "60 Minuten", price: "60 €" }],
+      name: "Entspannungsmassage",
+      durations: [
+        { duration: "60 Minuten", price: "60 €" },
+        { duration: "90 Minuten", price: "85 €" },],
+    },
+    {
+      name: "Ganzkörpermassage",
+      durations: [
+        { duration: "60 Minuten", price: "60 €" },
+        { duration: "90 Minuten", price: "85 €" },],
+    },
+    {
+      name: "Schulter-, Rücken- & Nackenmassage",
+      durations: [
+        { duration: "45 Minuten", price: "45 €" },
+        { duration: "60 Minuten", price: "60 €" },],
     },
   ];
 
@@ -37,6 +51,7 @@ export default function Prices() {
 
       <Container id="prices">
         <StyledTitle> ANGEBOTE UND PREISE</StyledTitle>
+        <StyledSubtitle>Massage-Gutscheine erhältlich</StyledSubtitle>
         <CardsContainer>
           {treatments.map((treatment, index) => (
             <Card key={index}>
@@ -69,6 +84,19 @@ export default function Prices() {
     </>
   );
 }
+const StyledSubtitle = styled.div`
+  font-size: 1.1rem;
+  text-align: center;
+  font-family: "Recoleta Alt Light", serif;
+  color: #8c7d7d;
+  font-weight: 400;
+  padding: 10px 20px;
+  background-color: #f9f4f0; 
+  border: 1px solid #d2c4b5;
+  border-radius: 8px;
+  display: inline-block; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+`;
 
 const Card = styled.div`
   background-color: #fffdfb;
