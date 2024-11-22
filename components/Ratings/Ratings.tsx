@@ -6,7 +6,7 @@ const BackgroundWrapper = styled.div`
   background-image: url("/other.png");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   padding: 100px 0;
   height: 400px;
   width: 100%;
