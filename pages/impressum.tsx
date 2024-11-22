@@ -8,7 +8,7 @@ export default function Impressum() {
         <StyledHeading1>Impressum</StyledHeading1>
         <StyledHeading2>Angaben gemäß § 5 TMG:</StyledHeading2>
         <StyledParagraph>
-          Simona Jäkel Gesundheitspraxis
+           Holistic Touch Simona Jäkel 
           <br />
           Gesundheitspraktikerin BfG
           <br />
@@ -25,7 +25,7 @@ export default function Impressum() {
         <StyledParagraph>
           Telefon: +49(0)15788297240
           <br />
-          E-Mail: simona.jaekel1@gmail.com
+          E-Mail: info@holistictouch-jaekel.de
         </StyledParagraph>
         <br />
         <StyledHeading3>
