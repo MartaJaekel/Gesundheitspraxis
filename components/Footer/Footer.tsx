@@ -17,7 +17,7 @@ const StyledContainer = styled.div`
   justify-content: center;
   gap: 40px;
   padding: 15px;
-  background-color: #f3f0ea;
+  background-color: white;
 `;
 
 const StyledLink = styled(Link)`

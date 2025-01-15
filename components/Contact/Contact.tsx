@@ -12,14 +12,12 @@ export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
-   
     if (state.succeeded) {
       setShowConfirmation(true);
-      if (formRef.current){
-        formRef.current.reset()
+      if (formRef.current) {
+        formRef.current.reset();
       }
     }
-   
   }, [state.succeeded]);
 
   function handleConfirmationClose() {
@@ -109,40 +107,52 @@ export default function Contact() {
 
         <StyledInfo>
           <StyledSection>
-            <ImageContainer>
-              <StyledImage src="/beauty.png" alt="profile-picture" />
-            </ImageContainer>
-            <h2>Holistic Touch</h2>
-            <h3>Simona Jäkel</h3>
+            <div>
+              <ImageContainer>
+                <StyledImage src="/beauty.png" alt="profile-picture" />
+              </ImageContainer>
+            </div>
+            <Info>
+              <h2>Holistic Touch Simona Jäkel</h2>
 
-            <StyledDetails>
-              <IconWrapper>
-                <img src="/telephone.png" alt="phone" />
-                <a href="tel:+49 (0) 15788297240">+49 (0) 15788297240</a>
-              </IconWrapper>
-              <IconWrapper>
-                <img src="/email.png" alt="email" />
-                <p>info@holistictouch-jaekel.de </p>
-              </IconWrapper>
-              <IconWrapper>
-                <img src="/location.png" alt="location" />
-                <p>Weichselplatz 4 - 12045 Berlin</p>
-              </IconWrapper>
-            </StyledDetails>
+              <StyledDetails>
+                <IconWrapper>
+                  <img src="/telephone.png" alt="phone" />
+                  <a href="tel:+49 (0) 15788297240">+49 (0) 15788297240</a>
+                </IconWrapper>
+                <IconWrapper>
+                  <img src="/email.png" alt="email" />
+                  <p>info@holistictouch-jaekel.de </p>
+                </IconWrapper>
+                <IconWrapper>
+                  <img src="/location.png" alt="location" />
+                  <p>Weichselplatz 4 - 12045 Berlin</p>
+                </IconWrapper>
+              </StyledDetails>
+            </Info>
           </StyledSection>
 
           <StyledMap>
             <StyledFrame
-             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1366.8341437444726!2d13.438556141852365!3d52.48727449331691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84f059d8c8f17%3A0x32b463fde3c289c7!2sHolistic%20Touch%20Simona%20J%C3%A4kel!5e0!3m2!1sde!2sde!4v1729531052888!5m2!1sde!2sde" width="600" height="450"  loading="lazy"  title="Map showing the location of Gesundheitspraxis Simona Jäkel">
-           
-             
-            </StyledFrame>
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1366.8341437444726!2d13.438556141852365!3d52.48727449331691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84f059d8c8f17%3A0x32b463fde3c289c7!2sHolistic%20Touch%20Simona%20J%C3%A4kel!5e0!3m2!1sde!2sde!4v1729531052888!5m2!1sde!2sde"
+              width="600"
+              height="450"
+              loading="lazy"
+              title="Map showing the location of Gesundheitspraxis Simona Jäkel"
+            ></StyledFrame>
           </StyledMap>
         </StyledInfo>
       </StyledContainer>
     </>
   );
 }
+const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${media("<=desktop")} {
+    align-items: center;
+  }
+`;
 const RequiredAsterisk = styled.span`
   color: red;
   margin-left: 2px;
@@ -156,13 +166,15 @@ const StyledContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   padding: 50px 100px;
-  background: #fbfbfb;
+  background: #f9f5f1;
   gap: 80px;
+  align-items: flex-end;
   flex-wrap: wrap;
   ${media("<=desktop")} {
     flex-direction: column;
     padding: 20px;
     gap: 40px;
+    align-items: normal;
   }
 `;
 
@@ -171,7 +183,6 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 40px;
   border-radius: 15px;
 `;
 
@@ -280,12 +291,14 @@ const StyledInfo = styled.div`
 `;
 
 const StyledSection = styled.section`
+  display: flex;
+  gap: 50px;
   text-align: center;
   h2 {
     font-family: "Inter Tight", sans-serif;
     font-size: xx-large;
     color: #6e6969;
-    font-weight: 100;
+    font-weight: 400;
   }
 
   h3 {
@@ -294,19 +307,27 @@ const StyledSection = styled.section`
     color: #6e6969;
     font-weight: 100;
   }
+  ${media("<=desktop")} {
+    flex-direction: column;
+    align-items: center;
+  }
+  ${media("<=tablet")} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const StyledImage = styled.img`
   border-radius: 50%;
-  height: 110px;
-  width: 110px;
+  height: 200px;
+  width: 200px;
   object-fit: cover;
 `;
 
 const StyledDetails = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   gap: 10px;
   margin-top: 20px;
 `;

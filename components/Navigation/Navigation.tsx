@@ -391,7 +391,7 @@ const NavContainer = styled.nav`
   position: fixed;
   padding: 20px 50px;
   z-index: 1;
-  height: 140px;
+  height: 145px;
 
   ${media("<=tablet")} {
     display: block;
