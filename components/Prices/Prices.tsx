@@ -5,13 +5,12 @@ import Ratings from "../Ratings/Ratings";
 
 export default function Prices() {
   const treatments = [
-    
     {
       name: "Lomi Lomi Massage",
       durations: [
         { duration: "60 Minuten", price: "75 €" },
         { duration: "90 Minuten", price: "105 €" },
-        { duration: "120 Minuten", price: "125 €" },
+        { duration: "120 Minuten", price: "130 €" },
       ],
     },
     {
@@ -25,13 +24,7 @@ export default function Prices() {
       name: "Fußreflexzonenmassage",
       durations: [{ duration: "60 Minuten", price: "60 €" }],
     },
-    {
-      name: "Entspannungsmassage",
-      durations: [
-        { duration: "60 Minuten", price: "60 €" },
-        { duration: "90 Minuten", price: "85 €" },
-      ],
-    },
+
     {
       name: "Ganzkörpermassage",
       durations: [
@@ -174,12 +167,12 @@ const CardsContainer = styled.div`
 
   ${media("<=desktop")} {
     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-   }
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-   ${media("<=tablet")} {
-   display: flex;
+  ${media("<=tablet")} {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
