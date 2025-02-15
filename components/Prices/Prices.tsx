@@ -5,20 +5,20 @@ import Ratings from "../Ratings/Ratings";
 
 export default function Prices() {
   const treatments = [
-    {
-      name: "Bowen Schulter-Nacken-Rücken",
-      durations: [{ duration: "60 Minuten", price: "60 €" }],
-    },
-    {
-      name: "Bowen für werdende Mütter",
-      durations: [{ duration: "60 Minuten", price: "60 €" }],
-    },
+    
     {
       name: "Lomi Lomi Massage",
       durations: [
-        { duration: "60 Minuten", price: "70 €" },
-        { duration: "90 Minuten", price: "90 €" },
-        { duration: "120 Minuten", price: "110 €" },
+        { duration: "60 Minuten", price: "75 €" },
+        { duration: "90 Minuten", price: "105 €" },
+        { duration: "120 Minuten", price: "125 €" },
+      ],
+    },
+    {
+      name: "Aromaölmasssage",
+      durations: [
+        { duration: "60 Minuten", price: "65 €" },
+        { duration: "90 Minuten", price: "95 €" },
       ],
     },
     {
@@ -29,19 +29,39 @@ export default function Prices() {
       name: "Entspannungsmassage",
       durations: [
         { duration: "60 Minuten", price: "60 €" },
-        { duration: "90 Minuten", price: "85 €" },],
+        { duration: "90 Minuten", price: "85 €" },
+      ],
     },
     {
       name: "Ganzkörpermassage",
       durations: [
-        { duration: "60 Minuten", price: "60 €" },
-        { duration: "90 Minuten", price: "85 €" },],
+        { duration: "60 Minuten", price: "65 €" },
+        { duration: "90 Minuten", price: "95 €" },
+        { duration: "120 Minuten", price: "125 €" },
+      ],
     },
     {
       name: "Schulter-, Rücken- & Nackenmassage",
       durations: [
-        { duration: "45 Minuten", price: "45 €" },
-        { duration: "60 Minuten", price: "60 €" },],
+        { duration: "45 Minuten", price: "50 €" },
+        { duration: "60 Minuten", price: "65 €" },
+      ],
+    },
+    {
+      name: "Ganzheitliche Massage",
+      durations: [
+        { duration: "60 Minuten", price: "65 €" },
+        { duration: "90 Minuten", price: "95 €" },
+        { duration: "120 Minuten", price: "125 €" },
+      ],
+    },
+    {
+      name: "Bowen - Schulter, Nacken & Rücken",
+      durations: [{ duration: "60 Minuten", price: "60 €" }],
+    },
+    {
+      name: "Bowen - Entspannung für werdende Mütter",
+      durations: [{ duration: "60 Minuten", price: "60 €" }],
     },
   ];
 
@@ -76,7 +96,7 @@ export default function Prices() {
               )
             }
           >
-             <span>Jetzt Buchen</span>
+            <span>Jetzt Buchen</span>
           </StyledButton>
         </Wrapper>
         <Ratings />
@@ -91,11 +111,11 @@ const StyledSubtitle = styled.div`
   color: #8c7d7d;
   font-weight: 400;
   padding: 10px 20px;
-  background-color: #f9f4f0; 
+  background-color: #f9f4f0;
   border: 1px solid #d2c4b5;
   border-radius: 8px;
-  display: inline-block; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 const Card = styled.div`
@@ -147,11 +167,22 @@ const Duration = styled.div`
   }
 `;
 const CardsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin-top: 40px;
+
+  ${media("<=desktop")} {
+    display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+   }
+
+   ${media("<=tablet")} {
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 const StyledButton = styled.button`
