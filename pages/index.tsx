@@ -6,17 +6,9 @@ import media from "css-in-js-media";
 import Main from "../components/Main/Main";
 import Prices from "../components/Prices/Prices";
 import Contact from "../components/Contact/Contact";
-import { useState, useEffect } from "react";
-
+import { useEffect } from "react";
 
 export default function Home() {
-  const [showPopUp, setShowPopUp] = useState(false);
-  useEffect(() => {
-    setShowPopUp(true);
-  }, []);
-  function closePopUp() {
-    setShowPopUp(false);
-  }
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -29,7 +21,7 @@ export default function Home() {
           content="Erleben Sie ganzheitliche Heilung mit Simona Jäkel. Spezialisiert auf Bowen-Therapie, Lomi Lomi Massage und Fußreflexzonenmassage, bietet Simona individuell abgestimmte Behandlungen zur Förderung von Entspannung, Balance und Wohlbefinden."
         />
         <meta property="og:title" content="Holistic Touch Simona Jäkel" />
-        <link rel="icon" href="/favicon.ico"/>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <ImageContainer>
@@ -61,14 +53,6 @@ export default function Home() {
           </StyledButton>
         </StyledImage>
       </ImageContainer>
-      {showPopUp && (
-        <PopUp>
-          <h1>Vorübergehende Adresse ab dem 04.02: Weichselplatz 3, 12045 Berlin. Bei Somatic Approach klingeln.</h1>
-          <button onClick={closePopUp}>
-            <Image src="/cross.svg" width={10} height={10} alt="close-button"></Image>
-          </button>
-        </PopUp>
-      )}
 
       <Intro />
       <Main />
@@ -138,7 +122,6 @@ const PopUp = styled.div`
     padding: 8px;
   }
 `;
-
 
 const ImageContainer = styled.div`
   width: 100%;
