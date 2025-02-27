@@ -89,39 +89,6 @@ const StyledButton = styled.button`
     }
   }
 `;
-const PopUp = styled.div`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: auto;
-  min-height: 60px;
-  z-index: 999999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  color: #958888;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  h1 {
-    font-size: 1rem;
-    color: #958888;
-    font-weight: 400;
-    background-color: white;
-    padding: 15px;
-  }
-  button {
-    border: solid 0px #958888;
-    border-radius: 30%;
-    position: absolute;
-    background-color: white;
-    top: 0px;
-    right: 0px;
-    padding: 8px;
-  }
-`;
 
 const ImageContainer = styled.div`
   width: 100%;
