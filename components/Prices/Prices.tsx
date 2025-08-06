@@ -8,54 +8,51 @@ export default function Prices() {
     {
       name: "Lomi Lomi Massage",
       durations: [
-        { duration: "60 Minuten", price: "75 €" },
-        { duration: "90 Minuten", price: "105 €" },
-        { duration: "120 Minuten", price: "130 €" },
+        { duration: "60 Minuten", price: "80 €" },
+        { duration: "90 Minuten", price: "100 €" },
+        { duration: "120 Minuten", price: "120 €" },
       ],
     },
     {
       name: "Aromaölmasssage",
       durations: [
-        { duration: "60 Minuten", price: "65 €" },
-        { duration: "90 Minuten", price: "95 €" },
+        { duration: "60 Minuten", price: "70 €" },
+        { duration: "90 Minuten", price: "90 €" },
       ],
     },
     {
       name: "Fußreflexzonenmassage",
-      durations: [{ duration: "60 Minuten", price: "60 €" }],
+      durations: [{ duration: "60 Minuten", price: "65 €" }],
     },
 
     {
       name: "Ganzkörpermassage",
       durations: [
-        { duration: "60 Minuten", price: "65 €" },
-        { duration: "90 Minuten", price: "95 €" },
-        { duration: "120 Minuten", price: "125 €" },
+        { duration: "60 Minuten", price: "70 €" },
+        { duration: "90 Minuten", price: "90 €" },
+        { duration: "120 Minuten", price: "110 €" },
       ],
     },
     {
       name: "Schulter-, Rücken- & Nackenmassage",
       durations: [
-        { duration: "45 Minuten", price: "50 €" },
-        { duration: "60 Minuten", price: "65 €" },
+        { duration: "45 Minuten", price: "55 €" },
+        { duration: "60 Minuten", price: "70 €" },
       ],
     },
     {
       name: "Ganzheitliche Massage",
       durations: [
-        { duration: "60 Minuten", price: "65 €" },
-        { duration: "90 Minuten", price: "95 €" },
-        { duration: "120 Minuten", price: "125 €" },
+        { duration: "60 Minuten", price: "70 €" },
+        { duration: "90 Minuten", price: "90 €" },
+        { duration: "120 Minuten", price: "110 €" },
       ],
     },
     {
-      name: "Bowen - Schulter, Nacken & Rücken",
-      durations: [{ duration: "60 Minuten", price: "60 €" }],
+      name: "Ganzheitliche Bowen Technik",
+      durations: [{ duration: "60 Minuten", price: "65 €" }],
     },
-    {
-      name: "Bowen - Entspannung für werdende Mütter",
-      durations: [{ duration: "60 Minuten", price: "60 €" }],
-    },
+   
   ];
 
   return (
