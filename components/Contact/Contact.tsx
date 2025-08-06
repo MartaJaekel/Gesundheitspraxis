@@ -52,7 +52,7 @@ export default function Contact() {
 
           <InputWrapper>
             <StyledLabel htmlFor="sname">
-              Name<RequiredAsterisk>*</RequiredAsterisk>
+              Nachname<RequiredAsterisk>*</RequiredAsterisk>
             </StyledLabel>
             <StyledInput id="sname" type="text" name="Name" required />
             <ValidationError prefix="Name" field="Name" errors={state.errors} />

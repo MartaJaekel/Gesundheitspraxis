@@ -26,7 +26,7 @@ export default function Prices() {
     },
 
     {
-      name: "Ganzkörpermassage",
+      name: "Teil- oder Ganzkörpermassage",
       durations: [
         { duration: "60 Minuten", price: "70 €" },
         { duration: "90 Minuten", price: "90 €" },
@@ -49,9 +49,16 @@ export default function Prices() {
       ],
     },
     {
-      name: "Ganzheitliche Bowen Technik",
+      name: "Ganzheitliche Bowen-Methode",
       durations: [{ duration: "60 Minuten", price: "65 €" }],
     },
+     {
+      name: "Schwangerschaftsmassage",
+      durations: [{ duration: "60 Minuten", price: "70 €" },
+        { duration: "90 Minuten", price: "90 €" }
+      ],
+    },
+    
    
   ];
 
@@ -78,6 +85,7 @@ export default function Prices() {
           ))}
         </CardsContainer>
         <Wrapper>
+          <ButtonContainer>
           <StyledButton
             onClick={() =>
               window.open(
@@ -86,14 +94,39 @@ export default function Prices() {
               )
             }
           >
-            <span>Jetzt Buchen</span>
+            <span>Buchung Neukölln</span>
+            
           </StyledButton>
+          <StyledButton
+            onClick={() =>
+              window.open(
+                "https://buchung.treatwell.de/ort/holistic-touch-simona-jaekel-mitte/",
+                "_blank"
+              )
+            }
+          >
+            <span>Buchung Mitte</span>
+            
+          </StyledButton>
+          </ButtonContainer>
         </Wrapper>
         <Ratings />
       </Container>
     </>
   );
 }
+const ButtonContainer = styled.div`
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 20px;
+    max-width: 350px;
+
+  ${media("<=phone")} {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
 const StyledSubtitle = styled.div`
   font-size: 1.1rem;
   text-align: center;
@@ -178,8 +211,7 @@ const CardsContainer = styled.div`
 const StyledButton = styled.button`
   padding: 15px 30px;
   border-radius: 15px;
-
-  color: white;
+ color: white;
   background-color: #d2c4b5;
   cursor: pointer;
   font-size: 1rem;
@@ -191,7 +223,7 @@ const StyledButton = styled.button`
   &:hover {
     background-color: #d2c4b5;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 20px;
+    transform: scale(1.05);
   }
 
   span {
