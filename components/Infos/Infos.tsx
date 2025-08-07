@@ -137,14 +137,14 @@ const CardContent = styled.div`
 const TreatmentName = styled.h3`
   font-size: 1.1rem;
   font-weight: bold;
-  color: #9e8d8d;
+  color: #746c6c;
   margin: 0;
   font-family: "Recoleta Alt Light";
 `;
 
 const Duration = styled.p`
   font-size: 0.9rem;
-  color: #9e8d8d;
+  color: #746c6c;
   margin: 0;
 `;
 
@@ -181,6 +181,6 @@ const StyledTitle = styled.h1`
   text-align: center;
   font-family: "Inter Tight", sans-serif;
   font-weight: lighter;
-  color: #9e8d8d;
+  color: #746c6c;
 `;
 

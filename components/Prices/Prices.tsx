@@ -14,7 +14,7 @@ export default function Prices() {
       ],
     },
     {
-      name: "Aromaölmasssage",
+      name: "Aromaölmassage",
       durations: [
         { duration: "60 Minuten", price: "70 €" },
         { duration: "90 Minuten", price: "90 €" },
@@ -243,7 +243,7 @@ const StyledTitle = styled.h1`
   text-align: center;
   font-family: "Inter Tight", sans-serif;
   font-weight: lighter;
-  color: #9e8d8d;
+  color: #746c6c;
 `;
 
 const Wrapper = styled.div`

@@ -36,7 +36,7 @@ export default function Main() {
             </StyledTitle>
             <StyledParagraphBowen>
               Die Bowen Technik (Kurzform: Bowtech) ist eine ganzheitliche,
-              sanfte Muskel und Bindegewebsmethode, die in den 50er Jahren von
+              sanfte Muskel- und Bindegewebsmethode, die in den 50er Jahren von
               Tom Bowen in Australien entwickelt wurde. Eine Reihe von sanften
               Impulsen im Bereich des Muskel- und Fasziensystems helfen dem
               Körper, seine Ressourcen der Selbstregulation optimal zu nutzen
@@ -62,8 +62,8 @@ export default function Main() {
               <StyledUl className="ml-6 list-disc [&>li]:mt-2">
                 <li>Rückenschmerzen verschiedenen Ursprungs</li>
                 <li>
-                  Verspannungen und Verhärtungen der Muskulatur im
-                  Rücken-Schulter und Nackenbereich
+                  Verspannungen und Verhärtungen der Muskulatur im Rücken-,
+                  Schulter- und Nackenbereich
                 </li>
                 <li>ISG-Blockaden</li>
                 <li>Kniebeschwerden</li>
@@ -97,7 +97,7 @@ export default function Main() {
               durchgeführt werden. Auf der Haut oder über leichte Kleidung
               werden sanfte Griffe gesetzt. Die gesetzten Impulse stimulieren
               bestimmte Nervenrezeptoren (Propriozeptoren u. Nozizeptoren) im
-              Muskel und Fasziensystem. Dadurch wird der Energiefluss angeregt,
+              Muskel- und Fasziensystem. Dadurch wird der Energiefluss angeregt,
               die Muskeln entspannen sich und das Nervensystem wird
               ausbalanciert. Zwischen zwei Griffserien folgen Pausen von 2 bis 3
               Minuten. Diese Pausen geben dem Körper Zeit, die Impulse zu
@@ -183,11 +183,11 @@ export default function Main() {
                 zur ganzheitlichen Behandlung ohne Medikamente. Der gesamte
                 Körper ist in den Füßen abgebildet, alle Organe, Muskeln,
                 Knochen, Gelenke sowie Drüsen finden sich an den Füßen, Händen
-                und Ohren wieder. Ihr Weg führt sie zu den Theorien von dem
-                Begründer der Zonentherapie Dr. W. H. Fitzgerald, hatte Eunice
-                D. Ingham die Behandlung wesentlich weiter entwickelt. Schwester
+                und Ohren wieder. Ihr Weg führte sie zu den Theorien des
+                Begründers der Zonentherapie, Dr. W. H. Fitzgerald. Eunice D.
+                Ingham entwickelte die Behandlung wesentlich weiter. Schwester
                 Jubilata wandte diese mit herausragenden Ergebnissen bei den
-                Kranken an. Im Kloster Strahlfeld ab 2003. Empfindliche Stellen
+                Kranken an, im Kloster Strahlfeld ab 2003. Empfindliche Stellen
                 an den Füßen sind Anzeiger für Disharmonien im Körper. Diese
                 „Fußlandkarte“ wird durch Druck mit den Händen als auch durch
                 Hilfe eines Holzstöckchens ertastet. Eine erhöhte
@@ -278,7 +278,7 @@ const StyledContentBowen = styled.div`
 const StyledParagraphBowen = styled.p`
   font-size: 1.1rem;
   line-height: 1.75rem;
-  color: #9e8d8d;
+  color: #746c6c;
   font-family: "Inter Tight", sans-serif;
   font-weight: 100;
   margin-top: 24px;
@@ -403,7 +403,7 @@ const PartTwo = styled.div`
   p {
     font-size: 1.1rem;
     line-height: 1.75rem;
-    color: #9e8d8d;
+    color: #746c6c;
     font-family: "Inter Tight", sans-serif;
     font-weight: 100;
   }
@@ -434,14 +434,14 @@ const Info = styled.div`
   font-size: 1.1rem;
   line-height: 1.75rem;
   width: 100%;
-  color: #9e8d8d;
+  color: #746c6c;
   text-align: left;
   font-family: "Inter Tight", sans-serif;
   font-weight: 100;
   text-align: left;
   margin-top: 20px;
   a {
-    color: #9e8d8d;
+    color: #746c6c;
     text-decoration: underline;
 
     &:hover {
@@ -531,23 +531,23 @@ const StyledTitle = styled.h2`
   font-size: 1.4em;
   font-style: normal;
   font-weight: 400;
-  color: #9e8d8d;
-  -webkit-hyphens: none; 
+  color: #746c6c;
+  -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
-  hyphens: none; 
+  hyphens: none;
   margin: 0px;
   font-family: "Inter Tight", sans-serif;
   scroll-margin-top: 150px;
-  word-break: normal; 
-  overflow-wrap: normal; 
+  word-break: normal;
+  overflow-wrap: normal;
 `;
 
 const StyledParagraph = styled.p`
   font-size: 1.1rem;
   line-height: 1.75rem;
   width: 100%;
-  color: #9e8d8d;
+  color: #746c6c;
   text-align: left;
   font-family: "Inter Tight", sans-serif;
   font-weight: 100;
@@ -556,7 +556,7 @@ const StyledParagraph = styled.p`
 const StyledUl = styled.ul`
   font-size: 1.1rem;
   line-height: 1.75rem;
-  color: #9e8d8d;
+  color: #746c6c;
   font-family: "Inter Tight", sans-serif;
   font-weight: 100;
 `;
@@ -591,5 +591,5 @@ const StyledName = styled.div`
   margin-top: 10px;
   font-size: 1rem;
   font-style: italic;
-  color: #9e8d8d;
+  color: #746c6c;
 `;

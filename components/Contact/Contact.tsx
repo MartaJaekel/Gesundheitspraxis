@@ -126,7 +126,7 @@ export default function Contact() {
                 </IconWrapper>
                 <IconWrapper>
                   <img src="/location.png" alt="location" />
-                  <p>Weichselplatz 4 - 12045 Berlin</p>
+                  <p>Weichselplatz 4 - 12045 Berlin.</p>
                 </IconWrapper>
                  <IconWrapper>
                   <img src="/location.png" alt="location" />

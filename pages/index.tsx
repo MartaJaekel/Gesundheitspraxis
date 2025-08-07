@@ -41,16 +41,6 @@ export default function Home() {
               Ganzheitliche Impulse für innere Balance
             </ImageText>
           </Overlay>
-          <StyledButton
-            onClick={() =>
-              window.open(
-                "https://buchung.treatwell.de/ort/gesundheitspraxis-simona-jaekel/",
-                "_blank"
-              )
-            }
-          >
-            <span>Jetzt Buchen</span>
-          </StyledButton>
         </StyledImage>
       </ImageContainer>
 
@@ -61,34 +51,6 @@ export default function Home() {
     </>
   );
 }
-
-const StyledButton = styled.button`
-  position: absolute;
-  padding: 15px 20px;
-
-  border-radius: 10px;
-  border: none;
-  color: #846a6a;
-
-  top: 75%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0;
-  background-color: #f0d0b0e6;
-  &:hover {
-    color: #ffffff;
-    transition: all 0.3s ease-in-out;
-  }
-  ${media("<=phone")} {
-    padding: 7px 20px;
-  }
-  span {
-    font-size: 0.9rem;
-    ${media("<=phone")} {
-      font-size: 0.6rem;
-    }
-  }
-`;
 
 const ImageContainer = styled.div`
   width: 100%;

@@ -79,7 +79,7 @@ const StyledParagraph = styled.p`
   font-family: "Recoleta Alt Light", serif;
   margin: 0;
   padding: 20px;
-  color: #9e8d8d;
+  color: #746c6c;
   font-weight: 100;
   max-width: 800px;
   animation: ${fadeIn} 2s ease-in-out;
