@@ -52,14 +52,13 @@ export default function Prices() {
       name: "Ganzheitliche Bowen-Methode",
       durations: [{ duration: "60 Minuten", price: "65 €" }],
     },
-     {
+    {
       name: "Schwangerschaftsmassage",
-      durations: [{ duration: "60 Minuten", price: "70 €" },
-        { duration: "90 Minuten", price: "90 €" }
+      durations: [
+        { duration: "60 Minuten", price: "70 €" },
+        { duration: "90 Minuten", price: "90 €" },
       ],
     },
-    
-   
   ];
 
   return (
@@ -86,28 +85,26 @@ export default function Prices() {
         </CardsContainer>
         <Wrapper>
           <ButtonContainer>
-          <StyledButton
-            onClick={() =>
-              window.open(
-                "https://buchung.treatwell.de/ort/gesundheitspraxis-simona-jaekel/",
-                "_blank"
-              )
-            }
-          >
-            <span>Buchung Neukölln</span>
-            
-          </StyledButton>
-          <StyledButton
-            onClick={() =>
-              window.open(
-                "https://buchung.treatwell.de/ort/holistic-touch-simona-jaekel-mitte/",
-                "_blank"
-              )
-            }
-          >
-            <span>Buchung Mitte</span>
-            
-          </StyledButton>
+            <StyledButton
+              onClick={() =>
+                window.open(
+                  "https://buchung.treatwell.de/ort/gesundheitspraxis-simona-jaekel/",
+                  "_blank"
+                )
+              }
+            >
+              <span>Buchung Neukölln</span>
+            </StyledButton>
+            <StyledButton
+              onClick={() =>
+                window.open(
+                  "https://buchung.treatwell.de/ort/holistic-touch-simona-jaekel-mitte/",
+                  "_blank"
+                )
+              }
+            >
+              <span>Buchung Mitte</span>
+            </StyledButton>
           </ButtonContainer>
         </Wrapper>
         <Ratings />
@@ -120,7 +117,7 @@ const ButtonContainer = styled.div`
   gap: 50px;
   justify-content: center;
   margin-top: 20px;
-    max-width: 350px;
+  max-width: 350px;
 
   ${media("<=phone")} {
     flex-direction: column;
@@ -211,7 +208,7 @@ const CardsContainer = styled.div`
 const StyledButton = styled.button`
   padding: 15px 30px;
   border-radius: 15px;
- color: white;
+  color: white;
   background-color: #d2c4b5;
   cursor: pointer;
   font-size: 1rem;
@@ -249,5 +246,4 @@ const StyledTitle = styled.h1`
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 40px;
 `;

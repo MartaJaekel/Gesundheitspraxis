@@ -126,7 +126,7 @@ export default function Contact() {
                 </IconWrapper>
                 <IconWrapper>
                   <img src="/location.png" alt="location" />
-                  <p>Weichselplatz 4 - 12045 Berlin.</p>
+                  <p>Weichselplatz 4 - 12045 Berlin</p>
                 </IconWrapper>
                  <IconWrapper>
                   <img src="/location.png" alt="location" />
@@ -156,6 +156,10 @@ const Info = styled.div`
   ${media("<=desktop")} {
     align-items: center;
   }
+    h2 {
+      font-size: 24px;
+    }
+      
 `;
 const RequiredAsterisk = styled.span`
   color: red;
@@ -358,6 +362,15 @@ const IconWrapper = styled.div`
     font-size: 20px;
     &:hover {
       color: #b08c6c;
+    }
+      }
+    ${media("<=phone")} {
+    p,
+    a {
+      font-size: 15px;
+    }
+    a {
+      font-size: 15px;
     }
   }
 `;
