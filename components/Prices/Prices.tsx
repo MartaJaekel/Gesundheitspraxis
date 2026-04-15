@@ -9,8 +9,8 @@ export default function Prices() {
       name: "Lomi Lomi Massage",
       durations: [
         { duration: "60 Minuten", price: "80 €" },
-        { duration: "90 Minuten", price: "100 €" },
-        { duration: "120 Minuten", price: "120 €" },
+        { duration: "90 Minuten", price: "110 €" },
+        { duration: "120 Minuten", price: "135 €" },
       ],
     },
     {
@@ -29,8 +29,8 @@ export default function Prices() {
       name: "Teil- oder Ganzkörpermassage",
       durations: [
         { duration: "60 Minuten", price: "70 €" },
-        { duration: "90 Minuten", price: "90 €" },
-        { duration: "120 Minuten", price: "110 €" },
+        { duration: "90 Minuten", price: "100 €" },
+        { duration: "120 Minuten", price: "125 €" },
       ],
     },
     {
@@ -44,8 +44,8 @@ export default function Prices() {
       name: "Ganzheitliche Massage",
       durations: [
         { duration: "60 Minuten", price: "70 €" },
-        { duration: "90 Minuten", price: "90 €" },
-        { duration: "120 Minuten", price: "110 €" },
+        { duration: "90 Minuten", price: "100 €" },
+        { duration: "120 Minuten", price: "125 €" },
       ],
     },
     {
@@ -56,7 +56,7 @@ export default function Prices() {
       name: "Schwangerschaftsmassage",
       durations: [
         { duration: "60 Minuten", price: "70 €" },
-        { duration: "90 Minuten", price: "90 €" },
+        { duration: "90 Minuten", price: "100 €" },
       ],
     },
   ];
