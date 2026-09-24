@@ -128,8 +128,7 @@ export default function Contact() {
                   <img src="/location.png" alt="location" />
                   <p>Weichselplatz 4 - 12045 Berlin</p>
                 </IconWrapper>
-                
-              </StyledDetails>
+                </StyledDetails>
             </Info>
           </StyledSection>
 
