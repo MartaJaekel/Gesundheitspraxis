@@ -95,16 +95,7 @@ export default function Prices() {
             >
               <span>Buchung Neukölln</span>
             </StyledButton>
-            <StyledButton
-              onClick={() =>
-                window.open(
-                  "https://buchung.treatwell.de/ort/holistic-touch-simona-jaekel-mitte/",
-                  "_blank"
-                )
-              }
-            >
-              <span>Buchung Mitte</span>
-            </StyledButton>
+            
           </ButtonContainer>
         </Wrapper>
         <Ratings />
