@@ -93,7 +93,7 @@ export default function Prices() {
                 )
               }
             >
-              <span>Buchung Neukölln</span>
+              <span>Buchung</span>
             </StyledButton>
             
           </ButtonContainer>
